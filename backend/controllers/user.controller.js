@@ -40,6 +40,11 @@ export const login = async (req,res)=>{
             res.status(400).json({message : "All fields are required!"});
             return;
         }
+        const existingUser = await User.findOne({email});
+        if(!existingUser){
+            res.status(404).json({message : "User does not exist"});
+            return;
+        }
     }catch(err){
         return res.status(500).json({message : err.message});
     }
