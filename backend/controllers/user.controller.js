@@ -30,3 +30,9 @@ export const register = async (req,res)=>{
             return res.status(500).json({message : err.message});
         }
 }
+
+
+
+export const login = async (req,res)=>{
+    
+}
