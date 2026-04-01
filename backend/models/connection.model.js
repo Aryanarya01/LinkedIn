@@ -1,7 +1,7 @@
 
 import mongoose from "mongoose"
 
-const connectionRequired = new mongoose.Schema({
+const connectionSchema = new mongoose.Schema({
     userId : {
         type : mongoose.Schema.Types.ObjectId,
         ref : "User",
@@ -15,3 +15,7 @@ const connectionRequired = new mongoose.Schema({
         default : null,
     } 
 })
+
+const connectionRequire = mongoose.model("connectionRequire",connectionSchema);
+
+export default connectionRequire;
