@@ -10,6 +10,11 @@ const commentSchema = new mongoose.Schema({
         ref : "Post",
     },
     body : {
-
+        type : String,
+        required : true,
     }
 })
+
+
+const comment = mongoose.model("comment",commentSchema);
+export default comment;
