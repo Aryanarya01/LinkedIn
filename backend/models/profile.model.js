@@ -36,6 +36,15 @@ const profileSchema = new mongoose.Schema({
         ref : "User",
     },
     bio : {
-        
+        type : String,
+        default : '',
+    },
+    currentPost : {
+        type : String,
+        default : '',
+    },
+    pastWork : {
+        type : [workSchema],
+        default : [],
     }
 })
