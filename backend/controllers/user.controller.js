@@ -1,7 +1,7 @@
 import Profile from "../models/profile.model.js";
 import User from "../models/user.model.js"
 import bcrypt from "bcrypt"
- 
+import crypto from "crypto"
 
 
 export const register = async (req,res)=>{
@@ -50,6 +50,10 @@ export const login = async (req,res)=>{
             res.status(400).json({message : "Invalid Credentials!"});
             return;
         }
+
+        const token = crypto.randomBytes(32).toString("hex");
+        await User.updateOne({_id : user._id},{token});
+        rs
     }catch(err){
         return res.status(500).json({message : err.message});
     }
