@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
         cb(null,File.originalname)
     },
 })
-
+const upload = multer({storage : storage})
 router.route("/register").post(register);
 router.route("/login").post(login)
 export default router;
