@@ -73,3 +73,7 @@ export const uploadProfilePicture = async (req,res)=>{
         return res.status(500).json({message : err.message});
     }
 }
+
+export const updateUserProfile = async(req,res)=>{
+    
+}
