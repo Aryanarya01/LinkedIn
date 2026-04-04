@@ -89,7 +89,8 @@ export const updateUserProfile = async(req,res)=>{
             return;
             }
         }
-        Object.assign(user,newUserData)
+        Object.assign(user,newUserData);
+        await user.save();
     }catch(err){
         return res.status(400).json({message : err.message});
     }
