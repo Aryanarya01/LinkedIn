@@ -82,6 +82,14 @@ export const updateUserProfile = async(req,res)=>{
             res.status(400).json({message : "User not found!"});
             return;
         } 
+        const existingUser = await User.findOne({$or : [{username},{email}]});
+        if(existingUser){
+            if(existingUser || String(existingUser._id) !== String(user._id)){
+            res.status(400).json({message : "User Already exixt!"});
+            return;
+            }
+        }
+        Object.assign(user,newUserData)
     }catch(err){
         return res.status(400).json({message : err.message});
     }
