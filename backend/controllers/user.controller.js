@@ -83,6 +83,6 @@ export const updateUserProfile = async(req,res)=>{
             return;
         } 
     }catch(err){
-        res.status(400).json({message : err.message});
+        return res.status(400).json({message : err.message});
     }
 }
