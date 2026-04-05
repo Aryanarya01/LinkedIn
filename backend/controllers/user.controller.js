@@ -60,7 +60,7 @@ export const login = async (req,res)=>{
 }
 
 export const uploadProfilePicture = async (req,res)=>{
-    const {token} = req.body; 
+    const {token} = req.body; ////                      me be a errr
     try{
          const user = await User.findOne({token : token});
          if(!user){
@@ -93,5 +93,15 @@ export const updateUserProfile = async(req,res)=>{
         await user.save();
     }catch(err){
         return res.status(400).json({message : err.message});
+    }
+}
+
+
+
+export const getUserAndProfile = async(req,res)=>{
+    try{
+
+    }catch(err){
+        res.status(500).json({message : err.message})
     }
 }
