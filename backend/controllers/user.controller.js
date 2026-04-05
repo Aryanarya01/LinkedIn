@@ -100,7 +100,7 @@ export const updateUserProfile = async(req,res)=>{
 
 export const getUserAndProfile = async(req,res)=>{
     try{
-
+        const {token} = req.body;
     }catch(err){
         res.status(500).json({message : err.message})
     }
