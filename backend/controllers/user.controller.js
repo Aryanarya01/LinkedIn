@@ -101,6 +101,8 @@ export const updateUserProfile = async(req,res)=>{
 export const getUserAndProfile = async(req,res)=>{
     try{
         const {token} = req.body;
+        const user = await User.findOne({token});
+        
     }catch(err){
         res.status(500).json({message : err.message})
     }
