@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getUserAndProfile, login, register, uploadProfilePicture } from "../controllers/user.controller.js";
+import { getUserAndProfile, login, register, updateUserProfile, uploadProfilePicture } from "../controllers/user.controller.js";
 import multer from "multer";
 const router = Router();
 
