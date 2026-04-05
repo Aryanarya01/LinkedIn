@@ -21,9 +21,9 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:9080/get_user_and_profile HTTP/1.1
+GET http://localhost:9080/get_user_and_profile HTTP/1.1
 Content-Type: application/json
 
 {
-    "token" : ""
+    "token" : "645462af7d9faf87dc8be3c14fb2dc86a12e2e49505e7f5bab0822935d6e0a5e"
 }    
