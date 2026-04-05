@@ -17,5 +17,5 @@ router.route("/login").post(login)
 
 router.route("/upload_profile_picture").post(upload.single('profile_picture'),uploadProfilePicture)
 router.route("/user_update").post(updateUserProfile)
-
+router.route("/get_user_and_Profile")
 export default router;
