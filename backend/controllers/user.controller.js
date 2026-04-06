@@ -24,7 +24,7 @@ export const register = async (req,res)=>{
                 password :hashedPassword,
             })
             const profile = new Profile({userId : newUser._id})
-            await Profile.save()
+            await profile.save();
             res.status(200).json({message : "User Created Successfully!"})
         }catch(err){
             return res.status(500).json({message : err.message});
