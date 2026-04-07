@@ -115,7 +115,7 @@ export const getUserAndProfile = async(req,res)=>{
 
 export const updateProfileData = async (req,res)=>{
     try{
-        const 
+        const {token, ...newProfileData} = req.body;
     }catch(err){
         res.status(500).json(err.message);
     }
