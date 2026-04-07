@@ -27,3 +27,19 @@ Content-Type: application/json
 {
      "token" : "e814f01e417273a5635f5bc4646f018d2f272b314d18428eb657a2b710f3ec74"
 }
+
+###
+
+POST http://localhost:9080/update_profile_data
+Content-Type: application/json
+{
+   "token" :,
+   "bio"
+   "currentPost" :[
+      {
+         "company" :"Microsoft",
+         "position" : "CTO",
+         "years" : "2+"
+      }
+   ]
+}
