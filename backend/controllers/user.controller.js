@@ -121,6 +121,8 @@ export const updateProfileData = async (req,res)=>{
             res.status(404).json({message : "User not found"});
             return;
         }
+        const profile_to_update = await Profile.findOne({userId : userProfile._id});
+        Object.assign(profile_to_update,newProfileData)
     }catch(err){
         res.status(500).json(err.message);
     }
