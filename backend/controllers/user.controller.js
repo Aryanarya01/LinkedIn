@@ -111,3 +111,8 @@ export const getUserAndProfile = async(req,res)=>{
         res.status(500).json({message : err.message})
     }
 }
+
+
+export const updateProfileData = async (req,res)=>{
+    
+}
