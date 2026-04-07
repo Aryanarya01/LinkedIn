@@ -41,5 +41,13 @@ Content-Type: application/json
          "position" : "CTO",
          "years" : "2+"
       }
-   ]
+   ],
+  "education": [
+   {
+      "school" : "IIT",
+      "degree" : "B.Tech",
+      "fieldOfStudy" : "2024-2028"
+   }
+  ]
+   
 }
