@@ -124,7 +124,7 @@ export const updateProfileData = async (req,res)=>{
         const profile_to_update = await Profile.findOne({userId : userProfile._id});
         Object.assign(profile_to_update,newProfileData);
         await profile_to_update.save();
-        return
+        return res.status(200).json({message : "Profile Updated!"});
     }catch(err){
         res.status(500).json(err.message);
     }
