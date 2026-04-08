@@ -2,7 +2,13 @@ import Profile from "../models/profile.model.js";
 import User from "../models/user.model.js"
 import bcrypt from "bcrypt"
 import crypto from "crypto"
+import PDFDocument from "pdfkit"
 
+
+const convertUserDataTOPDF = (userData)=>{
+    const doc = new PDFDocument();
+    const outputPath = crypto.randomBytes(32).toString("hex")+
+}
 
 export const register = async (req,res)=>{
         try{
