@@ -4,6 +4,7 @@ import bcrypt from "bcrypt"
 import crypto from "crypto"
 import PDFDocument from "pdfkit"
 import fs from "fs"
+import connectionRequest from "../models/connection.model.js";
 
 const convertUserDataTOPDF = async (userData)=>{
     const doc = new PDFDocument();
@@ -183,7 +184,18 @@ export const sendConnectionRequest = async (req,res)=>{
 
         const connectionUser = await User.findOne({_id : connectionId});
         if(!connectionUser){
-            res.status(404).json({message : "Connection User not exist!"});
+            res.status(404).json({message : "Connection User not found!"});
+            return;
+        }
+
+
+        const existingRequest = await connectionRequest.findOne({
+            userId : user._id,
+            connectionId : connectionUser._id
+        })
+
+        if(existingRequest){
+            res.status(400).json({message : "Request already sent!"});
             return;
         }
     }catch(err){
