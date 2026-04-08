@@ -138,3 +138,10 @@ export const getAllUserProfile = async(req,res)=>{
         res.status(500).json(err.message);
     }
 }
+
+export const downloadProfile = async(req,res)=>{
+
+    const user_id = req.query._id;
+    const userProfile = await
+
+}
