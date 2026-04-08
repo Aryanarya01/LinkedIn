@@ -198,6 +198,14 @@ export const sendConnectionRequest = async (req,res)=>{
             res.status(400).json({message : "Request already sent!"});
             return;
         }
+        const request = new connectionRequest({
+            userId : user._id,
+            connectionId : connectionUser._id
+        })
+
+        await request.save();
+
+        
     }catch(err){
         return res.status(500).json({message : err.message});
     }
