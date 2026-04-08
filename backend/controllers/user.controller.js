@@ -215,5 +215,10 @@ export const sendConnectionRequest = async (req,res)=>{
 export const getMyConnectionsRequests = async (req,res)=>{
     const {token} = req.body;
 
-    
+    try{
+
+    }catch(err){
+        res.status(500).json({message : err.message});
+        return;
+    }
 }
