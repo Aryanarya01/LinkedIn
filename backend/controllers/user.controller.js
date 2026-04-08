@@ -171,3 +171,7 @@ export const downloadProfile = async(req,res)=>{
     let outputPath = await convertUserDataTOPDF(userProfile);
     return res.json({"message" : outputPath})
 }
+
+export const sendConnectionRequest = async (req,res)=>{
+    const {token, conne}
+}
