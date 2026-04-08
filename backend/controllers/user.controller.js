@@ -129,3 +129,12 @@ export const updateProfileData = async (req,res)=>{
         res.status(500).json(err.message);
     }
 }
+
+export const getAllUserProfile = async(req,res)=>{
+    try{
+        const profiles = await Profile.find().populate('userId','name username email profilePicture');
+        return res.json({profiles})
+    }catch(err){
+        res.status(500).json(err.message);
+    }
+}
