@@ -211,7 +211,7 @@ export const sendConnectionRequest = async (req,res)=>{
     }
 }
 
-
+//              maine kis kis ko bja hai
 export const getMyConnectionsRequests = async (req,res)=>{
     const {token} = req.body;
 
@@ -221,6 +221,10 @@ export const getMyConnectionsRequests = async (req,res)=>{
             res.status(404).json({message : "user not found!"});
             return;
         }
+
+        const connections = await connectionRequest.find({userId : user._id})
+        .populate('connectionId','name username email profilePicture');
+        return res.json({connections})
     }catch(err){
         res.status(500).json({message : err.message});
         return;
