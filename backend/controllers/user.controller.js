@@ -175,7 +175,11 @@ export const downloadProfile = async(req,res)=>{
 export const sendConnectionRequest = async (req,res)=>{
     const {token, connectionId} = req.body;
     try{
-
+        const user = await User.findOne({token});
+        if(!user){
+            res.status(404).json({message : "User not found!"});
+            return;
+        }
     }catch(err){
         return res.status(500).json({message : err.message});
     }
