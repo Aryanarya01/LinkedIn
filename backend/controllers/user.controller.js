@@ -7,7 +7,7 @@ import PDFDocument from "pdfkit"
 
 const convertUserDataTOPDF = (userData)=>{
     const doc = new PDFDocument();
-    const outputPath = crypto.randomBytes(32).toString("hex")+
+    const outputPath = crypto.randomBytes(32).toString("hex")+".pdf";
 }
 
 export const register = async (req,res)=>{
