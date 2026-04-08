@@ -180,6 +180,12 @@ export const sendConnectionRequest = async (req,res)=>{
             res.status(404).json({message : "User not found!"});
             return;
         }
+
+        const connectionUser = await User.findOne({_id : connectionId});
+        if(!connectionUser){
+            res.status(404).json({message : "Connection User not exist!"});
+            return;
+        }
     }catch(err){
         return res.status(500).json({message : err.message});
     }
