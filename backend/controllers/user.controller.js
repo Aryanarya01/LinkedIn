@@ -232,12 +232,21 @@ export const getMyConnectionsRequests = async (req,res)=>{
 }
 
 
+//kis ne muje kiya hai
 export const whatAreMyConnections = async (req,res)=>{
     const {token} = req.body;
 
     try{
+        const user = await User.findOne({token});
+        if(!user){
+            res.status(404).json({message : "user not found!"});
+            return;
+        }
 
+        const connections = await connectionRequest.find({connectionId : user._id})
+        .populate('userId','name username email profilePicture')
     }catch(err){
-        
+        res.status(500).json({message : err.message});
+        return;
     }
 }
