@@ -210,3 +210,10 @@ export const sendConnectionRequest = async (req,res)=>{
         return res.status(500).json({message : err.message});
     }
 }
+
+
+export const getMyConnectionsRequests = async (req,res)=>{
+    const {token} = req.body;
+
+    
+}
