@@ -166,7 +166,7 @@ export const getAllUserProfile = async(req,res)=>{
 export const downloadProfile = async(req,res)=>{
 
     const user_id = req.query._id;
-    const userProfile = await Profile.find({userId : user_id}).populate('userId','name username email profilePicture');
+    const userProfile = await Profile.findOne({userId : user_id}).populate('userId','name username email profilePicture');
 
     let outputPath = await convertUserDataTOPDF(userProfile);
     return res.json({"message" : outputPath})
