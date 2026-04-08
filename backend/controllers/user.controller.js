@@ -16,7 +16,7 @@ const convertUserDataTOPDF = (userData)=>{
     doc.fontSize(14).text(`Username : ${userData.userId.username}`);
     doc.fontSize(14).text(`Email : ${userData.userId.email}`);
     doc.fontSize(14).text(`Bio : ${userData.bio}`);
-    doc.fontSize(14).text(`CurrentPosition : ${}`)
+    doc.fontSize(14).text(`CurrentPosition : ${userData.currentPosition}`);
     doc.fontSize(14).text
 
 }
