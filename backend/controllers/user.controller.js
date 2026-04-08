@@ -230,3 +230,14 @@ export const getMyConnectionsRequests = async (req,res)=>{
         return;
     }
 }
+
+
+export const whatAreMyConnections = async (req,res)=>{
+    const {token} = req.body;
+
+    try{
+
+    }catch(err){
+        
+    }
+}
