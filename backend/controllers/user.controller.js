@@ -17,7 +17,12 @@ const convertUserDataTOPDF = (userData)=>{
     doc.fontSize(14).text(`Email : ${userData.userId.email}`);
     doc.fontSize(14).text(`Bio : ${userData.bio}`);
     doc.fontSize(14).text(`CurrentPosition : ${userData.currentPosition}`);
-    doc.fontSize(14).text
+    doc.fontSize(14).text("Past Work :")
+    userData.pastWork.forEach((work,index)=>{
+        doc.fontSize(14).text(`Company Name : ${work.companyName}`);
+        doc.fontSize(14).text(`Position : ${work.position}`);
+        doc.fontSize(14).text(`Years : ${work.years}`)
+    })
 
 }
 
