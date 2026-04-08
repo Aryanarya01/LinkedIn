@@ -3,11 +3,16 @@ import User from "../models/user.model.js"
 import bcrypt from "bcrypt"
 import crypto from "crypto"
 import PDFDocument from "pdfkit"
-
+import fs from "fs"
 
 const convertUserDataTOPDF = (userData)=>{
     const doc = new PDFDocument();
     const outputPath = crypto.randomBytes(32).toString("hex")+".pdf";
+    const stream = fs.createWriteStream("uploads/"+outputPath);
+    doc.pipe(stream);
+
+    doc.image(`uploads/${userData.userId.profilePicture}`,{align : "center",width : 100});
+    
 }
 
 export const register = async (req,res)=>{
