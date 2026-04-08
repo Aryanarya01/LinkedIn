@@ -173,5 +173,10 @@ export const downloadProfile = async(req,res)=>{
 }
 
 export const sendConnectionRequest = async (req,res)=>{
-    const {token, conne}
+    const {token, connectionId} = req.body;
+    try{
+
+    }catch(err){
+        return res.status(500).json({message : err.message});
+    }
 }
