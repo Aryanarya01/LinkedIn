@@ -5,7 +5,7 @@ import crypto from "crypto"
 import PDFDocument from "pdfkit"
 import fs from "fs"
 
-const convertUserDataTOPDF = (userData)=>{
+const convertUserDataTOPDF = async (userData)=>{
     const doc = new PDFDocument();
     const outputPath = crypto.randomBytes(32).toString("hex")+".pdf";
     const stream = fs.createWriteStream("uploads/"+outputPath);
@@ -21,8 +21,10 @@ const convertUserDataTOPDF = (userData)=>{
     userData.pastWork.forEach((work,index)=>{
         doc.fontSize(14).text(`Company Name : ${work.companyName}`);
         doc.fontSize(14).text(`Position : ${work.position}`);
-        doc.fontSize(14).text(`Years : ${work.years}`)
+        doc.fontSize(14).text(`Years : ${work.years}`);
     })
+    doc.end();
+    return outputPath;
 
 }
 
