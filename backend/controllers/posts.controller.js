@@ -29,7 +29,8 @@ export const activeCheck = async(req,res)=>{
 
  export const getAllPosts = async (req,res)=>{
     try{
-
+        const post = await Post.find().populate('userId','name username email profilePicture');
+        return res.json({posts})
     }catch(err){
         return res.status(500).json({message : err.message})
     }
