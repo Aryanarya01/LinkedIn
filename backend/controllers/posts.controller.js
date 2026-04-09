@@ -1,5 +1,9 @@
  import User from "../models/user.model.js"
  import Post from "../models/posts.model.js"
+import Comment from "../models/comments.model.js";
+
+
+
 export const activeCheck = async(req,res)=>{
     res.status(200).json({message : "Running!"});
 }
@@ -63,7 +67,7 @@ export const activeCheck = async(req,res)=>{
 
 
  export const commentPost  = async(req,res)=>{
-    const {token, post_id, comment} = req.body;
+    const {token, post_id, commentBody} = req.body;
 
     try{
         const user = await User.findOne({token : token}).select("_id");
@@ -73,6 +77,13 @@ export const activeCheck = async(req,res)=>{
         }
 
         const post = await Post.findOne({_id : post_id});
+        if(!post){
+            res.status(404).json({message : "Post not found!"});
+            return;
+        }
+        const comment = new Comment({
+            userId : use
+        })
 
     }catch(err){
         return res.status(500).json({message : err.message});
