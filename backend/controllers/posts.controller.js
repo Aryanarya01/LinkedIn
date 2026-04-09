@@ -40,7 +40,11 @@ export const activeCheck = async(req,res)=>{
  export const deletePost = async (req,res)=>{
         const {token, post_id} = req.body; 
     try{
-        
+        const user = await User.findOne({token : token}).select("_id");
+        if(!user){
+            res.status(404).json({message : "User not found!"});
+            return;
+        }
     }catch(err){
         return res.status(500).json({message : err.message});
     }
