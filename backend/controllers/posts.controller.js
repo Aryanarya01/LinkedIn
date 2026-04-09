@@ -82,7 +82,7 @@ export const commentPost = async (req, res) => {
     const comment = new Comment({
       userId: user._id,
       postId: post_id,
-      body: commentBody,
+      body: commentBody,//check!
     });
     await comment.save();
     res.status(200).json({ message: "Comment Added!" });
@@ -90,3 +90,9 @@ export const commentPost = async (req, res) => {
     return res.status(500).json({ message: err.message });
   }
 };
+
+
+
+export const get_comments_by_post = async (req,res)=>{
+    
+}
