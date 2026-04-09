@@ -270,7 +270,8 @@ export const acceptConnectionRequest = async(req,res)=>{
          }else{
             connection.status_accepted = false;
          }
-         await connection
+         await connection.save();
+         return res.json({message : "Request Updated!"});
     }catch(err){
        return  res.status(500).json({message : err.message})
     }
