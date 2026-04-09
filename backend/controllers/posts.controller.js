@@ -35,3 +35,12 @@ export const activeCheck = async(req,res)=>{
         return res.status(500).json({message : err.message})
     }
  }
+
+
+ export const deletePost = async (req,res)=>{
+    try{
+
+    }catch(err){
+        return
+    }
+ }
