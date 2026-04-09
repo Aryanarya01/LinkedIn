@@ -1,4 +1,5 @@
  import User from "../models/user.model.js"
+ import Post from "../models/posts.model.js"
 export const activeCheck = async(req,res)=>{
     res.status(200).json({message : "Running!"});
 }
@@ -11,6 +12,12 @@ export const activeCheck = async(req,res)=>{
             res.status(404).json({message : "User not found!"});
             return;
         }
+
+        const post = new Post({
+            userId : user._id,
+            body : req.body.body,
+            
+        })
     }catch(err){
         return res.status(500).json({message : err.message});
     }
