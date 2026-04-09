@@ -11,6 +11,7 @@ const storage = multer.diskStorage({
         cb(null,file.originalname)
     },
 })
+const uploads = multer({storage : storage})
 router.route('/').get(activeCheck)
 
 export default router;
