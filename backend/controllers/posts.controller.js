@@ -55,8 +55,13 @@ export const activeCheck = async(req,res)=>{
             res.status(401).json({message : "Unauthorized"});
             return;
         }
-        await Post.deletePost({_id : post._id})
+        await Post.deleteOne({_id : post._id})// check
     }catch(err){
         return res.status(500).json({message : err.message});
     }
+ }
+
+
+ export const commentPost  = async(req,res)=>{
+    const 
  }
