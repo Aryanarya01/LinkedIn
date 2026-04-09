@@ -17,7 +17,7 @@ export const activeCheck = async(req,res)=>{
             userId : user._id,
             body : req.body.body,
             media : req.file != undefined ? req.file.filename : "",
-            fileType : req.file != undefined ? req.file.mimetype.split("/") : "",
+            fileType : req.file != undefined ? req.file.mimetype.split("/")[1] : "",
         })
         await post.save();
         return res.status(200).json({message : "Post Created!"});
