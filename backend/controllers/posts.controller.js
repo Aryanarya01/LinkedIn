@@ -66,6 +66,13 @@ export const activeCheck = async(req,res)=>{
     const {token, post_id, comment} = req.body;
 
     try{
+        const user = await User.findOne({token : token}).select("_id");
+        if(!user){
+            res.status(404).json({message : "User not found!"});
+            return;
+        }
+
+        const post = await Post.findOne({_id : post_id});
 
     }catch(err){
         return res.status(500).json({message : err.message});
