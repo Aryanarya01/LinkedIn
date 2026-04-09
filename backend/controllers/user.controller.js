@@ -252,6 +252,7 @@ export const whatAreMyConnections = async (req, res) => {
     const connections = await connectionRequest
       .find({ connectionId: user._id })
       .populate("userId", "name username email profilePicture");
+      return res.json(connections)
   } catch (err) {
     res.status(500).json({ message: err.message });
     return;
