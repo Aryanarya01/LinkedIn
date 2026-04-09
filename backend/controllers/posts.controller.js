@@ -50,6 +50,12 @@ export const activeCheck = async(req,res)=>{
             res.status(404).json({message : "Post not found!"});
             return;
         }
+
+        if(post.userId.toString() !== user._id.toString()){
+            res.status(401).json({message : "Unauthorized"});
+            return;
+        }
+        await Post.deletePost({_id : post._id})
     }catch(err){
         return res.status(500).json({message : err.message});
     }
