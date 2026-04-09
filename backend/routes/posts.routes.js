@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { activeCheck, createPost, getAllPosts } from "../controllers/posts.controller.js";
+import { activeCheck, createPost, deletePost, getAllPosts } from "../controllers/posts.controller.js";
 import multer from "multer"
 const router = Router();
 
@@ -15,5 +15,6 @@ const uploads = multer({storage : storage})
 router.route('/').get(activeCheck)
 router.route("/post").post(uploads.single('media'),createPost);
 router.route("/posts").get(getAllPosts);
+router.route("/delete_posts").post(deletePost);
 
 export default router;
