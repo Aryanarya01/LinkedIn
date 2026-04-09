@@ -94,5 +94,15 @@ export const commentPost = async (req, res) => {
 
 
 export const get_comments_by_post = async (req,res)=>{
-    
+    const {post_id} = req.body;
+    try{
+        const post = await Post.findOne({_id : post_id});
+        if(!post){
+            res.status(404).json({message : "Post not found!"});
+            return;
+        }
+        return res
+    }catch(err){
+        return res.status(500).json({message : err.message})
+    }
 }
