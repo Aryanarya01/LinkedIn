@@ -258,6 +258,6 @@ export const acceptConnectionRequest = async(req,res)=>{
     try{
 
     }catch(err){
-        res
+       return  res.status(500).json({message : err.message})
     }
 }
