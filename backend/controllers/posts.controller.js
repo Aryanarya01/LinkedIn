@@ -16,7 +16,8 @@ export const activeCheck = async(req,res)=>{
         const post = new Post({
             userId : user._id,
             body : req.body.body,
-            
+            media : req.file != undefined ? req.file.filename : "",
+            fileType : req.file != undefined ? req.file.mimetype.split("/")
         })
     }catch(err){
         return res.status(500).json({message : err.message});
