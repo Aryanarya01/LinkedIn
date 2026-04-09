@@ -250,3 +250,14 @@ export const whatAreMyConnections = async (req,res)=>{
         return;
     }
 }
+
+
+export const acceptConnectionRequest = async(req,res)=>{
+    const {token , requestId, action_type} = req.body;
+
+    try{
+
+    }catch(err){
+        res
+    }
+}
