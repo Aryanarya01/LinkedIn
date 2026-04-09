@@ -63,5 +63,12 @@ export const activeCheck = async(req,res)=>{
 
 
  export const commentPost  = async(req,res)=>{
-    const 
+    const {token, post_id, comment} = req.body;
+
+    try{
+
+    }catch(err){
+        return res.status(500).json({message : err.message});
+
+    }
  }
