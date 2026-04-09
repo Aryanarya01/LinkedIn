@@ -120,6 +120,11 @@ export const delete_comment_of_user = async (req,res)=>{
         if(!comment){
             return res.status(404).json({message : "Comment not found!"});
         }
+        if(comment.userId.toString()!== user._id.toString()){
+            return res.status(401).json({message : "Unauthorized"});
+        }
+        await Comment.deleteOne({_id : comment._id});
+        return res.status(200).json({message : "Comment Deleted!"});
     }catch(err){
         return res.status(500).json({message : err.message});
     }
