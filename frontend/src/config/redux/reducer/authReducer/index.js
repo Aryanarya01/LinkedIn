@@ -32,7 +32,9 @@ const authSlice = createSlice({
         .addCase(loginUser.fulfilled,(state, action)=>{
             state.isLoading = false;
             state.isError = false;
-            state
+            state.loggedIn = true;
+            state.isSuccess = true;
+            state.message = "Login is Successful";
         })
     }
 })
