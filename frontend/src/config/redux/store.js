@@ -1,4 +1,4 @@
-
+import { configureStore } from "@reduxjs/toolkit"
 
 
 /**
@@ -9,4 +9,8 @@
  * Register Here -> Reducer
  */
 
-export default const 
+ 
+
+export const Store = configureStore({
+    reducer :{}
+})
