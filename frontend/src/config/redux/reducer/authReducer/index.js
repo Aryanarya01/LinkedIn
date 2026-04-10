@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 import axios from "axios"
-import { loginUser } from "../../action/AuthAction"
+import { loginUser, registerUser } from "../../action/AuthAction"
 
 
 const initialState = {
@@ -41,7 +41,13 @@ const authSlice = createSlice({
             state.isError = true;
             state.message = action.payload;
         })
-        .addCase(reg)
+        .addCase(registerUser.pending,(state)=>{
+            state.isLoading = true;
+            state.message = "Registering you...";
+        })
+        .addCase(registerUser.fulfilled,(state, action)=>{
+            
+        })
     }
 })
 
