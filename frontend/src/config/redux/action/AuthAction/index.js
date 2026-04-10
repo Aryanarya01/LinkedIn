@@ -17,6 +17,7 @@ export const loginUser = createAsyncThunk(
                     message : "token not provided"
                 })
              }
+             return thunkAPI.fulfillWithValue(response.data.token)
         }catch(error){
             return thunkAPI.rejectWithValue(error.response.data)
         }
