@@ -1,3 +1,6 @@
+import { createSlice } from "@reduxjs/toolkit"
+import axios from "axios"
+import { loginUser } from "../../action/AuthAction"
 
 
 const initialState = {
@@ -11,3 +14,25 @@ const initialState = {
     connections : [],
     connectionRequest : [],
 }
+
+const authSlice = createSlice({
+    name : "auth",
+    initialState,
+    reducers : {
+        reset : ()=>initialState,
+        handelLoginUser : (state)=>{
+            state.message = "hello"
+        }
+    },
+    extraReducers : (builder)=>{
+        builder.addCase(loginUser.pending,(state)=>{
+            state.isLoading = true
+            state.message = "Logging You!"
+        })
+        .addCase(loginUser.fulfilled,(state, action)=>{
+            state.isLoading = false;
+            state.isError = false;
+            state
+        })
+    }
+})
