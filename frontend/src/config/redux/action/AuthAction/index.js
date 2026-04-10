@@ -23,3 +23,5 @@ export const loginUser = createAsyncThunk(
         }
     }
 )
+
+export const registerUser

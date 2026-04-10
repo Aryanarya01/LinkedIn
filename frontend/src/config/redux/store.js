@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit"
-
+import authReducer from "./reducer/authReducer" 
 
 /**
  * 
@@ -12,5 +12,7 @@ import { configureStore } from "@reduxjs/toolkit"
  
 
 export const Store = configureStore({
-    reducer :{}
+    reducer :{
+        auth : authReducer
+    }
 })
