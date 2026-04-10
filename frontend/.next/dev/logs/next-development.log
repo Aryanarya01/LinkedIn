@@ -165,3 +165,8 @@
 {"timestamp":"00:44:27.633","source":"Browser","level":"ERROR","message":"./src/pages/index.jsx:24:31\nExpected '</', got '}'\n  22 |             <p>A True social media platform, with stories no blufs...\n  23 |\n> 24 |             <div onClick={()=>} className=\"buttonJoin\">\n     |                               ^\n  25 |               <p>Join Now</p>\n  26 |             </div>\n  27 |\n\nParsing ecmascript source code failed\n\nGenerated code of loaders [next/dist/build/babel/loader] transform of file content of src/pages/index.jsx:\n./src/pages/index.jsx:24:31\n  22 |             <p>A True social media platform, with stories no blufs...\n  23 |\n> 24 |             <div onClick={()=>} className=\"buttonJoin\">\n     |                               ^\n  25 |               <p>Join Now</p>\n  26 |             </div>\n  27 |"}
 {"timestamp":"00:44:36.404","source":"Server","level":"LOG","message":"✓ Compiled in 1000ms"}
 {"timestamp":"00:44:36.625","source":"Browser","level":"LOG","message":"Refreshing page data due to server-side change"}
+{"timestamp":"00:45:22.912","source":"Server","level":"LOG","message":"✓ Compiled in 103ms"}
+{"timestamp":"00:45:30.351","source":"Server","level":"LOG","message":"✓ Compiled in 211ms"}
+{"timestamp":"00:45:30.633","source":"Browser","level":"ERROR","message":"%o\n\n%s\n\n%s\n {} The above error occurred in the <Home> component. React will try to recreate this component tree from scratch using the error boundary you provided, PagesDevOverlayErrorBoundary."}
+{"timestamp":"00:45:33.974","source":"Server","level":"LOG","message":"✓ Compiled in 574ms"}
+{"timestamp":"00:45:38.242","source":"Server","level":"LOG","message":"✓ Compiled in 69ms"}
