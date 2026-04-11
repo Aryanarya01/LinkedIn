@@ -17,5 +17,9 @@
 }
 
 .mainContainer_right{
-    flex: 0.5;
+    flex: 2.9rem;
+}
+.mainContainer_left > p:nth-child(2){
+    color: #4D4D4D;
+    font-size: 1.7rem;
 }
