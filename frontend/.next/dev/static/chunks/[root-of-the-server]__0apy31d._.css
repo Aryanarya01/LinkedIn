@@ -105,4 +105,8 @@
   display: flex;
 }
 
+.Home-module__Ho9lYW__mainContainer_left, .Home-module__Ho9lYW__mainContainer_right {
+  flex: .5;
+}
+
 /*# sourceMappingURL=%5Broot-of-the-server%5D__0apy31d._.css.map*/

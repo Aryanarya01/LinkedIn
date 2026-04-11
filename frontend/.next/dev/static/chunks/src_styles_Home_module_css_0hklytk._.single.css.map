@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/styles/Home.module.css"],"sourcesContent":[".container{\r\n    font-family: \"poppins\";\r\n    padding: 1.2rem;\r\n}\r\n\r\n.mainContainer{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    gap: 4rem;\r\n    padding-inline:2rem;\r\n    height: 80vh;\r\n}"],"names":[],"mappings":"AAAA;;;;;AAKA"}}]
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/styles/Home.module.css"],"sourcesContent":[".container{\r\n    font-family: \"poppins\";\r\n    padding: 1.2rem;\r\n}\r\n\r\n.mainContainer{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    gap: 4rem;\r\n    padding-inline:2rem;\r\n    height: 80vh;\r\n}\r\n\r\n.mainContainer_left{\r\n    flex: 0.5;\r\n}\r\n\r\n.mainContainer_right{\r\n    flex: 0.5;\r\n}"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;;;;;;AASA"}}]
 }

@@ -11,3 +11,11 @@
     padding-inline:2rem;
     height: 80vh;
 }
+
+.mainContainer_left{
+    flex: 0.5;
+}
+
+.mainContainer_right{
+    flex: 0.5;
+}

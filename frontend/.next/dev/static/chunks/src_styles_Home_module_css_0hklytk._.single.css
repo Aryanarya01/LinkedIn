@@ -13,4 +13,8 @@
   display: flex;
 }
 
+.Home-module__Ho9lYW__mainContainer_left, .Home-module__Ho9lYW__mainContainer_right {
+  flex: .5;
+}
+
 /*# sourceMappingURL=src_styles_Home_module_css_0hklytk._.single.css.map*/
