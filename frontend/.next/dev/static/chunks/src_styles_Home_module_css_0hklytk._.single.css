@@ -4,4 +4,13 @@
   font-family: poppins;
 }
 
+.Home-module__Ho9lYW__mainContainer {
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  height: 80vh;
+  padding-inline: 2rem;
+  display: flex;
+}
+
 /*# sourceMappingURL=src_styles_Home_module_css_0hklytk._.single.css.map*/

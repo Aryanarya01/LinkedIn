@@ -96,4 +96,13 @@
   font-family: poppins;
 }
 
+.Home-module__Ho9lYW__mainContainer {
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  height: 80vh;
+  padding-inline: 2rem;
+  display: flex;
+}
+
 /*# sourceMappingURL=%5Broot-of-the-server%5D__0apy31d._.css.map*/
