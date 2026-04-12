@@ -25,4 +25,6 @@
 }
 .mainContainer_left >  div.buttonJoin{
     width: fit-content;
+    cursor: pointer;
+    user-select: none;
 }
