@@ -17,7 +17,7 @@
   flex: .5;
 }
 
-.Home-module__Ho9lYW__mainContainer_right {
+.Home-module__Ho9lYW__mainContainer_left > p:first-child {
   flex: 2.9rem;
 }
 
@@ -30,9 +30,13 @@
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
+  color: #fff;
   background: #c52cd0;
+  border-radius: 20px;
   width: fit-content;
   margin-top: .8rem;
+  padding-block: .6rem;
+  padding-inline: 1.2rem;
   font-size: 1.4rem;
   transition: all .2s;
 }
