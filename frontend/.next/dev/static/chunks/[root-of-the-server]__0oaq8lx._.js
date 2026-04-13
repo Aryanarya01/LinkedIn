@@ -525,6 +525,7 @@ const __TURBOPACK__default__export__ = fontData;
 "[project]/src/styles/Home.module.css [client] (css module)", ((__turbopack_context__) => {
 
 __turbopack_context__.v({
+  "buttonJoin": "Home-module__Ho9lYW__buttonJoin",
   "container": "Home-module__Ho9lYW__container",
   "mainContainer": "Home-module__Ho9lYW__mainContainer",
   "mainContainer_left": "Home-module__Ho9lYW__mainContainer_left",

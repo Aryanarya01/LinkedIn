@@ -28,4 +28,7 @@
     cursor: pointer;
     user-select: none;
     transition: all 0.2s;
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+    background: rgb(197, 44, 208);
 }

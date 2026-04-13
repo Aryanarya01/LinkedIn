@@ -26,4 +26,15 @@
   font-size: 1.7rem;
 }
 
+.Home-module__Ho9lYW__mainContainer_left > div.Home-module__Ho9lYW__buttonJoin {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background: #c52cd0;
+  width: fit-content;
+  margin-top: .8rem;
+  font-size: 1.4rem;
+  transition: all .2s;
+}
+
 /*# sourceMappingURL=src_styles_Home_module_css_0hklytk._.single.css.map*/
