@@ -7,7 +7,7 @@ const NavbarComponent = () => {
   return (
     <div className={styles.container}>
       <nav className={styles.navBar}>
-        <h1 onClick={()=>{
+        <h1 style={{cursor:"pointer"}} onClick={()=>{
             router.push("/")
         }}>Pro Connect</h1>
         <div className={styles.navBar_OptionContainer}>
