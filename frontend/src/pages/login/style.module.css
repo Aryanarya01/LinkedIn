@@ -55,12 +55,10 @@
 
 
 .buttonWithOutline{
-    margin-top: 1.3rem;
-    border-radius: 20px;
-    border: 1px solid white;
-    font-size: 1.3rem;
-    font-weight: bold;
-    user-select: none;
+    padding: 0.8rem 1.3rem;
+    background: rgb(236, 236, 236);
+    width: 100%;
+    border-radius: 10px;
     cursor: pointer;
 }
 
