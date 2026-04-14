@@ -28,6 +28,13 @@
     font-size: 1.8rem   ;
 }
 
+.inputField{
+    padding-inline: 1.3rem;
+    padding-block: 0.8rem;
+    outline: none;
+    
+}
+
 .cardContainer_right{
     flex: 0.4;
     background: #00488b;

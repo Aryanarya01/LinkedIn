@@ -22,7 +22,7 @@ const LoginComponent = () => {
           <div className={styles.cardContainer_left}>
             <p className={styles.cardleft_heading} >{userLoginMethod ? "Sign In" : "Sign Up"}</p>
           
-            <input type="text" placeholder="Username" />
+            <input type="text" placeholder="Username" className={styles.inputField} />
           
           
           </div>
