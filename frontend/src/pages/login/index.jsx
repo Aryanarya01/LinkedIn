@@ -8,7 +8,7 @@ import styles from "./style.module.css";
 const LoginComponent = () => {
   const authState = useSelector((state) => state.auth);
   const router = useRouter();
-  const isLoginMethod = useState(false);
+  const [userLoginMethod,setUserLoginMethod] = useState(false);
 
   useEffect(() => {
     if (authState.loggedIn) {
@@ -20,7 +20,11 @@ const LoginComponent = () => {
       <div className={styles.container}>
         <div className={styles.cardContainer}>
           <div className={styles.cardContainer_left}>
-            <p className={styles.cardleft_heading} >{isLoginMethod ? "Sign Up" : "Sign Up"}</p>
+            <p className={styles.cardleft_heading} >{userLoginMethod ? "Sign In" : "Sign Up"}</p>
+          
+            <input type="text" placeholder="Username" />
+          
+          
           </div>
           <div className={styles.cardContainer_right}></div>
         </div>
