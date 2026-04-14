@@ -30,6 +30,10 @@ const LoginComponent = () => {
 
                <input type="Email" placeholder="Email" className={styles.inputField} />
                 <input type="Password" placeholder="Password" className={styles.inputField} />
+              <div className={styles.buttonWithOutline}>
+                  <p>{userLoginMethod ? "Sign In" : "Sign Up"}</p>
+              </div>
+            
             </div>
           
           

@@ -53,6 +53,13 @@
     gap: 1.2rem;
 }
 
+
+.buttonWithOutline{
+    margin-top: 1.3rem;
+    border-radius: 20px;
+    
+}
+
 .cardContainer_right{
     flex: 0.4;
     background: #00488b;
