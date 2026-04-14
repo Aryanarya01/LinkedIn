@@ -634,24 +634,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$ind
 ;
 const LoginComponent = ()=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "a97a34a26b376bdf98cc20dd88299d324747f61c9850ae13eaef0949d50507c2") {
+    if ($[0] !== "03eb1ecb6513f43a272159c7a94ac0ab9620250ef5f08dcc0ce7d0b0e05ca915") {
         for(let $i = 0; $i < 2; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "a97a34a26b376bdf98cc20dd88299d324747f61c9850ae13eaef0949d50507c2";
+        $[0] = "03eb1ecb6513f43a272159c7a94ac0ab9620250ef5f08dcc0ce7d0b0e05ca915";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
-        t0 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Components$2f$Navbar$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
-                    fileName: "[project]/src/pages/login/index.jsx",
-                    lineNumber: 14,
-                    columnNumber: 15
-                }, ("TURBOPACK compile-time value", void 0)),
-                "LoginComponent"
-            ]
-        }, void 0, true, {
+        t0 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {}, void 0, false, {
             fileName: "[project]/src/pages/login/index.jsx",
             lineNumber: 14,
             columnNumber: 10

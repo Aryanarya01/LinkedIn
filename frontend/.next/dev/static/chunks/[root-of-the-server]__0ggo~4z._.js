@@ -468,7 +468,7 @@ function triggerUpdate(msg) {
 }),
 "[project]/src/pages/login/index.jsx [client] (ecmascript)", ((__turbopack_context__, module, exports) => {
 
-const e = new Error("Could not parse module '[project]/src/pages/login/index.jsx'\n\nUnterminated regexp literal");
+const e = new Error("Could not parse module '[project]/src/pages/login/index.jsx'\n\nUnexpected token `)`. Expected jsx identifier");
 e.code = 'MODULE_UNPARSABLE';
 throw e;
 }),

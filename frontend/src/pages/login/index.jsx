@@ -1,13 +1,12 @@
 import NavbarComponent from '@/Components/Navbar'
+import UserLayout from '@/layout/UserLayout'
 import React from 'react'
 
 const LoginComponent = () => {
   return (
-     
-    <div>
-      <NavbarComponent/>
-      
-      LoginComponent</div>
+      <UserLayout>
+          
+      </UserLayout>
   )
 }
 
