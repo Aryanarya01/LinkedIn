@@ -529,6 +529,7 @@ __turbopack_context__.v({
   "container": "Home-module__Ho9lYW__container",
   "mainContainer": "Home-module__Ho9lYW__mainContainer",
   "mainContainer_left": "Home-module__Ho9lYW__mainContainer_left",
+  "mainContainer_right": "Home-module__Ho9lYW__mainContainer_right",
 });
 }),
 "[project]/src/pages/index.jsx [client] (ecmascript)", ((__turbopack_context__) => {

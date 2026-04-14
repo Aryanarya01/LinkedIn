@@ -15,10 +15,16 @@
 .mainContainer_left{
     flex: 0.5;
 }
-
+.mainContainer_right{
+    flex: 0.5;
+}
 
 .mainContainer_left > p:nth-child(1){
-    flex: 2.9rem;
+    font-size:  2.9rem;
+    background: -webkit-linear-gradient(45deg,#000000,#b2b2b2);
+    background-clip: text;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
 }
 .mainContainer_left > p:nth-child(2){
     color: #4D4D4D;

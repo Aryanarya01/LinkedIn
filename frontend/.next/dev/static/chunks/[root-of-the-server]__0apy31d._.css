@@ -105,12 +105,17 @@
   display: flex;
 }
 
-.Home-module__Ho9lYW__mainContainer_left {
+.Home-module__Ho9lYW__mainContainer_left, .Home-module__Ho9lYW__mainContainer_right {
   flex: .5;
 }
 
 .Home-module__Ho9lYW__mainContainer_left > p:first-child {
-  flex: 2.9rem;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(45deg, #000, #b2b2b2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 2.9rem;
+  font-weight: bold;
 }
 
 .Home-module__Ho9lYW__mainContainer_left > p:nth-child(2) {
