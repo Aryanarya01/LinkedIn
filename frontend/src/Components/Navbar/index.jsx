@@ -9,7 +9,9 @@ const NavbarComponent = () => {
         <nav className={styles.navBar}>
             <h1>Pro Connect</h1>
         <div className={styles.navBar_OptionContainer}>
-            <div >
+            <div onClick={()=>{
+                router("/login")
+            }} className={styles.buttonJoin}>
                 <p>Be a part</p>
             </div>
 
