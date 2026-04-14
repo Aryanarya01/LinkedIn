@@ -1,8 +1,11 @@
 import React from 'react'
 
+
 const NavbarComponent = () => {
   return (
-    <div>NavbarComponent</div>
+    <div className={styles.container}>
+        
+    </div>
   )
 }
 
