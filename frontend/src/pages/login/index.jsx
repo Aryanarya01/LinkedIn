@@ -10,7 +10,6 @@ const LoginComponent = () => {
   const router = useRouter();
   const isLoginMethod = useState(false);
 
-
   useEffect(() => {
     if (authState.loggedIn) {
       router.push("/dashboard");
