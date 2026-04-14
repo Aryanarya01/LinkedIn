@@ -3,14 +3,14 @@ import styles from "./styles.module.css"
 import { useRouter } from 'next/router'
 
 const NavbarComponent = () => {
-    const router = useRouter()
+    const router = useRouter();
   return (
     <div className={styles.container}>
         <nav className={styles.navBar}>
             <h1>Pro Connect</h1>
         <div className={styles.navBar_OptionContainer}>
             <div onClick={()=>{
-                router("/login")
+                router.push("/login")
             }} className={styles.buttonJoin}>
                 <p>Be a part</p>
             </div>
