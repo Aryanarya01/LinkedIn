@@ -1,13 +1,16 @@
 import NavbarComponent from "@/Components/Navbar";
 import UserLayout from "@/layout/UserLayout";
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import styles from "./style.module.css";
 
 const LoginComponent = () => {
   const authState = useSelector((state) => state.auth);
   const router = useRouter();
+  const isLoginMethod = useState(false);
+
+
   useEffect(() => {
     if (authState.loggedIn) {
       router.push("/dashboard");
