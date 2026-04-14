@@ -28,7 +28,8 @@ const LoginComponent = () => {
                   <input type="text" placeholder="Name" className={styles.inputField} />
               </div>
 
-               <input type="text" placeholder="Username" className={styles.inputField} />
+               <input type="Email" placeholder="Email" className={styles.inputField} />
+                <input type="Password" placeholder="Password" className={styles.inputField} />
             </div>
           
           

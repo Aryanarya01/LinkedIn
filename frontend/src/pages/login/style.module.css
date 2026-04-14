@@ -45,6 +45,7 @@
     padding-top: 1.3rem;
     max-width: 400px;
     margin: 0 auto;
+    gap: 1.5rem;
 }
 .inputRow{
     width: fit-content;
