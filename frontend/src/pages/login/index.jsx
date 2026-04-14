@@ -25,8 +25,10 @@ const LoginComponent = () => {
             <div className={styles.inputContainers}>
               <div className={styles.inputRow}>
                  <input type="text" placeholder="Username" className={styles.inputField} />
-                  <input type="text" placeholder="Username" className={styles.inputField} />
+                  <input type="text" placeholder="Name" className={styles.inputField} />
               </div>
+
+               <input type="text" placeholder="Username" className={styles.inputField} />
             </div>
           
           
