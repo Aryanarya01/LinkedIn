@@ -20,7 +20,7 @@ const LoginComponent = () => {
       <div className={styles.container}>
         <div className={styles.cardContainer}>
           <div className={styles.cardContainer_left}>
-            <p >{isLoginMethod ? "Sign Up" : "Sign Up"}</p>
+            <p className={styles.cardleft_heading} >{isLoginMethod ? "Sign Up" : "Sign Up"}</p>
           </div>
           <div className={styles.cardContainer_right}></div>
         </div>

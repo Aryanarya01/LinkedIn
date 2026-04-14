@@ -23,6 +23,10 @@
     text-align: center;
 }
 
+.cardleft_heading{
+    font-weight: bold;
+}
+
 .cardContainer_right{
     flex: 0.4;
     background: #00488b;
