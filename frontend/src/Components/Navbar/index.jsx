@@ -1,24 +1,28 @@
-import React from 'react'
-import styles from "./styles.module.css"
-import { useRouter } from 'next/router'
+import React from "react";
+import styles from "./styles.module.css";
+import { useRouter } from "next/router";
 
 const NavbarComponent = () => {
-    const router = useRouter();
+  const router = useRouter();
   return (
     <div className={styles.container}>
-        <nav className={styles.navBar}>
-            <h1>Pro Connect</h1>
+      <nav className={styles.navBar}>
+        <h1 onClick={()=>{
+            router.push("/")
+        }}>Pro Connect</h1>
         <div className={styles.navBar_OptionContainer}>
-            <div onClick={()=>{
-                router.push("/login")
-            }} className={styles.buttonJoin}>
-                <p>Be a part</p>
-            </div>
-
+          <div
+            onClick={() => {
+              router.push("/login");
+            }}
+            className={styles.buttonJoin}
+          >
+            <p>Be a part</p>
+          </div>
         </div>
-        </nav>
+      </nav>
     </div>
-  )
-}
+  );
+};
 
-export default NavbarComponent
+export default NavbarComponent;

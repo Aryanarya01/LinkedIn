@@ -466,49 +466,11 @@ function triggerUpdate(msg) {
     }
 }
 }),
-"[project]/src/pages/login/index.jsx [client] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
+"[project]/src/pages/login/index.jsx [client] (ecmascript)", ((__turbopack_context__, module, exports) => {
 
-__turbopack_context__.s([
-    "default",
-    ()=>__TURBOPACK__default__export__
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/compiler-runtime.js [client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/index.js [client] (ecmascript)");
-;
-;
-;
-const LoginComponent = ()=>{
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(2);
-    if ($[0] !== "bf5e62d472b1a2ee96bf8a0059b7850d3f8f02deae9181c2282b2a9f831bf4bf") {
-        for(let $i = 0; $i < 2; $i += 1){
-            $[$i] = Symbol.for("react.memo_cache_sentinel");
-        }
-        $[0] = "bf5e62d472b1a2ee96bf8a0059b7850d3f8f02deae9181c2282b2a9f831bf4bf";
-    }
-    let t0;
-    if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
-        t0 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            children: "LoginComponent"
-        }, void 0, false, {
-            fileName: "[project]/src/pages/login/index.jsx",
-            lineNumber: 13,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[1] = t0;
-    } else {
-        t0 = $[1];
-    }
-    return t0;
-};
-_c = LoginComponent;
-const __TURBOPACK__default__export__ = LoginComponent;
-var _c;
-__turbopack_context__.k.register(_c, "LoginComponent");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
+const e = new Error("Could not parse module '[project]/src/pages/login/index.jsx'\n\nUnterminated regexp literal");
+e.code = 'MODULE_UNPARSABLE';
+throw e;
 }),
 "[next]/entry/page-loader.ts { PAGE => \"[project]/src/pages/login/index.jsx [client] (ecmascript)\" } [client] (ecmascript)", ((__turbopack_context__, module, exports) => {
 
