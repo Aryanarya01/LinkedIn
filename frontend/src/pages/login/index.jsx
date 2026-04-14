@@ -18,9 +18,13 @@ const LoginComponent = () => {
   });
   return (
     <UserLayout>
-      <div className={styles.cardContainer}>
-        <div className={styles.cardContainer_left}></div>
-        <div className={styles.cardContainer_right}></div>
+      <div className={styles.container}>
+        <div className={styles.cardContainer}>
+          <div className={styles.cardContainer_left}>
+            <p>{isLoginMethod ? "Sign Up" : "Sign Up"}</p>
+          </div>
+          <div className={styles.cardContainer_right}></div>
+        </div>
       </div>
     </UserLayout>
   );
