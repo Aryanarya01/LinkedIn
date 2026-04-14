@@ -4,7 +4,11 @@ import styles from "./styles.module.css"
 const NavbarComponent = () => {
   return (
     <div className={styles.container}>
-            <h2>Helli</h2>
+        <nav className={styles.navBar}>
+        <div className={styles.navBar_leftContainer}>
+            
+        </div>
+        </nav>
     </div>
   )
 }
