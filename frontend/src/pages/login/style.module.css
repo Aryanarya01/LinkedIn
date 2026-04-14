@@ -3,7 +3,7 @@
     justify-content: center;
     height: 90svh;
     align-items: center;
-    
+    background-color: snow;
 }
 
 
@@ -15,4 +15,19 @@
     width: 80vw;
     background: white;
     box-shadow: 10px 10px 15px rgb(173, 173, 173);
+}
+
+.cardContainer_left{
+    flex: 0.6;
+    padding: 2rem;
+    text-align: center;
+}
+
+.cardContainer_right{
+    flex: 0.4;
+    background: #00488b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
