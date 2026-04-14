@@ -546,8 +546,10 @@ var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$g
 var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$geist_mono_77bf7c02$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[next]/internal/font/google/geist_mono_77bf7c02.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/styles/Home.module.css [client] (css module)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/router.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$pages$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/pages/index.jsx [client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
+;
 ;
 ;
 ;
@@ -557,11 +559,11 @@ var _s = __turbopack_context__.k.signature();
 function Home() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(11);
-    if ($[0] !== "08fef17030fca44d4d65cf6838ce1db0b47b6bcc3a805b602937baedc9a6837d") {
+    if ($[0] !== "b72681ec2dda3e81ab8105aa095518724c76afde464c11916f94b059a926703a") {
         for(let $i = 0; $i < 11; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "08fef17030fca44d4d65cf6838ce1db0b47b6bcc3a805b602937baedc9a6837d";
+        $[0] = "b72681ec2dda3e81ab8105aa095518724c76afde464c11916f94b059a926703a";
     }
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"])();
     let t0;
@@ -571,14 +573,14 @@ function Home() {
             children: "Connect with Friends without Exaggerations"
         }, void 0, false, {
             fileName: "[project]/src/pages/index.jsx",
-            lineNumber: 26,
+            lineNumber: 27,
             columnNumber: 10
         }, this);
         t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
             children: "A True social media platform, with stories no blufs!"
         }, void 0, false, {
             fileName: "[project]/src/pages/index.jsx",
-            lineNumber: 27,
+            lineNumber: 28,
             columnNumber: 10
         }, this);
         $[1] = t0;
@@ -605,7 +607,7 @@ function Home() {
             children: "Join Now"
         }, void 0, false, {
             fileName: "[project]/src/pages/index.jsx",
-            lineNumber: 48,
+            lineNumber: 49,
             columnNumber: 10
         }, this);
         $[5] = t3;
@@ -625,13 +627,13 @@ function Home() {
                     children: t3
                 }, void 0, false, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 55,
+                    lineNumber: 56,
                     columnNumber: 61
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/pages/index.jsx",
-            lineNumber: 55,
+            lineNumber: 56,
             columnNumber: 10
         }, this);
         $[6] = t2;
@@ -647,12 +649,12 @@ function Home() {
                 src: "images/Connection.png"
             }, void 0, false, {
                 fileName: "[project]/src/pages/index.jsx",
-                lineNumber: 63,
+                lineNumber: 64,
                 columnNumber: 54
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/pages/index.jsx",
-            lineNumber: 63,
+            lineNumber: 64,
             columnNumber: 10
         }, this);
         $[8] = t5;
@@ -662,22 +664,28 @@ function Home() {
     let t6;
     if ($[9] !== t4) {
         t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].container,
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$pages$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["default"], {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].mainContainer,
-                    children: [
-                        t4,
-                        t5
-                    ]
-                }, void 0, true, {
+                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].container,
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$styles$2f$Home$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].mainContainer,
+                        children: [
+                            t4,
+                            t5
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/pages/index.jsx",
+                        lineNumber: 71,
+                        columnNumber: 63
+                    }, this)
+                }, void 0, false, {
                     fileName: "[project]/src/pages/index.jsx",
-                    lineNumber: 70,
-                    columnNumber: 46
+                    lineNumber: 71,
+                    columnNumber: 29
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/pages/index.jsx",
-                lineNumber: 70,
+                lineNumber: 71,
                 columnNumber: 12
             }, this)
         }, void 0, false);
