@@ -36,6 +36,15 @@
     border: 1px solid silver;
 }
 
+.inputContainers{
+    display: flex;
+    flex-direction: column;
+}
+.inputRow{
+    display: flex;
+    gap: 1.2rem;
+}
+
 .cardContainer_right{
     flex: 0.4;
     background: #00488b;
