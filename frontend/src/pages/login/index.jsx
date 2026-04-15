@@ -37,7 +37,7 @@ const LoginComponent = () => {
         <div className={styles.cardContainer}>
           <div className={styles.cardContainer_left}>
             <p className={styles.cardleft_heading} >{userLoginMethod ? "Sign In" : "Sign Up"}</p>
-            <p style={{color : authState.isError ? "red" : "green"}}>{authState.message.message}</p>
+            <p style={{color : authState.isError ? "red" : "green"}}>{authState.message?.message}</p>
             <div className={styles.inputContainers}>
               <div className={styles.inputRow}>
                  <input onChange={(e)=>setUsername(e.target.value)} type="text" placeholder="Username" className={styles.inputField} />

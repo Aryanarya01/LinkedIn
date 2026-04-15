@@ -497,25 +497,25 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f
 ;
 const loginUser = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])("user/login", async (user, thunkAPI)=>{
     try {
-        const response1 = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["clientServer"].post('/login', {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["clientServer"].post('/login', {
             email: user.email,
             password: user.password
         });
-        if (response1.data.token) {
-            localStorage.setItem("token", response1.data.token);
+        if (response.data.token) {
+            localStorage.setItem("token", response.data.token);
         } else {
             return thunkAPI.rejectWithValue({
                 message: "token not provided"
             });
         }
-        return thunkAPI.fulfillWithValue(response1.data.token);
+        return thunkAPI.fulfillWithValue(response.data.token);
     } catch (error) {
         return thunkAPI.rejectWithValue(error.response.data);
     }
 });
 const registerUser = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])("user/register", async (user, thunkAPI)=>{
     try {
-        const request = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["clientServer"].post("/register", {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["clientServer"].post("/register", {
             username: user.username,
             password: user.password,
             email: user.email,
@@ -583,7 +583,9 @@ const authSlice = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modul
             state.isError = false;
             state.isSuccess = true;
             state.loggedIn = true;
-            state.message = "Registered Successfull, Please Login!";
+            state.message = {
+                message: "Registered Successfull, Please Login!"
+            };
         }).addCase(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$redux$2f$action$2f$AuthAction$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["registerUser"].rejected, (state, action)=>{
             state.isLoading = false;
             state.isError = true;
