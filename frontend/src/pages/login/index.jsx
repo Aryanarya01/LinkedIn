@@ -25,12 +25,18 @@ const LoginComponent = () => {
     }
   },[authState.loggedIn]);
 
+  useEffect(()=>{
+    
+  })
+
   const handelRegister = ()=>{
     console.log("registering");
     dispatch(registerUser({username,password,email,name}))
     
   }
-
+  const handelLogin = ()=>{
+    console.log("login")
+  }
   return (
     <UserLayout>
       <div className={styles.container}>
@@ -51,7 +57,7 @@ const LoginComponent = () => {
                 <input onChange={(e)=>setPassword(e.target.value)} type="Password" placeholder="Password" className={styles.inputField} />
               <div onClick={()=>{
                 if(userLoginMethod){
-
+                  handelLogin()
                 }else{
                   handelRegister()
                 }
