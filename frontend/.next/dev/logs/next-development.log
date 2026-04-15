@@ -250,3 +250,10 @@
 {"timestamp":"00:43:10.975","source":"Server","level":"LOG","message":"✓ Compiled in 852ms"}
 {"timestamp":"00:43:12.905","source":"Browser","level":"LOG","message":"Refreshing page data due to server-side change"}
 {"timestamp":"00:43:17.728","source":"Server","level":"LOG","message":"✓ Compiled in 170ms"}
+{"timestamp":"00:44:17.513","source":"Server","level":"LOG","message":"✓ Compiled in 264ms"}
+{"timestamp":"00:44:19.593","source":"Server","level":"LOG","message":"✓ Compiled in 111ms"}
+{"timestamp":"00:44:20.213","source":"Browser","level":"LOG","message":"Refreshing page data due to server-side change"}
+{"timestamp":"00:44:20.213","source":"Browser","level":"ERROR","message":"./src/pages/login/index.jsx:28:13\nParenthesized expression cannot be empty\n  26 |     }\n  27 |   },[authState.loggedIn]);\n> 28 |   useEffect(())\n     |             ^^\n  29 |   useEffect(()=>{\n  30 |       dispatch(emptyMessage());\n  31 |   },[userLoginMethod])\n\nParsing ecmascript source code failed\n\nGenerated code of loaders [next/dist/build/babel/loader] transform of file content of src/pages/login/index.jsx:\n./src/pages/login/index.jsx:28:13\n  26 |     }\n  27 |   },[authState.loggedIn]);\n> 28 |   useEffect(())\n     |             ^^\n  29 |   useEffect(()=>{\n  30 |       dispatch(emptyMessage());\n  31 |   },[userLoginMethod])"}
+{"timestamp":"00:44:20.213","source":"Browser","level":"ERROR","message":"./src/pages/login/index.jsx\nCode generation for chunk item errored\nAn error occurred while generating the chunk item [project]/src/pages/login/index.jsx [ssr] (ecmascript)\n\nCaused by:\n- CJS module can't be async.\n\nDebug info:\n- An error occurred while generating the chunk item [project]/src/pages/login/index.jsx [ssr] (ecmascript)\n- Execution of <EcmascriptModuleAsset as EcmascriptChunkPlaceable>::chunk_item_content failed\n- Execution of EcmascriptChunkItemContent::new failed\n- CJS module can't be async."}
+{"timestamp":"00:44:24.305","source":"Server","level":"LOG","message":"✓ Compiled in 2.2s"}
+{"timestamp":"00:44:25.203","source":"Browser","level":"LOG","message":"Refreshing page data due to server-side change"}

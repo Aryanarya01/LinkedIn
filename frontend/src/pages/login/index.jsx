@@ -25,7 +25,9 @@ const LoginComponent = () => {
       router.push("/dashboard");
     }
   },[authState.loggedIn]);
-
+  useEffect(()=>{
+    
+  })
   useEffect(()=>{
       dispatch(emptyMessage());
   },[userLoginMethod])
