@@ -564,11 +564,11 @@ var _s = __turbopack_context__.k.signature();
 const NavbarComponent = ()=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(16);
-    if ($[0] !== "2b76dd489e44b5c34fb5748acc484e63f83ea087a756f21482a6c1a32037035c") {
+    if ($[0] !== "2f7efb0612792ea16f320d028e39f4308cde47246e15a9334debb9b718a8eddb") {
         for(let $i = 0; $i < 16; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2b76dd489e44b5c34fb5748acc484e63f83ea087a756f21482a6c1a32037035c";
+        $[0] = "2f7efb0612792ea16f320d028e39f4308cde47246e15a9334debb9b718a8eddb";
     }
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const authState = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["useSelector"])(_temp);
@@ -603,17 +603,34 @@ const NavbarComponent = ()=>{
     if ($[4] !== authState.profileFetched || $[5] !== authState.user) {
         t2 = authState.profileFetched && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    children: [
-                        "Hey, ",
-                        authState.user.userId.name
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/Components/Navbar/index.jsx",
-                    lineNumber: 37,
-                    columnNumber: 48
-                }, ("TURBOPACK compile-time value", void 0))
-            }, void 0, false, {
+                style: {
+                    display: "flex",
+                    gap: "1.2rem"
+                },
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        children: [
+                            "Hey, ",
+                            authState.user.userId.name
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/Components/Navbar/index.jsx",
+                        lineNumber: 40,
+                        columnNumber: 10
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        style: {
+                            fontWeight: "bold",
+                            cursor: "pointer"
+                        },
+                        children: "Profile"
+                    }, void 0, false, {
+                        fileName: "[project]/src/Components/Navbar/index.jsx",
+                        lineNumber: 40,
+                        columnNumber: 50
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/Components/Navbar/index.jsx",
                 lineNumber: 37,
                 columnNumber: 43
@@ -640,12 +657,12 @@ const NavbarComponent = ()=>{
                 children: "Be a part"
             }, void 0, false, {
                 fileName: "[project]/src/Components/Navbar/index.jsx",
-                lineNumber: 48,
+                lineNumber: 54,
                 columnNumber: 38
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/Components/Navbar/index.jsx",
-            lineNumber: 46,
+            lineNumber: 52,
             columnNumber: 39
         }, ("TURBOPACK compile-time value", void 0));
         $[7] = authState.profileFetched;
@@ -664,7 +681,7 @@ const NavbarComponent = ()=>{
             ]
         }, void 0, true, {
             fileName: "[project]/src/Components/Navbar/index.jsx",
-            lineNumber: 57,
+            lineNumber: 63,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[10] = t2;
@@ -685,12 +702,12 @@ const NavbarComponent = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/Components/Navbar/index.jsx",
-                lineNumber: 66,
+                lineNumber: 72,
                 columnNumber: 44
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/Components/Navbar/index.jsx",
-            lineNumber: 66,
+            lineNumber: 72,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[13] = t1;

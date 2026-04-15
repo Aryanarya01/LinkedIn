@@ -147,17 +147,34 @@ const NavbarComponent = ()=>{
                     children: [
                         authState.profileFetched && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
-                                    children: [
-                                        "Hey, ",
-                                        authState.user.userId.name
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/Components/Navbar/index.jsx",
-                                    lineNumber: 22,
-                                    columnNumber: 13
-                                }, ("TURBOPACK compile-time value", void 0))
-                            }, void 0, false, {
+                                style: {
+                                    display: "flex",
+                                    gap: "1.2rem"
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                        children: [
+                                            "Hey, ",
+                                            authState.user.userId.name
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/src/Components/Navbar/index.jsx",
+                                        lineNumber: 22,
+                                        columnNumber: 13
+                                    }, ("TURBOPACK compile-time value", void 0)),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
+                                        style: {
+                                            fontWeight: "bold",
+                                            cursor: "pointer"
+                                        },
+                                        children: "Profile"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/Components/Navbar/index.jsx",
+                                        lineNumber: 23,
+                                        columnNumber: 13
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/src/Components/Navbar/index.jsx",
                                 lineNumber: 21,
                                 columnNumber: 12
@@ -176,12 +193,12 @@ const NavbarComponent = ()=>{
                                 children: "Be a part"
                             }, void 0, false, {
                                 fileName: "[project]/src/Components/Navbar/index.jsx",
-                                lineNumber: 34,
+                                lineNumber: 35,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/src/Components/Navbar/index.jsx",
-                            lineNumber: 28,
+                            lineNumber: 29,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
