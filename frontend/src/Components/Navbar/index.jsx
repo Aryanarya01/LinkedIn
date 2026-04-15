@@ -16,6 +16,11 @@ const NavbarComponent = () => {
         }}>Pro Connect</h1>
         <div className={styles.navBar_OptionContainer}>
           
+
+        {authState.profileFetched && <div>
+            
+          </div>}
+
           
           {!authState.profileFetched &&
           <div
