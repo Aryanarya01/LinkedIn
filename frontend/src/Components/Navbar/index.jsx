@@ -18,7 +18,9 @@ const NavbarComponent = () => {
           
 
         {authState.profileFetched && <div>
-            
+           <div>
+            <p>Hey, {authState.user.userId.name}</p>
+           </div>
           </div>}
 
           
