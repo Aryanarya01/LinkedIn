@@ -47,10 +47,10 @@ globalThis.__BUILD_MANIFEST = {
       "static/chunks/node_modules_react-dom_0bruynb._.js",
       "static/chunks/node_modules_axios_lib_07q4_l1._.js",
       "static/chunks/node_modules_0b10f4c._.js",
-      "static/chunks/[root-of-the-server]__0dfsxt_._.js",
+      "static/chunks/[root-of-the-server]__0t5b8__._.js",
       "static/chunks/src_0tlwn-j._.css",
       "static/chunks/src_pages_login_index_jsx_07xvfw~._.js",
-      "static/chunks/turbopack-src_pages_login_index_jsx_0rvzdcb._.js"
+      "static/chunks/turbopack-src_pages_login_index_jsx_0d7nx.x._.js"
     ]
   },
   "devFiles": [],

@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./style.module.css";
 import { loginUser, registerUser } from "@/config/redux/action/AuthAction";
+import { emptyMessage } from "@/config/redux/reducer/authReducer";
 
 const LoginComponent = () => {
   const authState = useSelector((state) => state.auth);
@@ -26,7 +27,7 @@ const LoginComponent = () => {
   },[authState.loggedIn]);
 
   useEffect(()=>{
-    
+      dispatch(emptyMessage());
   },[userLoginMethod])
 
   const handelRegister = ()=>{
