@@ -1,5 +1,5 @@
 (globalThis["TURBOPACK_CHUNK_LISTS"] || (globalThis["TURBOPACK_CHUNK_LISTS"] = [])).push({
     script: typeof document === "object" ? document.currentScript : undefined,
-    chunks: ["static/chunks/node_modules_next_dist_compiled_0ywsb3_._.js","static/chunks/node_modules_next_dist_shared_lib_0~pg0mt._.js","static/chunks/node_modules_next_dist_client_0pe1dg-._.js","static/chunks/node_modules_next_dist_0k8zr~w._.js","static/chunks/node_modules_react-dom_0bruynb._.js","static/chunks/node_modules_axios_lib_07q4_l1._.js","static/chunks/node_modules_07g-dj.._.js","static/chunks/[root-of-the-server]__0dep711._.js","static/chunks/src_styles_globals_0fuav90.css"],
+    chunks: ["static/chunks/node_modules_next_dist_compiled_0ywsb3_._.js","static/chunks/node_modules_next_dist_shared_lib_0~pg0mt._.js","static/chunks/node_modules_next_dist_client_0pe1dg-._.js","static/chunks/node_modules_next_dist_0k8zr~w._.js","static/chunks/node_modules_react-dom_0bruynb._.js","static/chunks/node_modules_axios_lib_07q4_l1._.js","static/chunks/node_modules_07g-dj.._.js","static/chunks/[root-of-the-server]__128ld7h._.js","static/chunks/src_styles_globals_0fuav90.css"],
     source: "entry"
 });
