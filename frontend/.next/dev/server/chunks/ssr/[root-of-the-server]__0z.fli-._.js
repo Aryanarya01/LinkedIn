@@ -108,6 +108,9 @@ const authSlice = (0, __TURBOPACK__imported__module__$5b$externals$5d2f40$reduxj
         reset: ()=>initialState,
         handelLoginUser: (state)=>{
             state.message = "hello";
+        },
+        emptyMessage: (state)=>{
+            state.message = "";
         }
     },
     extraReducers: (builder)=>{

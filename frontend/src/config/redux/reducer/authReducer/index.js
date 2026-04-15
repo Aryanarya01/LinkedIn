@@ -21,6 +21,9 @@ const authSlice = createSlice({
         reset : ()=>initialState,
         handelLoginUser : (state)=>{
             state.message = "hello"
+        },
+        emptyMessage : (state)=>{
+            state.message = ""
         }
     },
     extraReducers : (builder)=>{

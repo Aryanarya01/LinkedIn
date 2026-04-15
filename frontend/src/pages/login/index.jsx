@@ -27,7 +27,7 @@ const LoginComponent = () => {
 
   useEffect(()=>{
     
-  })
+  },[userLoginMethod])
 
   const handelRegister = ()=>{
     console.log("registering");
