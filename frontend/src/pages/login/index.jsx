@@ -17,7 +17,7 @@ const LoginComponent = () => {
   });
 
   const handelRegister = ()=>{
-    
+
   }
 
   return (
@@ -35,7 +35,13 @@ const LoginComponent = () => {
 
                <input type="Email" placeholder="Email" className={styles.inputField} />
                 <input type="Password" placeholder="Password" className={styles.inputField} />
-              <div className={styles.buttonWithOutline}>
+              <div onClick={()=>{
+                if(userLoginMethod){
+
+                }else{
+                  handelRegister()
+                }
+              }} className={styles.buttonWithOutline}>
                   <p>{userLoginMethod ? "Sign In" : "Sign Up"}</p>
               </div>
             
