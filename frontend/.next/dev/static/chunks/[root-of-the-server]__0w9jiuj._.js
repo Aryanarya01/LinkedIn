@@ -477,21 +477,24 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/compiler-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/router.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/index.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-redux/dist/react-redux.mjs [client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 const Dashboard = ()=>{
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(8);
-    if ($[0] !== "1f7619e8e11ec521a699d7148f7fa008f8febdebe989863fc452a61041ab4af0") {
-        for(let $i = 0; $i < 8; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(10);
+    if ($[0] !== "51d9520066c36263fef88f377cceb288162e89da44b70218bf0a51dc61ace01b") {
+        for(let $i = 0; $i < 10; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "1f7619e8e11ec521a699d7148f7fa008f8febdebe989863fc452a61041ab4af0";
+        $[0] = "51d9520066c36263fef88f377cceb288162e89da44b70218bf0a51dc61ace01b";
     }
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const dispath = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["useDispatch"])();
     const [isTokenThere, setIsTokenThere] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t0;
     if ($[1] !== router) {
@@ -516,40 +519,48 @@ const Dashboard = ()=>{
     }
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])(t0, t1);
     let t2;
-    let t3;
-    if ($[4] !== isTokenThere) {
+    if ($[4] !== dispath || $[5] !== isTokenThere) {
         t2 = ()=>{
-            if (isTokenThere) {}
+            if (isTokenThere) {
+                dispath(get);
+            }
         };
+        $[4] = dispath;
+        $[5] = isTokenThere;
+        $[6] = t2;
+    } else {
+        t2 = $[6];
+    }
+    let t3;
+    if ($[7] !== isTokenThere) {
         t3 = [
             isTokenThere
         ];
-        $[4] = isTokenThere;
-        $[5] = t2;
-        $[6] = t3;
+        $[7] = isTokenThere;
+        $[8] = t3;
     } else {
-        t2 = $[5];
-        t3 = $[6];
+        t3 = $[8];
     }
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])(t2, t3);
     let t4;
-    if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[9] === Symbol.for("react.memo_cache_sentinel")) {
         t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             children: "Dashboard"
         }, void 0, false, {
             fileName: "[project]/src/pages/dashboard/index.jsx",
-            lineNumber: 53,
+            lineNumber: 62,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[7] = t4;
+        $[9] = t4;
     } else {
-        t4 = $[7];
+        t4 = $[9];
     }
     return t4;
 };
-_s(Dashboard, "65EVX8wK8hOmTXo/GZM2Rh/1nR4=", false, function() {
+_s(Dashboard, "2mwpueh8C04TL/EHkUBPljKQliw=", false, function() {
     return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"]
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["useDispatch"]
     ];
 });
 _c = Dashboard;

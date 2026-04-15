@@ -1,1 +1,3 @@
 {"timestamp":"00:00:06.040","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:42:46.207","source":"Browser","level":"LOG","message":"login"}
+{"timestamp":"00:42:49.431","source":"Browser","level":"LOG","message":"login"}
