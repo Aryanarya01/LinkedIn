@@ -32,9 +32,28 @@ const Dashboard = () => {
   return (
    
       <UserLayout>
-        {authState.profileFetched && <div>
-            Hey {authState.user.userId.name}
-          </div>}
+         
+      <div className="container">
+
+            <div className="homeContainer">
+
+                <div className="homeContainer__leftBar">
+                    
+                </div>
+
+            </div>
+
+            <div className="feedContainer">
+
+            </div>
+
+            <div className="extraContainer">
+
+            </div>
+
+      </div>
+
+
       </UserLayout>
   )
 }
