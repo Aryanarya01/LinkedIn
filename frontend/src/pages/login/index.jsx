@@ -19,11 +19,11 @@ const LoginComponent = () => {
 
 
 
-  // useEffect(() => {
-  //   if (authState.loggedIn) {
-  //     router.push("/dashboard");
-  //   }
-  // });
+  useEffect(() => {
+    if (authState.loggedIn) {
+      router.push("/dashboard");
+    }
+  },[authState.loggedIn]);
 
   const handelRegister = ()=>{
     console.log("registering");
