@@ -497,24 +497,34 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f
 ;
 const loginUser = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])("user/login", async (user, thunkAPI)=>{
     try {
-        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["clientServer"].post('/login', {
+        const response1 = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["clientServer"].post('/login', {
             email: user.email,
             password: user.password
         });
-        if (response.data.token) {
-            localStorage.setItem("token", response.data.token);
+        if (response1.data.token) {
+            localStorage.setItem("token", response1.data.token);
         } else {
             return thunkAPI.rejectWithValue({
                 message: "token not provided"
             });
         }
-        return thunkAPI.fulfillWithValue(response.data.token);
+        return thunkAPI.fulfillWithValue(response1.data.token);
     } catch (error) {
         return thunkAPI.rejectWithValue(error.response.data);
     }
 });
 const registerUser = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])("user/register", async (user, thunkAPI)=>{
-    try {} catch (err) {}
+    try {
+        const request = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["clientServer"].post("/register", {
+            username: user.username,
+            password: user.password,
+            email: user.email,
+            name: user.name
+        });
+        return thunkAPI.fulfillWithValue(response.data);
+    } catch (err) {
+        return thunkAPI.rejectWithValue(err.response.data);
+    }
 });
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);

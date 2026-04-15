@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./style.module.css";
-import { loginUser } from "@/config/redux/action/AuthAction";
+import { loginUser, registerUser } from "@/config/redux/action/AuthAction";
 
 const LoginComponent = () => {
   const authState = useSelector((state) => state.auth);
@@ -14,20 +14,20 @@ const LoginComponent = () => {
 
   const [email,setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username,setUserName] = useState("");
+  const [username,setUsername] = useState("");
   const [name,setName] = useState("")
 
 
 
-  useEffect(() => {
-    if (authState.loggedIn) {
-      router.push("/dashboard");
-    }
-  });
+  // useEffect(() => {
+  //   if (authState.loggedIn) {
+  //     router.push("/dashboard");
+  //   }
+  // });
 
   const handelRegister = ()=>{
     console.log("registering");
-    dispatch(loginUser())
+    dispatch(registerUser({username,password,email,name}))
     
   }
 
@@ -37,15 +37,15 @@ const LoginComponent = () => {
         <div className={styles.cardContainer}>
           <div className={styles.cardContainer_left}>
             <p className={styles.cardleft_heading} >{userLoginMethod ? "Sign In" : "Sign Up"}</p>
-          
+            <p style={{color : authState.isError ? "red" : "green"}}>{authState.message.message}</p>
             <div className={styles.inputContainers}>
               <div className={styles.inputRow}>
-                 <input type="text" placeholder="Username" className={styles.inputField} />
-                  <input type="text" placeholder="Name" className={styles.inputField} />
+                 <input onChange={(e)=>setUsername(e.target.value)} type="text" placeholder="Username" className={styles.inputField} />
+                  <input onChange={(e)=>setName(e.target.value)} type="text" placeholder="Name" className={styles.inputField} />
               </div>
 
-               <input type="Email" placeholder="Email" className={styles.inputField} />
-                <input type="Password" placeholder="Password" className={styles.inputField} />
+               <input onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Email" className={styles.inputField} />
+                <input onChange={(e)=>setPassword(e.target.value)} type="Password" placeholder="Password" className={styles.inputField} />
               <div onClick={()=>{
                 if(userLoginMethod){
 
