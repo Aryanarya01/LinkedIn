@@ -11,15 +11,17 @@ const DashboardLayout = ({children}) => {
                     
                 </div>
 
-            </div>
-
-            <div className={styles.feedContainer}>
+                 <div className={styles.homeContainer__feedContainer}>
                 {children}
             </div>
 
-            <div className={styles.extraContainer}>
+            <div className={styles.homeContainer__extraContainer}>
 
             </div>
+
+            </div>
+
+            
 
       </div>
     </div>

@@ -590,24 +590,17 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$layout$2f$DashboardLa
 ;
 const DashboardLayout = (t0)=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(7);
-    if ($[0] !== "ff27579805ae8a996d3391129f5b73636954492204f77521f0c5c76c0e44ac0c") {
+    if ($[0] !== "6ae5c05f3b8f257fda731c09d13ab5182b3d2ee5f605ef8e7754629964b13150") {
         for(let $i = 0; $i < 7; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "ff27579805ae8a996d3391129f5b73636954492204f77521f0c5c76c0e44ac0c";
+        $[0] = "6ae5c05f3b8f257fda731c09d13ab5182b3d2ee5f605ef8e7754629964b13150";
     }
     const { children } = t0;
     let t1;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
         t1 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$layout$2f$DashboardLayout$2f$index$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].homeContainer,
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$layout$2f$DashboardLayout$2f$index$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].homeContainer__leftBar
-            }, void 0, false, {
-                fileName: "[project]/src/layout/DashboardLayout/index.jsx",
-                lineNumber: 17,
-                columnNumber: 48
-            }, ("TURBOPACK compile-time value", void 0))
+            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$layout$2f$DashboardLayout$2f$index$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].homeContainer__leftBar
         }, void 0, false, {
             fileName: "[project]/src/layout/DashboardLayout/index.jsx",
             lineNumber: 17,
@@ -620,7 +613,7 @@ const DashboardLayout = (t0)=>{
     let t2;
     if ($[2] !== children) {
         t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$layout$2f$DashboardLayout$2f$index$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].feedContainer,
+            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$layout$2f$DashboardLayout$2f$index$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].homeContainer__feedContainer,
             children: children
         }, void 0, false, {
             fileName: "[project]/src/layout/DashboardLayout/index.jsx",
@@ -635,7 +628,7 @@ const DashboardLayout = (t0)=>{
     let t3;
     if ($[4] === Symbol.for("react.memo_cache_sentinel")) {
         t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$layout$2f$DashboardLayout$2f$index$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].extraContainer
+            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$layout$2f$DashboardLayout$2f$index$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].homeContainer__extraContainer
         }, void 0, false, {
             fileName: "[project]/src/layout/DashboardLayout/index.jsx",
             lineNumber: 32,
@@ -650,12 +643,19 @@ const DashboardLayout = (t0)=>{
         t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$layout$2f$DashboardLayout$2f$index$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].container,
-                children: [
-                    t1,
-                    t2,
-                    t3
-                ]
-            }, void 0, true, {
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$layout$2f$DashboardLayout$2f$index$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].homeContainer,
+                    children: [
+                        t1,
+                        t2,
+                        t3
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/layout/DashboardLayout/index.jsx",
+                    lineNumber: 39,
+                    columnNumber: 49
+                }, ("TURBOPACK compile-time value", void 0))
+            }, void 0, false, {
                 fileName: "[project]/src/layout/DashboardLayout/index.jsx",
                 lineNumber: 39,
                 columnNumber: 15
