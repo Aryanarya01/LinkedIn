@@ -1,5 +1,6 @@
 import { getAboutUser } from '@/config/redux/action/AuthAction';
 import { getAllPosts } from '@/config/redux/action/PostAction';
+import DashboardLayout from '@/layout/DashboardLayout';
 import UserLayout from '@/layout/UserLayout';
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
@@ -33,25 +34,13 @@ const Dashboard = () => {
    
       <UserLayout>
          
-      <div className="container">
-
-            <div className="homeContainer">
-
-                <div className="homeContainer__leftBar">
-                    
-                </div>
-
-            </div>
-
-            <div className="feedContainer">
-
-            </div>
-
-            <div className="extraContainer">
-
-            </div>
-
-      </div>
+      <DashboardLayout>
+        <div>
+          <h1>
+            Dashboard
+          </h1>
+        </div>
+      </DashboardLayout>
 
 
       </UserLayout>
