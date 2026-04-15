@@ -15,6 +15,11 @@ const LoginComponent = () => {
       router.push("/dashboard");
     }
   });
+
+  const handelRegister = ()=>{
+    
+  }
+
   return (
     <UserLayout>
       <div className={styles.container}>
