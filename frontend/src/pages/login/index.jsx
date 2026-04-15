@@ -27,7 +27,7 @@ const LoginComponent = () => {
 
   const handelRegister = ()=>{
     console.log("registering");
-    dispatch(loginUser)
+    dispatch(loginUser())
     
   }
 
