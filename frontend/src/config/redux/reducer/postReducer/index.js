@@ -42,4 +42,4 @@ const postSlice = createSlice({
     }
 })
 
-export 
+export default postSlice.reducer
