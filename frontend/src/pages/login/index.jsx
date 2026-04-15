@@ -37,6 +37,7 @@ const LoginComponent = () => {
   }
   const handelLogin = ()=>{
     console.log("login")
+    dispatch(loginUser({email,password}))
   }
   return (
     <UserLayout>

@@ -246,3 +246,7 @@
 {"timestamp":"00:41:36.314","source":"Server","level":"LOG","message":"✓ Compiled in 962ms"}
 {"timestamp":"00:41:37.431","source":"Browser","level":"LOG","message":"login"}
 {"timestamp":"00:41:40.280","source":"Browser","level":"LOG","message":"registering"}
+{"timestamp":"00:43:05.254","source":"Server","level":"LOG","message":"✓ Compiled in 190ms"}
+{"timestamp":"00:43:10.975","source":"Server","level":"LOG","message":"✓ Compiled in 852ms"}
+{"timestamp":"00:43:12.905","source":"Browser","level":"LOG","message":"Refreshing page data due to server-side change"}
+{"timestamp":"00:43:17.728","source":"Server","level":"LOG","message":"✓ Compiled in 170ms"}
