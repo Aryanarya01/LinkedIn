@@ -1,16 +1,25 @@
 import { useRouter } from 'next/router'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Dashboard = () => {
     const router  = useRouter();
-       
+      
+  const [isTokenThere,setIsTokenThere] = useState(false);
+
   useEffect(() => {
     const token = localStorage.getItem('token');
 
     if (!token) {
       router.push("/login");
     }
+    setIsTokenThere(true)
   }, []);
+
+  useEffect(()=>{
+
+  },[isTokenThere])
+
+
   return (
     <div>Dashboard</div>
   )
