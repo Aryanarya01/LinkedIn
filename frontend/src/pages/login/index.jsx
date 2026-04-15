@@ -2,12 +2,13 @@ import NavbarComponent from "@/Components/Navbar";
 import UserLayout from "@/layout/UserLayout";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./style.module.css";
 
 const LoginComponent = () => {
   const authState = useSelector((state) => state.auth);
   const router = useRouter();
+  const dispatch = useDispatch();
   const [userLoginMethod,setUserLoginMethod] = useState(false);
 
   useEffect(() => {
@@ -17,7 +18,9 @@ const LoginComponent = () => {
   });
 
   const handelRegister = ()=>{
-
+    console.log("registering");
+    
+    
   }
 
   return (
