@@ -4,12 +4,20 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./style.module.css";
+import { loginUser } from "@/config/redux/action/AuthAction";
 
 const LoginComponent = () => {
   const authState = useSelector((state) => state.auth);
   const router = useRouter();
   const dispatch = useDispatch();
   const [userLoginMethod,setUserLoginMethod] = useState(false);
+
+  const [email,setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [username,setUserName] = useState("");
+  const [name,setName] = useState("")
+
+
 
   useEffect(() => {
     if (authState.loggedIn) {
@@ -19,7 +27,7 @@ const LoginComponent = () => {
 
   const handelRegister = ()=>{
     console.log("registering");
-    
+    dispatch(loginUser)
     
   }
 
