@@ -63,7 +63,11 @@ const LoginComponent = () => {
           
           
           </div>
-          <div className={styles.cardContainer_right}></div>
+          <div className={styles.cardContainer_right}>
+
+              <p>Already Logged In</p>
+
+          </div>
         </div>
       </div>
     </UserLayout>
