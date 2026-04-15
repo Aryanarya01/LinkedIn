@@ -65,8 +65,14 @@ const LoginComponent = () => {
           </div>
           <div className={styles.cardContainer_right}>
 
-              <p>Already Have an Account?</p>
-
+        
+                {userLoginMethod ? <p>Don't Have an Account?</p> :<p>Already Have an Account?</p>}
+                   <div onClick={()=>{
+                      setUserLoginMethod(!userLoginMethod)
+                }} style={{color:"black",textAlign : "center"}} className={styles.buttonWithOutline}>
+                    <p>{userLoginMethod ? "Sign Up" : "Sign In"}</p>
+                </div>
+               
           </div>
         </div>
       </div>
