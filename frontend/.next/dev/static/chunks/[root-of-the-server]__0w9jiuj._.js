@@ -484,12 +484,12 @@ var _s = __turbopack_context__.k.signature();
 ;
 const Dashboard = ()=>{
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(7);
-    if ($[0] !== "e138a6d60156bd56efbb46ecfba0a39bd2da6640a094625aa8b74fe4a79ba5ae") {
-        for(let $i = 0; $i < 7; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(8);
+    if ($[0] !== "1f7619e8e11ec521a699d7148f7fa008f8febdebe989863fc452a61041ab4af0") {
+        for(let $i = 0; $i < 8; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "e138a6d60156bd56efbb46ecfba0a39bd2da6640a094625aa8b74fe4a79ba5ae";
+        $[0] = "1f7619e8e11ec521a699d7148f7fa008f8febdebe989863fc452a61041ab4af0";
     }
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const [isTokenThere, setIsTokenThere] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -516,30 +516,36 @@ const Dashboard = ()=>{
     }
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])(t0, t1);
     let t2;
+    let t3;
     if ($[4] !== isTokenThere) {
-        t2 = [
+        t2 = ()=>{
+            if (isTokenThere) {}
+        };
+        t3 = [
             isTokenThere
         ];
         $[4] = isTokenThere;
         $[5] = t2;
+        $[6] = t3;
     } else {
         t2 = $[5];
+        t3 = $[6];
     }
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])(_temp, t2);
-    let t3;
-    if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
-        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useEffect"])(t2, t3);
+    let t4;
+    if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
+        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             children: "Dashboard"
         }, void 0, false, {
             fileName: "[project]/src/pages/dashboard/index.jsx",
-            lineNumber: 47,
+            lineNumber: 53,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[6] = t3;
+        $[7] = t4;
     } else {
-        t3 = $[6];
+        t4 = $[7];
     }
-    return t3;
+    return t4;
 };
 _s(Dashboard, "65EVX8wK8hOmTXo/GZM2Rh/1nR4=", false, function() {
     return [
@@ -548,7 +554,6 @@ _s(Dashboard, "65EVX8wK8hOmTXo/GZM2Rh/1nR4=", false, function() {
 });
 _c = Dashboard;
 const __TURBOPACK__default__export__ = Dashboard;
-function _temp() {}
 var _c;
 __turbopack_context__.k.register(_c, "Dashboard");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {

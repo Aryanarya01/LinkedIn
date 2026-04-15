@@ -16,7 +16,9 @@ const Dashboard = () => {
   }, []);
 
   useEffect(()=>{
-
+    if(isTokenThere){
+      
+    }
   },[isTokenThere])
 
 
