@@ -1,5 +1,6 @@
 import { getAboutUser } from '@/config/redux/action/AuthAction';
 import { getAllPosts } from '@/config/redux/action/PostAction';
+import UserLayout from '@/layout/UserLayout';
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
@@ -29,9 +30,12 @@ const Dashboard = () => {
 
 
   return (
-    <div>
-    hey
-    </div>
+   
+      <UserLayout>
+        {authState.profileFetched && <div>
+            Hey {authState.user.userId.name}
+          </div>}
+      </UserLayout>
   )
 }
 

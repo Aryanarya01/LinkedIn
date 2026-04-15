@@ -1,9 +1,13 @@
 import React from "react";
 import styles from "./styles.module.css";
 import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
 
 const NavbarComponent = () => {
   const router = useRouter();
+
+  const authState = useSelector((state)=>state.auth)
+  
   return (
     <div className={styles.container}>
       <nav className={styles.navBar}>
@@ -11,6 +15,9 @@ const NavbarComponent = () => {
             router.push("/")
         }}>Pro Connect</h1>
         <div className={styles.navBar_OptionContainer}>
+          
+          
+          {!authState.profileFetched &&
           <div
             onClick={() => {
               router.push("/login");
@@ -19,6 +26,8 @@ const NavbarComponent = () => {
           >
             <p>Be a part</p>
           </div>
+}
+
         </div>
       </nav>
     </div>

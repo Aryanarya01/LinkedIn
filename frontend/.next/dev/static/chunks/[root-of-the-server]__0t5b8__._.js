@@ -487,8 +487,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$com
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/index.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Components$2f$Navbar$2f$styles$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/Components/Navbar/styles.module.css [client] (css module)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/router.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-redux/dist/react-redux.mjs [client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
+;
 ;
 ;
 ;
@@ -496,13 +498,14 @@ var _s = __turbopack_context__.k.signature();
 const NavbarComponent = ()=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$compiler$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["c"])(12);
-    if ($[0] !== "175f76b041e9f7f37da4ee1a95c94bce548f49d5c3fa70e737d740bfd39db24f") {
+    if ($[0] !== "83a42f891753b68c8f984b8697ae5236f11bd3cbfaa28455340723a178883b72") {
         for(let $i = 0; $i < 12; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "175f76b041e9f7f37da4ee1a95c94bce548f49d5c3fa70e737d740bfd39db24f";
+        $[0] = "83a42f891753b68c8f984b8697ae5236f11bd3cbfaa28455340723a178883b72";
     }
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const authState = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["useSelector"])(_temp);
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
         t0 = {
@@ -522,7 +525,7 @@ const NavbarComponent = ()=>{
             children: "Pro Connect"
         }, void 0, false, {
             fileName: "[project]/src/Components/Navbar/index.jsx",
-            lineNumber: 25,
+            lineNumber: 27,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[2] = router;
@@ -531,86 +534,84 @@ const NavbarComponent = ()=>{
         t1 = $[3];
     }
     let t2;
-    if ($[4] !== router) {
-        t2 = ()=>{
-            router.push("/login");
-        };
-        $[4] = router;
-        $[5] = t2;
-    } else {
-        t2 = $[5];
-    }
-    let t3;
-    if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
-        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-            children: "Be a part"
-        }, void 0, false, {
-            fileName: "[project]/src/Components/Navbar/index.jsx",
-            lineNumber: 45,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[6] = t3;
-    } else {
-        t3 = $[6];
-    }
-    let t4;
-    if ($[7] !== t2) {
-        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Components$2f$Navbar$2f$styles$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].navBar_OptionContainer,
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                onClick: t2,
-                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Components$2f$Navbar$2f$styles$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].buttonJoin,
-                children: t3
+    if ($[4] !== authState.profileFetched || $[5] !== router) {
+        t2 = !authState.profileFetched && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            onClick: ()=>{
+                router.push("/login");
+            },
+            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Components$2f$Navbar$2f$styles$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].buttonJoin,
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                children: "Be a part"
             }, void 0, false, {
                 fileName: "[project]/src/Components/Navbar/index.jsx",
-                lineNumber: 52,
-                columnNumber: 57
+                lineNumber: 39,
+                columnNumber: 38
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/Components/Navbar/index.jsx",
-            lineNumber: 52,
+            lineNumber: 37,
+            columnNumber: 39
+        }, ("TURBOPACK compile-time value", void 0));
+        $[4] = authState.profileFetched;
+        $[5] = router;
+        $[6] = t2;
+    } else {
+        t2 = $[6];
+    }
+    let t3;
+    if ($[7] !== t2) {
+        t3 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Components$2f$Navbar$2f$styles$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].navBar_OptionContainer,
+            children: t2
+        }, void 0, false, {
+            fileName: "[project]/src/Components/Navbar/index.jsx",
+            lineNumber: 48,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[7] = t2;
-        $[8] = t4;
+        $[8] = t3;
     } else {
-        t4 = $[8];
+        t3 = $[8];
     }
-    let t5;
-    if ($[9] !== t1 || $[10] !== t4) {
-        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t4;
+    if ($[9] !== t1 || $[10] !== t3) {
+        t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Components$2f$Navbar$2f$styles$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].container,
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$Components$2f$Navbar$2f$styles$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].navBar,
                 children: [
                     t1,
-                    t4
+                    t3
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/Components/Navbar/index.jsx",
-                lineNumber: 60,
+                lineNumber: 56,
                 columnNumber: 44
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/src/Components/Navbar/index.jsx",
-            lineNumber: 60,
+            lineNumber: 56,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[9] = t1;
-        $[10] = t4;
-        $[11] = t5;
+        $[10] = t3;
+        $[11] = t4;
     } else {
-        t5 = $[11];
+        t4 = $[11];
     }
-    return t5;
+    return t4;
 };
-_s(NavbarComponent, "fN7XvhJ+p5oE6+Xlo0NJmXpxjC8=", false, function() {
+_s(NavbarComponent, "1/ydDd+rYOPpw4dbtGMPCvkkEqg=", false, function() {
     return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"]
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__["useSelector"]
     ];
 });
 _c = NavbarComponent;
 const __TURBOPACK__default__export__ = NavbarComponent;
+function _temp(state) {
+    return state.auth;
+}
 var _c;
 __turbopack_context__.k.register(_c, "NavbarComponent");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
@@ -842,7 +843,7 @@ const authSlice = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modul
             state.isLoading = false;
             state.isError = false;
             state.profileFetched = true;
-            state.user = action.payload.user;
+            state.user = action.payload;
         });
     }
 });
