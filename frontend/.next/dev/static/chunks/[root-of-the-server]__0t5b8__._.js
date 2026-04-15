@@ -756,7 +756,16 @@ const registerUser = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_mo
     }
 });
 const getAboutUser = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$reduxjs$2f$toolkit$2f$dist$2f$redux$2d$toolkit$2e$modern$2e$mjs__$5b$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createAsyncThunk"])("user/getAboutUser", async (user, thunkAPI)=>{
-    try {} catch (err) {}
+    try {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$index$2e$jsx__$5b$client$5d$__$28$ecmascript$29$__["clientServer"].get("/get_user_and_Profile", {
+            params: {
+                token: user.token
+            }
+        });
+        return thunkAPI.fulfillWithValue(response.data);
+    } catch (err) {
+        return thunkAPI.rejectWithValue(err.response.data);
+    }
 });
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
