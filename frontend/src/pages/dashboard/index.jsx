@@ -2,11 +2,13 @@ import { getAboutUser } from '@/config/redux/action/AuthAction';
 import { getAllPosts } from '@/config/redux/action/PostAction';
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Dashboard = () => {
     const router  = useRouter();
     const dispath = useDispatch();
+    const authState = useSelector((state)=>state.auth)
+
   const [isTokenThere,setIsTokenThere] = useState(false);
 
   useEffect(() => {
@@ -27,7 +29,9 @@ const Dashboard = () => {
 
 
   return (
-    <div>Dashboard</div>
+    <div>
+    hey
+    </div>
   )
 }
 

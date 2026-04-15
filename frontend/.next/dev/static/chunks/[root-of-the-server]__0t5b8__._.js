@@ -838,6 +838,11 @@ const authSlice = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modul
             state.isLoading = false;
             state.isError = true;
             state.message = action.payload;
+        }).addCase(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$redux$2f$action$2f$AuthAction$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__["getAboutUser"].fulfilled, (state, action)=>{
+            state.isLoading = false;
+            state.isError = false;
+            state.profileFetched = true;
+            state.user = action.payload.user;
         });
     }
 });
