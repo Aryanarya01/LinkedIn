@@ -65,7 +65,7 @@ const LoginComponent = () => {
           </div>
           <div className={styles.cardContainer_right}>
 
-              <p>Already Logged In</p>
+              <p>Already Have an Account?</p>
 
           </div>
         </div>
