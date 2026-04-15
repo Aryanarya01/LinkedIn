@@ -1,23 +1,23 @@
 import React from 'react'
-
+import styles from "./index.module.css"
 const DashboardLayout = ({children}) => {
   return (
     <div> 
-         <div className="container">
+         <div className={styles.container}>
 
-            <div className="homeContainer">
+            <div className={styles.homeContainer}>
 
-                <div className="homeContainer__leftBar">
+                <div className={styles.homeContainer__leftBar}>
                     
                 </div>
 
             </div>
 
-            <div className="feedContainer">
+            <div className={styles.feedContainer}>
                 {children}
             </div>
 
-            <div className="extraContainer">
+            <div className={styles.extraContainer}>
 
             </div>
 
