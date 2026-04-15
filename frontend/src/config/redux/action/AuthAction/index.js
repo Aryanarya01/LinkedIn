@@ -40,3 +40,13 @@ export const registerUser = createAsyncThunk(
             }
     }
 )
+
+export const getAboutUser = createAsyncThunk("user/getAboutUser",
+    async(user, thunkAPI)=>{
+        try{
+
+        }catch(err){
+            
+        }
+    }
+)
