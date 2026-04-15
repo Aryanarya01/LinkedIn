@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 12, "column": 0}, "map": {"version":3,"sources":["file:///D:/LindedIn/frontend/src/pages/_app.js"],"sourcesContent":["import { Store } from \"@/config/redux/store\";\nimport \"@/styles/globals.css\";\nimport { Provider } from \"react-redux\";\n\nexport default function App({ Component, pageProps }) {\nreturn(\n     <Provider store={Store}>\n    <Component {...pageProps} />\n   </Provider>\n)\n}\n"],"names":["App","Component","pageProps","store"],"mappings":";;;;;AAAA;AAEA;;;;;;;;;AAEe,SAASA,IAAI,EAAEC,SAAS,EAAEC,SAAS,EAAE;IACpD,qBACK,qKAAC,6LAAQ;QAACC,OAAO,iIAAK;kBACvB,cAAA,qKAACF;YAAW,GAAGC,SAAS;;;;;;;;;;;AAG5B"}}]
+}
