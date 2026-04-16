@@ -1,8 +1,14 @@
 import DashboardLayout from '@/layout/DashboardLayout'
 import UserLayout from '@/layout/UserLayout'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 
 const DiscoverPage = () => {
+  const authState = useSelector()
+  useEffect(()=>{
+
+  },[])
+
   return (
     <div>
         <UserLayout>
