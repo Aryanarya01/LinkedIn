@@ -13,7 +13,7 @@ const DashboardLayout = ({ children }) => {
        if (!token) {
          router.push("/login");
        }
-       setTokenIsThere()
+       dispath(setTokenIsThere())
      }, []);
 
   return (
