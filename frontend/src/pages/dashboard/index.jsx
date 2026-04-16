@@ -1,4 +1,4 @@
-import { getAboutUser } from '@/config/redux/action/AuthAction';
+import { getAboutUser, getAllUsers } from '@/config/redux/action/AuthAction';
 import { getAllPosts } from '@/config/redux/action/PostAction';
 import DashboardLayout from '@/layout/DashboardLayout';
 import UserLayout from '@/layout/UserLayout';
@@ -18,6 +18,9 @@ const Dashboard = () => {
     if(authState.isTokenThere){
       dispath(getAllPosts())
       dispath(getAboutUser({token : localStorage.getItem('token')}))
+    }
+    if(!authState.all_profiles_fetched){
+      dispath(getAllUsers())
     }
   },[authState.isTokenThere])
 
