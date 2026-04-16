@@ -17,6 +17,9 @@
 .sideBarOptions{
     display: flex;
     align-items: center;
+    font-size: 1.4rem;
 }
 
-.
+.sideBarOptions > svg {
+    max-height: 1.4em;
+}
