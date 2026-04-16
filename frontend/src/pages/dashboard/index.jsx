@@ -11,7 +11,6 @@ const Dashboard = () => {
     const dispath = useDispatch();
     const authState = useSelector((state)=>state.auth)
 
-  const [isTokenThere,setIsTokenThere] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -27,7 +26,7 @@ const Dashboard = () => {
       dispath(getAllPosts())
       dispath(getAboutUser({token : localStorage.getItem('token')}))
     }
-  },[isTokenThere])
+  },[authState.isTokenThere])
 
 
   return (
