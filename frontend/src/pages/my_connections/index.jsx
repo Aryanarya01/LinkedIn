@@ -6,4 +6,4 @@ const MyConnectionsPage = () => {
   )
 }
 
-export default MyConnectionsPage
+export default MyConnectionsPage;
