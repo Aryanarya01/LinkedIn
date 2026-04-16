@@ -31,9 +31,9 @@ const Dashboard = () => {
          
       <DashboardLayout>
         <div>
-          <h1>
-            Dashboard
-          </h1>
+          <div className="scrollComponent">
+              <div className={styles.createPostContainer}></div>
+          </div>
         </div>
       </DashboardLayout>
 
