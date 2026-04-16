@@ -8,7 +8,9 @@ const DashboardLayout = ({children}) => {
             <div className={styles.homeContainer}>
 
                 <div className={styles.homeContainer__leftBar}>
-                    
+
+                    <div className={styles.sideBarOptions}></div>
+
                 </div>
 
                  <div className={styles.homeContainer__feedContainer}>
