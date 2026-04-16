@@ -1,13 +1,20 @@
 import React from "react";
 import styles from "./index.module.css";
+import { useRouter } from "next/router";
 const DashboardLayout = ({ children }) => {
+
+  const router = useRouter();
+   
+
   return (
     <div>
       <div className={styles.container}>
         <div className={styles.homeContainer}>
           <div className={styles.homeContainer__leftBar}>
             <div>
-              <div className={styles.sideBarOptions}>
+              <div onClick={()=>{
+                router.push("/dashboard")
+              }} className={styles.sideBarOptions}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
