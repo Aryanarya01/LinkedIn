@@ -27,16 +27,15 @@ const Dashboard = () => {
       <UserLayout>
         <DashboardLayout>
           <div>
-            <div className="scrollComponent">
+            <div className={styles.scrollComponent}>
               <div className={styles.createPostContainer}>
-                <img
-                  width={200}
+                <img className={styles.userProfile}
                   src={`${BASE_URL}/${authState.user.userId.profilePicture}`}
                   alt=""
                 />
                 <textarea name="" id=""></textarea>
                 <label htmlFor="fileUpload">
-                  <div className="Fab">
+                  <div className={styles.Fab}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

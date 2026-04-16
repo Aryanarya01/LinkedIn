@@ -1,5 +1,24 @@
-
+.scrollComponent{
+    display: flex;
+    justify-content: center;
+}
 
 .createPostContainer{
-        
+    display: flex;
+    height: 10svh;
+    width: 70%;
+    padding-inline: 0.8rem;
+    gap: 1.3rem;
+}
+.createPostContainer > textarea {
+    width: 100%;
+}
+.userProfile {
+    border-radius: 100%;
+    height: 60%;
+    width: fit-content;
+}
+.Fab > svg {
+    width: 100px;
+    height: 40px;
 }
