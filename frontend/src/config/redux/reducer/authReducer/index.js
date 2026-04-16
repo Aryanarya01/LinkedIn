@@ -9,6 +9,7 @@ const initialState = {
     isLoading : false,
     loggedIn : false,
     message : "",
+    isTokenThere : false,
     profileFetched : false,
     connections : [],
     connectionRequest : [],

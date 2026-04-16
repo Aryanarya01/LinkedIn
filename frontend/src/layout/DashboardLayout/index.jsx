@@ -66,7 +66,9 @@ const DashboardLayout = ({ children }) => {
 
           <div className={styles.homeContainer__feedContainer}>{children}</div>
 
-          <div className={styles.homeContainer__extraContainer}></div>
+          <div className={styles.homeContainer__extraContainer}>
+            <h3>Top Profiles</h3>
+          </div>
         </div>
       </div>
     </div>
