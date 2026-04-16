@@ -43,7 +43,16 @@ const Dashboard = () => {
 
       </UserLayout>
   )}else{
-      
+      return(
+         <UserLayout>
+         
+      <DashboardLayout>
+       <h2>Loading...</h2>
+      </DashboardLayout>
+
+
+      </UserLayout>
+      )
   }
 }
 
