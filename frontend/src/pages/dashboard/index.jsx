@@ -25,7 +25,7 @@ const Dashboard = () => {
     }
   },[authState.isTokenThere])
 
-
+  if(authState.user){
   return (
    
       <UserLayout>
@@ -34,7 +34,7 @@ const Dashboard = () => {
         <div>
           <div className="scrollComponent">
               <div className={styles.createPostContainer}>
-                <img src={`${BASE_URL}/${authState.user.userId.profilePicture}`} alt="" />
+                <img width={200} src={`${BASE_URL}/${authState.user.userId.profilePicture}`} alt="" />
               </div>
           </div>
         </div>
@@ -42,7 +42,9 @@ const Dashboard = () => {
 
 
       </UserLayout>
-  )
+  )}else{
+      
+  }
 }
 
 export default Dashboard
