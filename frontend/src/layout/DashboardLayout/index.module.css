@@ -9,3 +9,14 @@
 .homeContainer > div:nth-child(even){
     flex: 0.6;
 }
+.homeContainer__leftBar {
+    display: flex;
+    flex-direction: column;
+}
+
+.sideBarOptions{
+    display: flex;
+    align-items: center;
+}
+
+.
