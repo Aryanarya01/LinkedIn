@@ -18,7 +18,15 @@
     height: 60%;
     width: fit-content;
 }
+.Fab {
+    background-color: rgb(31, 31, 241);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+ 
+}
 .Fab > svg {
-    width: 100px;
+    width: fit-content;
     height: 40px;
+    color: white;
 }
