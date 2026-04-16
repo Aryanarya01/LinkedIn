@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import styles from "./index.module.css"
+import { BASE_URL } from '@/config';
 const Dashboard = () => {
     const router  = useRouter();
     const dispath = useDispatch();
@@ -32,7 +33,9 @@ const Dashboard = () => {
       <DashboardLayout>
         <div>
           <div className="scrollComponent">
-              <div className={styles.createPostContainer}></div>
+              <div className={styles.createPostContainer}>
+                <img src={`${BASE_URL}/${authState.user.userId.profilePicture}`} alt="" />
+              </div>
           </div>
         </div>
       </DashboardLayout>
