@@ -5,7 +5,7 @@ import UserLayout from '@/layout/UserLayout';
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-
+import styles from "./index.module.css"
 const Dashboard = () => {
     const router  = useRouter();
     const dispath = useDispatch();
