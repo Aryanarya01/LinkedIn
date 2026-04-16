@@ -55,3 +55,12 @@ export const getAboutUser = createAsyncThunk("user/getAboutUser",
         }
     }
 )
+
+
+export const getAllUsers = createAsyncThunk("/user/get_all_users",
+    async(_,thunkAPI)={
+        try{
+            
+        }
+    }
+)
