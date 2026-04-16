@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./index.module.css";
 import { useRouter } from "next/router";
+import { setTokenIsThere } from "@/config/redux/reducer/authReducer";
+import { useDispatch } from "react-redux";
 const DashboardLayout = ({ children }) => {
 
   const router = useRouter();
+  const dispath = useDispatch();
+    useEffect(() => {
+       const token = localStorage.getItem('token');
    
+       if (!token) {
+         router.push("/login");
+       }
+       setTokenIsThere()
+     }, []);
 
   return (
     <div>

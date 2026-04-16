@@ -12,17 +12,10 @@ const Dashboard = () => {
     const authState = useSelector((state)=>state.auth)
 
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-
-    if (!token) {
-      router.push("/login");
-    }
-    setIsTokenThere(true)
-  }, []);
+  
 
   useEffect(()=>{
-    if(isTokenThere){
+    if(authState.isTokenThere){
       dispath(getAllPosts())
       dispath(getAboutUser({token : localStorage.getItem('token')}))
     }
