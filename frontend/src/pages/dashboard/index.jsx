@@ -33,7 +33,7 @@ const Dashboard = () => {
                   src={`${BASE_URL}/${authState.user.userId.profilePicture}`}
                   alt=""
                 />
-                <textarea className={styles.textArea} name="" id=""></textarea>
+                <textarea placeholder={"What's in your mind?"} className={styles.textArea} name="" id=""></textarea>
                 <label htmlFor="fileUpload">
                   <div className={styles.Fab}>
                     <svg
