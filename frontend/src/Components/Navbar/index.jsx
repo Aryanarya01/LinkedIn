@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./styles.module.css";
 import { useRouter } from "next/router";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { reset } from "@/config/redux/reducer/authReducer";
 
 const NavbarComponent = () => {
   const router = useRouter();
-
+  const dispath = useDispatch();
   const authState = useSelector((state)=>state.auth)
   
   return (
@@ -24,6 +25,7 @@ const NavbarComponent = () => {
             <p onClick={()=>{
               localStorage.removeItem("token");
               router.push("/login")
+              dispath(reset())
             }} style={{fontWeight : "bold", cursor :"pointer"}}>Logout</p>
 
            </div>
