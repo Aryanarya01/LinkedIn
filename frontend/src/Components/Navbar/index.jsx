@@ -21,7 +21,10 @@ const NavbarComponent = () => {
            <div style={{display :"flex", gap:"1.2rem"}}>
             <p>Hey, {authState.user.userId.name}</p>
             <p style={{fontWeight : "bold", cursor :"pointer"}}>Profile</p>
-            <p style={{fontWeight : "bold", cursor :"pointer"}}>Logout</p>
+            <p onClick={()=>{
+              localStorage.removeItem("token");
+              router.push("/login")
+            }} style={{fontWeight : "bold", cursor :"pointer"}}>Logout</p>
 
            </div>
           </div>}
