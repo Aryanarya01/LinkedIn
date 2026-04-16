@@ -25,7 +25,11 @@ const authSlice = createSlice({
         },
         emptyMessage : (state)=>{
             state.message = ""
-        }
+        },
+        setTokenIsThere : (state)=>{
+            state.isTokenThere = true
+        },
+        
     },
     extraReducers : (builder)=>{
         builder.addCase(loginUser.pending,(state)=>{
