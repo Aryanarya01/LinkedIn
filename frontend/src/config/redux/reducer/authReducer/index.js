@@ -29,7 +29,9 @@ const authSlice = createSlice({
         setTokenIsThere : (state)=>{
             state.isTokenThere = true
         },
-        
+        setTokenIsNotThere : (state)=>{
+            state.isTokenThere = false
+        }
     },
     extraReducers : (builder)=>{
         builder.addCase(loginUser.pending,(state)=>{
