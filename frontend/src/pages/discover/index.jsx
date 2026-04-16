@@ -4,7 +4,8 @@ import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
 const DiscoverPage = () => {
-  const authState = useSelector()
+  const authState = useSelector((state)=>state.auth);
+  const 
   useEffect(()=>{
 
   },[])

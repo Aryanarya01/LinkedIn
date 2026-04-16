@@ -14,7 +14,7 @@ const initialState = {
     connections : [],
     connectionRequest : [],
     all_users : [],
-    all_profiles_fetching : false,
+    all_profiles_fetched : false,
 }
 
 const authSlice = createSlice({
