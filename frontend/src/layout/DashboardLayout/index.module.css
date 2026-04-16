@@ -12,12 +12,14 @@
 .homeContainer__leftBar {
     display: flex;
     flex-direction: column;
+    gap: 1.2rem;
 }
 
 .sideBarOptions{
     display: flex;
     align-items: center;
     font-size: 1.4rem;
+    gap: 1.3rem;
 }
 
 .sideBarOptions > svg {
