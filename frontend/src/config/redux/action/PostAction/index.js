@@ -10,3 +10,9 @@ export const getAllPosts = createAsyncThunk("post/getAllPosts",async(_,thunkAPI)
         return thunkAPI.rejectWithValue(err.response.data);
     }
 })  
+
+export const createPost = createAsyncThunk("post/createPost",
+    async(userData, thunkAPI)=>{
+        const {}
+    }
+)
