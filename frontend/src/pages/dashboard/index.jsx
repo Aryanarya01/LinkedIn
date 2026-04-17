@@ -1,5 +1,5 @@
 import { getAboutUser, getAllUsers } from "@/config/redux/action/AuthAction";
-import { getAllPosts } from "@/config/redux/action/PostAction";
+import { createPost, getAllPosts } from "@/config/redux/action/PostAction";
 import DashboardLayout from "@/layout/DashboardLayout";
 import UserLayout from "@/layout/UserLayout";
 import { useRouter } from "next/router";
@@ -11,6 +11,10 @@ const Dashboard = () => {
   const router = useRouter();
   const dispath = useDispatch();
   const authState = useSelector((state) => state.auth);
+
+  const postState = useSelector((state)=> state.postReducer)
+
+
 
   useEffect(() => {
     if (authState.isTokenThere) {
@@ -26,14 +30,16 @@ const Dashboard = () => {
   const [fileContent,setFileContent] = useState()
 
     const handleUpload = async()=>{
-      
+      await dispath(createPost({file :fileContent,body:postContent}));
+      setPostContent("");
+      setPostContent(null)
     }
 
   if (authState.user) {
     return (
       <UserLayout>
         <DashboardLayout>
-          <div>
+          
             <div className={styles.scrollComponent}>
               <div className={styles.createPostContainer}>
                 <img className={styles.userProfile}
@@ -61,11 +67,19 @@ const Dashboard = () => {
                 </label>
                 <input onChange={(e)=>setFileContent(e.target.files[0])} type="file" hidden id="fileUpload" />
                 {postContent.length > 0 && 
-                <div className={styles.uploadButton}>Post</div>
+                <div onClick={handleUpload} className={styles.uploadButton}>Post</div>
                 }
               </div>
+
+
+                <div className={styles.postContainer}>
+                    {postState.posts.map((post)=>{
+                      return
+                    })}
+                </div>
+
             </div>
-          </div>
+         
         </DashboardLayout>
       </UserLayout>
     );
