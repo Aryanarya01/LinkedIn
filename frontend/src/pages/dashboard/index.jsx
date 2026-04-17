@@ -25,6 +25,10 @@ const Dashboard = () => {
   const [postContent,setPostContent] = useState("");
   const [fileContent,setFileContent] = useState()
 
+    const handleUpload = async()=>{
+      
+    }
+
   if (authState.user) {
     return (
       <UserLayout>
