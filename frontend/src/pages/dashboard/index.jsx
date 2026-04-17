@@ -23,7 +23,7 @@ const Dashboard = () => {
   }, [authState.isTokenThere]);
 
   const [postContent,setPostContent] = useState("");
-
+  const [fileContent,setFileContent] = useState()
 
   if (authState.user) {
     return (
@@ -55,9 +55,9 @@ const Dashboard = () => {
                     </svg>
                   </div>
                 </label>
-                <input type="file" hidden id="fileUpload" />
+                <input onChange={(e)=>setFileContent(e.target.files[0])} type="file" hidden id="fileUpload" />
                 {postContent.length > 0 && 
-                <div className={styles.uploadButton}>Upload File</div>
+                <div className={styles.uploadButton}>Post</div>
                 }
               </div>
             </div>
