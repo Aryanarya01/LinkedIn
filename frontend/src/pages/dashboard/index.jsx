@@ -76,7 +76,9 @@ const Dashboard = () => {
                     {postState.posts.map((post)=>{
                       return(
                          <div key={post._id} className={styles.singleCard}> 
-                            
+
+                          <div className={styles.singleCard_profileContainer}></div>
+
                          </div>
                       )
                     })}
