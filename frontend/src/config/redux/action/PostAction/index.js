@@ -13,6 +13,12 @@ export const getAllPosts = createAsyncThunk("post/getAllPosts",async(_,thunkAPI)
 
 export const createPost = createAsyncThunk("post/createPost",
     async(userData, thunkAPI)=>{
-        const {}
+        const {file, body} = userData;
+        try{
+            const formData = new FormData();
+            formData.append('token',localStorage.getItem('token'))
+        }catch(err){
+            return thunkAPI.rejectWithValue(err.response.data)
+        }
     }
 )
