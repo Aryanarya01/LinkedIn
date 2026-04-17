@@ -23,7 +23,7 @@ const Dashboard = () => {
   }, [authState.isTokenThere]);
 
   const [postContent,setPostContent] = useState("");
-  
+
 
   if (authState.user) {
     return (
@@ -36,7 +36,7 @@ const Dashboard = () => {
                   src={`${BASE_URL}/${authState.user.userId.profilePicture}`}
                   alt=""
                 />
-                <textarea placeholder={"What's in your mind?"} className={styles.textArea} name="" id=""></textarea>
+                <textarea onChange={(e)=>setPostContent(e.target.value)} value={postContent} placeholder={"What's in your mind?"} className={styles.textArea} name="" id=""></textarea>
                 <label htmlFor="fileUpload">
                   <div className={styles.Fab}>
                     <svg
