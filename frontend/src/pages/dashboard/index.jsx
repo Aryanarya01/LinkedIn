@@ -22,6 +22,9 @@ const Dashboard = () => {
     }
   }, [authState.isTokenThere]);
 
+  const [postContent,setPostContent] = useState("");
+  
+
   if (authState.user) {
     return (
       <UserLayout>
