@@ -74,7 +74,11 @@ const Dashboard = () => {
 
                 <div className={styles.postContainer}>
                     {postState.posts.map((post)=>{
-                      return
+                      return(
+                         <div key={post._id} className={styles.singleCard}> 
+                            
+                         </div>
+                      )
                     })}
                 </div>
 
