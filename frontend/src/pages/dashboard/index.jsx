@@ -56,7 +56,9 @@ const Dashboard = () => {
                   </div>
                 </label>
                 <input type="file" hidden id="fileUpload" />
+                {postContent.length > 0 && 
                 <div className={styles.uploadButton}>Upload File</div>
+                }
               </div>
             </div>
           </div>
