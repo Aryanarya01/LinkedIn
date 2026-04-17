@@ -9,9 +9,13 @@
     width: 70%;
     padding-inline: 0.8rem;
     gap: 1.3rem;
+    position: relative;
     align-items: center;
     background: rgb(249, 242, 242);
     border-radius: 20px;
+}
+.uploadButton{
+    position: absolute;
 }
 .createPostContainer > textarea {
     width: 100%;
