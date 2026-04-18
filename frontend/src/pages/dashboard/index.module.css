@@ -107,8 +107,10 @@
 .singleOption__optionContainer{
     display: flex;
     align-items: center;
+    gap: 1.2rem;
 }
 
 .singleOption__optionContainer > svg {
     height: 100%;
+    width: 8%;
 }
