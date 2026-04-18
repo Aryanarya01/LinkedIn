@@ -3,6 +3,7 @@ import {
   createPost,
   deletePost,
   getAllPosts,
+  incrementPostLike,
 } from "@/config/redux/action/PostAction";
 import DashboardLayout from "@/layout/DashboardLayout";
 import UserLayout from "@/layout/UserLayout";
@@ -151,7 +152,8 @@ const Dashboard = () => {
                           <div className={styles.optionsContainer}>
 
                             <div onClick={async ()=>{
-                              await dispath(incrementLike({post_id : post._id}))
+                              await dispath(incrementPostLike({post_id : post._id}))
+                              dispath(getAllPosts())
                             }}
                               className={styles.singleOption__optionContainer}
                             >
