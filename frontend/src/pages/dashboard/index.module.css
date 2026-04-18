@@ -97,3 +97,9 @@
     object-fit: cover;
     border-radius: 20px;
 }
+
+.optionsContainer{
+    display: flex;
+    height: 20%;
+    width: 100%;
+}
