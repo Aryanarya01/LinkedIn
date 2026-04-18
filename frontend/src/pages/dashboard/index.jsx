@@ -149,7 +149,10 @@ const Dashboard = () => {
                           </div>
 
                           <div className={styles.optionsContainer}>
-                            <div
+
+                            <div onClick={async ()=>{
+                              await dispath(incrementLike({post_id : post._id}))
+                            }}
                               className={styles.singleOption__optionContainer}
                             >
                               <svg
@@ -168,6 +171,7 @@ const Dashboard = () => {
                               </svg>
                               <p>{post.likes}</p>
                             </div>
+
                             <div
                               className={styles.singleOption__optionContainer}
                             >
