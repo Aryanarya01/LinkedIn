@@ -63,7 +63,7 @@ export const incrementPostLike = createAsyncThunk(
       try{
 
       }catch(err){
-        
+          return thunkAPI.rejectWithValue(err.response.data)
       }
   }
 )
