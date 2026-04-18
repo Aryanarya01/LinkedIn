@@ -232,6 +232,12 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
+{
+  postState.postId == "" && 
+  <div className={commentsContainer}></div>
+
+}
+
         </DashboardLayout>
       </UserLayout>
     );
