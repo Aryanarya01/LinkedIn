@@ -2,6 +2,7 @@ import { getAboutUser, getAllUsers } from "@/config/redux/action/AuthAction";
 import {
   createPost,
   deletePost,
+  getAllComments,
   getAllPosts,
   incrementPostLike,
 } from "@/config/redux/action/PostAction";
@@ -174,7 +175,9 @@ const Dashboard = () => {
                               <p>{post.likes}</p>
                             </div>
 
-                            <div
+                            <div onClick={()=>{
+                              dispath(getAllComments({post_id : post._id}))
+                            }}
                               className={styles.singleOption__optionContainer}
                             >
                               <svg
@@ -192,6 +195,8 @@ const Dashboard = () => {
                                 />
                               </svg>
                             </div>
+
+
                             <div
                               onClick={() => {
                                 const text = encodeURIComponent(post.body);
