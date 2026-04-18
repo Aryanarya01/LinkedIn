@@ -156,7 +156,9 @@ const Dashboard = () => {
                                 </div>
                                  <div onClick={()=>{
                                   const text = encodeURIComponent(post.body)
-                                  
+                                  const url = encodeURIComponent("apnacollege.in");
+
+                                  const twitterUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
                                  }} className={styles.singleOption__optionContainer}>
 
 
