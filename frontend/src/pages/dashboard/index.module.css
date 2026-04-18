@@ -83,3 +83,9 @@
     width: 10%;
     border-radius: 50%;
 }
+
+.singleCard__image{
+    width: 100%;
+    padding-top: 0.6rem;
+    height: fit-content;
+}
