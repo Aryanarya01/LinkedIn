@@ -79,7 +79,9 @@ export const getAllComments = createAsyncThunk("post/getAllComments",
           post_id: postData.post_id
         }
       })
-      
+      return thunkAPI.fulfillWithValue({comments :response.data,
+        post_id : postData.post_id
+      })
     }catch(err){
       return thunkAPI.rejectWithValue(err.response.data)
     }
