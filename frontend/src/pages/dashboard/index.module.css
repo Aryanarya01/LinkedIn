@@ -78,3 +78,7 @@
     padding-right: 3.4rem;
 }
 
+.singleCard_profileContainer>img{
+    width: 10%;
+    border-radius: 50%;
+}

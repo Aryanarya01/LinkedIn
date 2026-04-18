@@ -81,6 +81,7 @@ const Dashboard = () => {
                             <div className={styles.singleCard_profileContainer}>
                               <img className={styles.userProfile}  src={`${BASE_URL}/${authState.user.userId.profilePicture}`} alt="" />
                               <p>{post.userId.name}</p>
+                              <p>{post.userId.username}</p>
                             </div>
                            </div>
                         )
