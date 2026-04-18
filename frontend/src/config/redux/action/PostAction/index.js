@@ -44,7 +44,7 @@ export const deletePost = createAsyncThunk("post/deletePost",
     try{
 
     }catch(err){
-      return
+      return thunkAPI.rejectWithValue(err.response.data)
     }
   }
 )
