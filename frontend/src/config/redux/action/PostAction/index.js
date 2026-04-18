@@ -60,6 +60,10 @@ export const deletePost = createAsyncThunk(
 export const incrementPostLike = createAsyncThunk(
   "post/incrementLike",
   async (user, thunkAPI)=>{
+      try{
 
+      }catch(err){
+        
+      }
   }
 )
