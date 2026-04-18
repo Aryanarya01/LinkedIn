@@ -1,5 +1,5 @@
 import { getAboutUser, getAllUsers } from "@/config/redux/action/AuthAction";
-import { createPost, getAllPosts } from "@/config/redux/action/PostAction";
+import { createPost, deletePost, getAllPosts } from "@/config/redux/action/PostAction";
 import DashboardLayout from "@/layout/DashboardLayout";
 import UserLayout from "@/layout/UserLayout";
 import { useRouter } from "next/router";
@@ -56,7 +56,7 @@ const Dashboard = () => {
                   id=""
                 ></textarea>
                 <label htmlFor="fileUpload">
-                  <div onClick={()=>{}} className={styles.Fab}>
+                  <div className={styles.Fab}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -107,7 +107,10 @@ const Dashboard = () => {
                               {post.userId.name}
                             </p>
                             {post.userId._id === authState.user.userId._id && (
-                              <div style={{ cursor: "pointer" }}>
+                              <div onClick={async()=>{
+                                await dispath(deletePost({post_id : post_id}))
+                                await dispath(getAllPosts())
+                              }} style={{ cursor: "pointer" }}>
                                 <svg
                                   style={{ height: "1.4rem", color: "red" }}
                                   xmlns="http://www.w3.org/2000/svg"
