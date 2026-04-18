@@ -74,7 +74,12 @@ export const incrementPostLike = createAsyncThunk(
 export const getAllComments = createAsyncThunk("post/getAllComments",
   async (postData, thunkAPI)=>{
     try{
-
+      const response = await clientServer.get("/get_comments",{
+        params : {
+          post_id: postData.post_id
+        }
+      })
+      
     }catch(err){
       return thunkAPI.rejectWithValue(err.response.data)
     }
