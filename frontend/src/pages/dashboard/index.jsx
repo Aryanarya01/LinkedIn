@@ -95,9 +95,11 @@ const Dashboard = () => {
                           alt=""
                         />
                         <div>
-                          <p style={{ fontWeight: "bold" }}>
-                            {post.userId.name}
-                          </p>
+                          <div>
+                            <p style={{ fontWeight: "bold" }}>
+                              {post.userId.name}
+                            </p>
+                          </div>
                           <p style={{ color: "grey" }}>
                             {post.userId.username}
                           </p>
