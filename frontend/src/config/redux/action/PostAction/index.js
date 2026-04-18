@@ -54,3 +54,7 @@ export const deletePost = createAsyncThunk(
     }
   },
 );
+
+
+
+export const incrementPostLike = createAsyncThunk()
