@@ -103,3 +103,12 @@
     height: 20%;
     width: 100%;
 }
+
+.singleOption__optionContainer{
+    display: flex;
+    align-items: center;
+}
+
+.singleOption__optionContainer > svg {
+    height: 100%;
+}
