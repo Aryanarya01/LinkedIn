@@ -56,7 +56,7 @@ const Dashboard = () => {
                   id=""
                 ></textarea>
                 <label htmlFor="fileUpload">
-                  <div className={styles.Fab}>
+                  <div onClick={()=>{}} className={styles.Fab}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

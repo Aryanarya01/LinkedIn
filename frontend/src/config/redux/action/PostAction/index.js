@@ -37,3 +37,10 @@ export const createPost = createAsyncThunk(
     }
   },
 );
+
+
+export const deletePost = createAsyncThunk("post/deletePost",
+  async(post_id, thunkAPI)=>{
+    try
+  }
+)
