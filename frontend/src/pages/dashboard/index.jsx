@@ -159,6 +159,7 @@ const Dashboard = () => {
                                   const url = encodeURIComponent("apnacollege.in");
 
                                   const twitterUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+                                  window.open(twitterUrl,"_blank")
                                  }} className={styles.singleOption__optionContainer}>
 
 
