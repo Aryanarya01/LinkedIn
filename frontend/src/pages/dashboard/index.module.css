@@ -118,3 +118,7 @@
     height: 100%;
     width: 8%;
 }
+
+.commentsContainer{
+    position: absolute;
+}

@@ -234,7 +234,7 @@ const Dashboard = () => {
           </div>
 {
   postState.postId == "" && 
-  <div className={commentsContainer}></div>
+  <div className={styles.commentsContainer}></div>
 
 }
 
