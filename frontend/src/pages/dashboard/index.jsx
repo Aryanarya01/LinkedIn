@@ -235,7 +235,11 @@ const Dashboard = () => {
 {
   postState.postId !== "" && 
   <div className={styles.commentsContainer}>
-    <p>show comments</p>
+
+    <div className={styles.allCommentsContainer}>
+
+    </div>
+
   </div>
 
 }
