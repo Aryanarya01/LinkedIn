@@ -9,7 +9,7 @@ const initialState = {
     isLoading : false,
     loggedIn : false,
     message : "",
-    Comments :[],
+    comments :[],
     postId : "",
 }
 
@@ -41,6 +41,7 @@ const postSlice = createSlice({
         })
         .addCase(getAllComments.fulfilled,(state, action)=>{
             state.postId = action.payload.post_id
+             state.comments = action.payload.comments
         })
     }
 })

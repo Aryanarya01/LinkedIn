@@ -233,8 +233,10 @@ const Dashboard = () => {
             </div>
           </div>
 {
-  postState.postId == "" && 
-  <div className={styles.commentsContainer}></div>
+  postState.postId !== "" && 
+  <div className={styles.commentsContainer}>
+    <p>show comments</p>
+  </div>
 
 }
 
