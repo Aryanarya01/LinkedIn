@@ -239,7 +239,11 @@ const Dashboard = () => {
     dispath(resetPostId())
   }} className={styles.commentsContainer}>
 
-    <div className={styles.allCommentsContainer}>
+    <div
+      onClick={(e)=>{
+        e.stopPropagation()
+      }}
+    className={styles.allCommentsContainer}>
 
     </div>
 
