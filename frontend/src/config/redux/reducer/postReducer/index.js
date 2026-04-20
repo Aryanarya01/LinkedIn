@@ -45,5 +45,6 @@ const postSlice = createSlice({
         })
     }
 })
+export const {resetPostId} = postSlice.actions;
 
 export default postSlice.reducer

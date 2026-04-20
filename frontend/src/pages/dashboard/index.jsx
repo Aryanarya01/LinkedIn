@@ -13,6 +13,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./index.module.css";
 import { BASE_URL } from "@/config";
+import { resetPostId } from "@/config/redux/reducer/postReducer";
 
 const Dashboard = () => {
   const router = useRouter();
@@ -234,7 +235,9 @@ const Dashboard = () => {
           </div>
 {
   postState.postId !== "" && 
-  <div className={styles.commentsContainer}>
+  <div onClick={()=>{
+    dispath(resetPostId())
+  }} className={styles.commentsContainer}>
 
     <div className={styles.allCommentsContainer}>
 
