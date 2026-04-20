@@ -136,4 +136,6 @@
 .allCommentsContainer{
     width: 40vw;
     height: 80vh;
+    background: white;
+    border-radius: 10px;
 }
