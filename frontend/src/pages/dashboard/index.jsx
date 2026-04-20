@@ -244,7 +244,9 @@ const Dashboard = () => {
         e.stopPropagation()
       }}
     className={styles.allCommentsContainer}>
-
+        { postState.comments.length === 0 &&
+          <h2>No Comments</h2>
+        }
     </div>
 
   </div>
