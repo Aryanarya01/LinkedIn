@@ -164,7 +164,7 @@
 }
 
 .postCommentContainer>input:focus{
-    outline: none;
+    border: 1px solid silver;
 }
 .postCommentContainer__commentBtn {
     flex: 0.1;
