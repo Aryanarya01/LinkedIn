@@ -5,6 +5,7 @@ import {
   getAllComments,
   getAllPosts,
   incrementPostLike,
+  postComment,
 } from "@/config/redux/action/PostAction";
 import DashboardLayout from "@/layout/DashboardLayout";
 import UserLayout from "@/layout/UserLayout";
@@ -253,7 +254,8 @@ const Dashboard = () => {
         <div className={styles.postCommentContainer}>
             <input type="" placeholder="Comment" value={commentText} onChange={(e)=>setCommentText(e.target.value)} />
             <div onClick={async ()=>{
-
+                await dispath(postComment({post_id : postState.postId, body :commentText}))
+                await dispath
             }} className={styles.postCommentContainer__commentBtn}>
               <p>Comment</p>
             </div>
