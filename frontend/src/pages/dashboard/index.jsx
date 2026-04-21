@@ -252,7 +252,11 @@ const Dashboard = () => {
 
         <div className={styles.postCommentContainer}>
             <input type="" placeholder="Comment" value={commentText} onChange={(e)=>setCommentText(e.target.value)} />
-            
+            <div onClick={async ()=>{
+
+            }} className={styles.postCommentContainer__commentBtn}>
+              <p>Comment</p>
+            </div>
         </div>
 
     </div>
