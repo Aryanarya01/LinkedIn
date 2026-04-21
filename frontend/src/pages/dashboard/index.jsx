@@ -35,7 +35,7 @@ const Dashboard = () => {
   const [postContent, setPostContent] = useState("");
   const [fileContent, setFileContent] = useState();
   const [commentText,setCommentText] = useState("");
-  
+
 
   const handleUpload = async () => {
     await dispath(createPost({ file: fileContent, body: postContent }));
@@ -251,7 +251,8 @@ const Dashboard = () => {
         }
 
         <div className={styles.postCommentContainer}>
-            <input type="" placeholder="Comment" value={commen} />
+            <input type="" placeholder="Comment" value={commentText} onChange={(e)=>setCommentText(e.target.value)} />
+            
         </div>
 
     </div>
