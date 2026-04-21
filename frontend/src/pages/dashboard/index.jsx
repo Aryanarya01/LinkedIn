@@ -256,13 +256,17 @@ const Dashboard = () => {
         {
           postState.comments.length !== 0 &&
           <div>
-            {postState.comments.map((postComment,index)=>{
+            {postState.comments.map((comment,index)=>{
               return (
                 <div className={styles.singleComment} key={comment._id}>
                   <div className={styles.singleComment__profileContainer}>
-                  <img src={`${BASE_URL}/${comment.userId}`} alt="" />
-
+                  <img src={`${BASE_URL}/${comment.userId.profilePicture}`} alt="" />
+                    <div>
+                      <p style={{fontWeight : "bold",fontSize : "1.2rem"}}>{comment.userId.name}</p>
+                      <p>@{comment.userId.username}</p>
+                    </div>
                   </div>
+                  <p>{comment.body}</p>
                 </div>
               )
             })}
