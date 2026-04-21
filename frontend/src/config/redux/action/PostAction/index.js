@@ -87,3 +87,10 @@ export const getAllComments = createAsyncThunk(
     }
   },
 );
+
+
+export const postComment = createAsyncThunk("post/postComment",
+  async(commentData, thunkAPI)=>{
+    
+  }
+)
