@@ -153,3 +153,22 @@
     gap: 1.2rem;
 }
 
+.postCommentContainer>input{
+    flex: 0.9;
+    padding-inline: 1.5rem;
+    padding-block: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(228, 228, 228);
+}
+
+.postCommentContainer__commentBtn {
+    flex: 0.1;
+    width: fit-content;
+    padding: 1.2rem;
+    background-color: orange;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer
+    ;
+}
