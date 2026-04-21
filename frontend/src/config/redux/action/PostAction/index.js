@@ -97,7 +97,9 @@ export const postComment = createAsyncThunk("post/postComment",
         body : commentData.body
       })
       const response = await clientServer.post("/comments",{
-        token : localStorage.getItem("token")
+        token : localStorage.getItem("token"),
+        post_id : commentData.post_id,
+        comment_text : commentData.body
       })
     } catch(err){
       return thunkAPI.rejectWithValue(err.response.data)
