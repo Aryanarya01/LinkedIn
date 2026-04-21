@@ -251,6 +251,25 @@ const Dashboard = () => {
           <h2>No Comments</h2>
         }
 
+
+
+        {
+          postState.comments.length !== 0 &&
+          <div>
+            {postState.comments.map((postComment,index)=>{
+              return (
+                <div className={styles.singleComment} key={comment._id}>
+                  <div className={styles.singleComment__profileContainer}>
+                  <img src={`${BASE_URL}/${comment.userId}`} alt="" />
+
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        }
+
+
         <div className={styles.postCommentContainer}>
             <input type="" placeholder="Comment" value={commentText} onChange={(e)=>setCommentText(e.target.value)} />
             <div onClick={async ()=>{
