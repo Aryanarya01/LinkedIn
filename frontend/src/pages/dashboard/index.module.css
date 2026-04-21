@@ -159,9 +159,13 @@
     padding-block: 1.2rem;
     border: none;
     border-radius: 10px;
+    outline: none;
     background-color: rgb(228, 228, 228);
 }
 
+.postCommentContainer>input:focus{
+    outline: none;
+}
 .postCommentContainer__commentBtn {
     flex: 0.1;
     width: fit-content;
@@ -169,6 +173,6 @@
     background-color: orange;
     border-radius: 10px;
     text-align: center;
-    cursor: pointer
-    ;
+    cursor: pointer;
+    color: white;
 }
