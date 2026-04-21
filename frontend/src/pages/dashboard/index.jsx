@@ -247,6 +247,11 @@ const Dashboard = () => {
         { postState.comments.length === 0 &&
           <h2>No Comments</h2>
         }
+
+        <div className="postCommentContainer">
+          
+        </div>
+
     </div>
 
   </div>
