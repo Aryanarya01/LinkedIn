@@ -255,7 +255,7 @@ const Dashboard = () => {
             <input type="" placeholder="Comment" value={commentText} onChange={(e)=>setCommentText(e.target.value)} />
             <div onClick={async ()=>{
                 await dispath(postComment({post_id : postState.postId, body :commentText}))
-                await dispath
+                await dispath(getAllComments({post_id : postState.postId}))
             }} className={styles.postCommentContainer__commentBtn}>
               <p>Comment</p>
             </div>
