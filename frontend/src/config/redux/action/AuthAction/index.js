@@ -69,6 +69,10 @@ export const getAllUsers = createAsyncThunk("/user/get_all_users",
 )
 
 
-export const getConnectionsRequest = createAsyncThunk()
+export const getConnectionsRequest = createAsyncThunk("user/sendConnectionRequest",
+    async (user,thunkAPI)=>{
+        
+    }
+)
 
 export const sendConnectionRequest = createAsyncThunk()
