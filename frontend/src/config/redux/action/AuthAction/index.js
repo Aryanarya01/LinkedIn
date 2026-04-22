@@ -117,3 +117,9 @@ export const getMyConnectionRequests = createAsyncThunk(
     }
   },
 );
+
+
+
+export const AcceptConnection = createAsyncThunk("user/acceptConnection",
+  async
+)
