@@ -1,4 +1,6 @@
 import { clientServer } from '@/config'
+import DashboardLayout from '@/layout/DashboardLayout'
+import UserLayout from '@/layout/UserLayout'
 import { useSearchParams } from 'next/navigation'
 import React, { useEffect } from 'react'
 
@@ -10,7 +12,11 @@ const ViewProfilePage = ({userProfile}) => {
     })
 
   return (
-    <div>{userProfile.userId.name}</div>
+    <UserLayout>
+      <DashboardLayout>
+         <div className="container></div>
+      </DashboardLayout>
+    </UserLayout>
   )
 }
 
