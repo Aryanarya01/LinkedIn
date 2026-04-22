@@ -14,7 +14,8 @@
     flex-direction: column;
     gap: 1.2rem;
     align-items: start;
-        padding-left: 20px;
+    padding-left: 20px;
+
 }
 
 /* recheck */
@@ -23,7 +24,7 @@
     align-items: center;
     font-size: 1.4rem;
     gap: 1.3rem;
-    
+
     cursor: pointer;
     transition: all 0.2s;
 }
