@@ -121,7 +121,6 @@ export const updateUserProfile = async (req, res) => {
   }
 };
 
-
 // export const updateUserProfile = async (req, res) => {
 //   try {
 //     const { token, username, email, ...newUserData } = req.body;
@@ -156,12 +155,11 @@ export const updateUserProfile = async (req, res) => {
 //   }
 // };
 
-
 export const getUserAndProfile = async (req, res) => {
   try {
     const { token } = req.query;
     console.log(`token : ${token}`);
-    
+
     const user = await User.findOne({ token });
     if (!user) {
       return res.status(400).json({ message: "User not found!" });
@@ -290,7 +288,7 @@ export const whatAreMyConnections = async (req, res) => {
     const connections = await connectionRequest
       .find({ connectionId: user._id })
       .populate("userId", "name username email profilePicture");
-      return res.json(connections)
+    return res.json(connections);
   } catch (err) {
     res.status(500).json({ message: err.message });
     return;
@@ -322,18 +320,19 @@ export const acceptConnectionRequest = async (req, res) => {
   }
 };
 
-
-export const getUserProfileAndUserBasedOnUsername = async(req,res)=>{
-    const {username} = req.query;
-    try{
-      const user = await User.findOne({username});
-      if(!user){
-        return res.status(404).json({message : "user not found!"});
-      }
-      const userProfile = await Profile.findOne({userId : user._id})
-      .populate("userId","name username email profilePictutre");
-      res.json({"profile" : userProfile})
-    }catch(err){
-      return res.status(500).json({message : err.message})
+export const getUserProfileAndUserBasedOnUsername = async (req, res) => {
+  const { username } = req.query;
+  try {
+    const user = await User.findOne({ username });
+    if (!user) {
+      return res.status(404).json({ message: "user not found!" });
     }
-}
+    const userProfile = await Profile.findOne({ userId: user._id }).populate(
+      "userId",
+      "name username email profilePictutre",
+    );
+    res.json({ profile: userProfile });
+  } catch (err) {
+    return res.status(500).json({ message: err.message });
+  }
+};
