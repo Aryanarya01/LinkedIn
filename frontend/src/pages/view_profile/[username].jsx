@@ -25,7 +25,10 @@ const ViewProfilePage = ({userProfile}) => {
 
             <div style={{flex:"0.8"}}>
 
-              <div style={{display : "flex", width : "fit-content", alignItems : "center"}}></div>
+              <div style={{display : "flex", width : "fit-content", alignItems : "center", gap : "1.2rem"}}>
+                <h2>{userProfile.userId.name}</h2>
+                
+              </div>
 
             </div>
 
