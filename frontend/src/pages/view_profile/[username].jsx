@@ -7,7 +7,7 @@ import styles from "./index.module.css"
 import { useRouter } from 'next/router'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllPosts } from '@/config/redux/action/PostAction'
-import { getConnectionsRequest } from '@/config/redux/action/AuthAction'
+import { getConnectionsRequest, sendConnectionRequest } from '@/config/redux/action/AuthAction'
 const ViewProfilePage = ({userProfile}) => {
     const searchParames = useSearchParams()
 
@@ -41,7 +41,7 @@ const ViewProfilePage = ({userProfile}) => {
         if(authState.connections.some(user => user.connections._id === userProfile.userId._id)){
           setIsCurrentUserInConnection(true)
         }
-      })
+      },[authState.connections])
 
 
 
@@ -67,6 +67,22 @@ const ViewProfilePage = ({userProfile}) => {
                 <h2>{userProfile.userId.name}</h2>
                 <p style={{color : "grey"}}>@{userProfile.userId.username}</p>
               </div>
+
+
+              {isCurrentUserInConnection ? 
+              <button className={styles.connectedButton}>Connected</button> 
+              :
+              <button onClick={()=>{
+                dispatch(sendConnectionRequest({token : localStorage.getItem("token"),}))
+              }}>Connect</button>  
+            }
+
+
+            <div>
+              <p>{userProfile.bio}</p>
+            </div>
+
+
 
             </div>
 

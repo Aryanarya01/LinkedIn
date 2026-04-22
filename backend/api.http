@@ -43,8 +43,8 @@ POST http://localhost:9080/update_profile_data HTTP/1.1
 Content-Type: application/json
 
 {
-   "token": "6f30699e290d17c2c3cd9e62c741ca5b57a13a7694b5c993998c3b22d28cc5ba",
-  "bio": "",
+   "token": "982f41727d6d0b9970352a9391e0c9bcda78ce3022e4369147535a16eb4f743b",
+  "bio": "Hey i am aryan, I am from Almora.",
   "currentPost" : "CTO",
   "pastWork": [
     {
