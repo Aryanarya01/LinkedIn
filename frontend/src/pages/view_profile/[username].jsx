@@ -21,7 +21,9 @@ export async function getServerSideProps(context) {
     console.log(context.query.username);
     
   const request = await clientServer.get("/user/get_profile_based_on_username",{
-    
+    params : {
+      username : context.query.username
+    }
   })
 
     return {props: {}}
