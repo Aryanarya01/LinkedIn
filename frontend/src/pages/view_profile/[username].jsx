@@ -14,7 +14,7 @@ const ViewProfilePage = ({userProfile}) => {
   return (
     <UserLayout>
       <DashboardLayout>
-         <div className={styles.stycontainer}></div>
+         <div className={styles.container}></div>
       </DashboardLayout>
     </UserLayout>
   )
