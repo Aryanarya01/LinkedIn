@@ -25,6 +25,7 @@ export async function getServerSideProps(context) {
       username : context.query.username
     }
   })
-
+  const response = await request.data;
+  console.log(response);
     return {props: {}}
 }
