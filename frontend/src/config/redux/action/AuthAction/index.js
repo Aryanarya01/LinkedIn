@@ -101,3 +101,9 @@ export const getConnectionsRequest = createAsyncThunk("user/getConnectionRequest
         }
     }
 );
+
+
+
+export const getMyConnectionRequests = createAsyncThunk("user/getConnectionRequests",
+  async(user, thunkAPI)
+)
