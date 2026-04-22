@@ -1,3 +1,4 @@
+import { clientServer } from '@/config'
 import { useSearchParams } from 'next/navigation'
 import React, { useEffect } from 'react'
 
@@ -19,5 +20,9 @@ export async function getServerSideProps(context) {
     console.log("view")
     console.log(context.query.username);
     
+  const request = await clientServer.get("/user/get_profile_based_on_username",{
+    
+  })
+
     return {props: {}}
 }
