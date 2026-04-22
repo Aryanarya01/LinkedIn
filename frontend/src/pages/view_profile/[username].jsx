@@ -2,7 +2,7 @@ import { BASE_URL, clientServer } from '@/config'
 import DashboardLayout from '@/layout/DashboardLayout'
 import UserLayout from '@/layout/UserLayout'
 import { useSearchParams } from 'next/navigation'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./index.module.css"
 import { useRouter } from 'next/router'
 import { useDispatch, useSelector } from 'react-redux'
@@ -14,7 +14,10 @@ const ViewProfilePage = ({userProfile}) => {
     const dispatch = useDispatch()
 
 
+    const authState = useSelector((state)=>state.auth)
 
+    const [userPosts,setUserPosts] = useState([]);
+    
 
 
 
