@@ -4,8 +4,26 @@ import UserLayout from '@/layout/UserLayout'
 import { useSearchParams } from 'next/navigation'
 import React, { useEffect } from 'react'
 import styles from "./index.module.css"
+import { useRouter } from 'next/router'
+import { useDispatch, useSelector } from 'react-redux'
 const ViewProfilePage = ({userProfile}) => {
     const searchParames = useSearchParams()
+
+    const router = useRouter();
+    const postReducer = useSelector((state)=>state.postReducer);
+    const dispatch = useDispatch()
+
+
+
+
+
+
+
+
+
+
+
+
 
     useEffect(()=>{
       console.log("From View : View Profile")
