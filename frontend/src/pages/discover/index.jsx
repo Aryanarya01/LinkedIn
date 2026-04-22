@@ -4,6 +4,7 @@ import UserLayout from '@/layout/UserLayout'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styles from "./index.module.css"
+import { BASE_URL } from "@/config";
 
 
 
@@ -31,7 +32,7 @@ const DiscoverPage = () => {
           {authState.all_profiles_fetched && authState.all_users.map((user)=>{
             return(
               <div key={user._id} className={styles.userProfile}>
-                    <img src={`${BAS}`} alt="Profile"/>
+                    <img src={`${BASE_URL}/${user.userId.profilePicture}`} alt="Profile"/>
                     <h1>{user.userId.name}</h1>
                     <p>{user.userId.username}</p>
               </div>
