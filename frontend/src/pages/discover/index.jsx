@@ -32,9 +32,11 @@ const DiscoverPage = () => {
           {authState.all_profiles_fetched && authState.all_users.map((user)=>{
             return(
               <div key={user._id} className={styles.userCard}>
-                    <img src={`${BASE_URL}/${user.userId.profilePicture}`} alt="Profile"/>
-                    <h1>{user.userId.name}</h1>
-                    <p>{user.userId.username}</p>
+                    <img className={styles.userCard__image} src={`${BASE_URL}/${user.userId.profilePicture}`} alt="Profile"/>
+                    <div>
+                      <h1>{user.userId.name}</h1>
+                      <p>{user.userId.username}</p>
+                    </div>
               </div>
             )
           })}
