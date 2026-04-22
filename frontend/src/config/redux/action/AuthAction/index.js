@@ -90,7 +90,9 @@ export const sendConnectionRequest = createAsyncThunk(
 export const getConnectionsRequest = createAsyncThunk("user/getConnectionRequests",
     async(user,thunkAPI)=>{
         try{
-
+            const response = await clientServer.get("/user/getConnectionRequests",{
+                
+            })
         }catch(err){
             return thunkAPI.rejectWithValue(err.response.data)
         }
