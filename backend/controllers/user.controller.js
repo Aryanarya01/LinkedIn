@@ -321,3 +321,8 @@ export const acceptConnectionRequest = async (req, res) => {
     return res.status(500).json({ message: err.message });
   }
 };
+
+
+export const getUserProfileAndUserBasedOnUsername = async(req,res)=>{
+  
+}
