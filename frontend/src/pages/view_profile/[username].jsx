@@ -73,7 +73,7 @@ const ViewProfilePage = ({userProfile}) => {
               <button className={styles.connectedButton}>Connected</button> 
               :
               <button onClick={()=>{
-                dispatch(sendConnectionRequest({token : localStorage.getItem("token"),}))
+                dispatch(sendConnectionRequest({token : localStorage.getItem("token"),user_id : userProfile.userId._id}))
               }} className={styles.connectBtn}>Connect</button>  
             }
 
@@ -93,7 +93,7 @@ const ViewProfilePage = ({userProfile}) => {
                   <div key={post._id} className={styles.postCard}>
                     <div className={styles.card}>
                       <div className={styles.card__profileContainer}>
-                        {post.media !== "" ? <img src={`${BASE_URL}/${post.media}`} alt="" /> : }
+                        {post.media !== "" ? <img src={`${BASE_URL}/${post.media}`} alt="" /> :<div style={{height : "3.4rem",width : "3.4rem"}}></div> }
                       </div>
                         <p>{post.body}</p>
                     </div>
