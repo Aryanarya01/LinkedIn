@@ -1,4 +1,4 @@
-import { clientServer } from '@/config'
+import { BASE_URL, clientServer } from '@/config'
 import DashboardLayout from '@/layout/DashboardLayout'
 import UserLayout from '@/layout/UserLayout'
 import { useSearchParams } from 'next/navigation'
@@ -14,7 +14,11 @@ const ViewProfilePage = ({userProfile}) => {
   return (
     <UserLayout>
       <DashboardLayout>
-         <div className={styles.container}></div>
+         <div className={styles.container}>
+          <div className={styles.backDropContainer}>
+            <img className={styles.backDrop} src={`${BASE_URL}/${userProfile.userId.profilePicture}`} alt="backDrop" />
+          </div>
+         </div>
       </DashboardLayout>
     </UserLayout>
   )
