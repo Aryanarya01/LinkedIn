@@ -17,10 +17,10 @@ const ViewProfilePage = ({userProfile}) => {
     const authState = useSelector((state)=>state.auth)
 
     const [userPosts,setUserPosts] = useState([]);
-    
 
+    const [isCurrentUserInConnection, setIsCurrentUserInConnection] =useState(false)
 
-
+  
 
 
 
