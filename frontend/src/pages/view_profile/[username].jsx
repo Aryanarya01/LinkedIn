@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react'
 import styles from "./index.module.css"
 import { useRouter } from 'next/router'
 import { useDispatch, useSelector } from 'react-redux'
+import { getAllPosts } from '@/config/redux/action/PostAction'
+import { getConnectionsRequest } from '@/config/redux/action/AuthAction'
 const ViewProfilePage = ({userProfile}) => {
     const searchParames = useSearchParams()
 
@@ -20,7 +22,18 @@ const ViewProfilePage = ({userProfile}) => {
 
     const [isCurrentUserInConnection, setIsCurrentUserInConnection] =useState(false)
 
-  
+    const getUsersPosts = async()=>{
+      await dispatch(getAllPosts());
+      await dispatch(getConnectionsRequest({token :localStorage.getItem("token")}))
+    }
+
+    useEffect(()=>{
+      let post = postReducer.posts.filter((post)=>{
+        return post.userId.username === router.query.username
+      })
+      setUserPosts(post);
+
+    },[postReducer.posts])
 
 
 
