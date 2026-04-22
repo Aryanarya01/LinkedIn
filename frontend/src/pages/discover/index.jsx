@@ -15,7 +15,7 @@ const DiscoverPage = () => {
   const router = useRouter();
 
 
-  
+
   useEffect(()=>{
     if(!authState.all_profiles_fetched){
       dispath(getAllUsers())
@@ -36,7 +36,7 @@ const DiscoverPage = () => {
           {authState.all_profiles_fetched && authState.all_users.map((user)=>{
             return(
               <div onClick={()=>{
-
+                router.push(`/view_profile/${user.userId.username}`)
               }} key={user._id} className={styles.userCard}>
                     <img className={styles.userCard__image} src={`${BASE_URL}/${user.userId.profilePicture}`} alt="Profile"/>
                     <div>
