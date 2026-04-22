@@ -74,7 +74,7 @@ const ViewProfilePage = ({userProfile}) => {
               :
               <button onClick={()=>{
                 dispatch(sendConnectionRequest({token : localStorage.getItem("token"),}))
-              }}>Connect</button>  
+              }} className={styles.connectBtn}>Connect</button>  
             }
 
 
@@ -86,7 +86,21 @@ const ViewProfilePage = ({userProfile}) => {
 
             </div>
 
-            <div style={{flex:"0.2"}}></div>
+            <div style={{flex:"0.2"}}>
+              <h3>Recent Activity</h3>
+              {userPosts.map((post)=>{
+                return(
+                  <div key={post._id} className={styles.postCard}>
+                    <div className={styles.card}>
+                      <div className={styles.card__profileContainer}>
+                        {post.media !== "" ? <img src={`${BASE_URL}/${post.media}`} alt="" /> : }
+                      </div>
+                        <p>{post.body}</p>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
           </div>
 
         </div>
