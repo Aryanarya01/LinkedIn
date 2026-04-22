@@ -18,6 +18,14 @@ const ViewProfilePage = ({userProfile}) => {
           <div className={styles.backDropContainer}>
             <img className={styles.backDrop} src={`${BASE_URL}/${userProfile.userId.profilePicture}`} alt="backDrop" />
           </div>
+
+        <div className={styles.profileContainer_details}>
+
+          <div style={{display:"flex",gap:"0.7rem"}}></div>
+
+        </div>
+
+
          </div>
       </DashboardLayout>
     </UserLayout>
