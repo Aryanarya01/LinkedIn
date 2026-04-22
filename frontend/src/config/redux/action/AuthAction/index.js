@@ -71,7 +71,15 @@ export const getAllUsers = createAsyncThunk("/user/get_all_users",
 
 export const getConnectionsRequest = createAsyncThunk("user/sendConnectionRequest",
     async (user,thunkAPI)=>{
-        
+            try{
+                const response = await clientServer.post("/user/send_connection_request",{
+                    token: user.token,
+                    connectionId : user.user_id
+                })
+                return thunkAPI.fulfillWithValue(response.data)
+            }catch(err){
+                return thunkAPI.rejectWithValue(err.response.data)
+            }
     }
 )
 
