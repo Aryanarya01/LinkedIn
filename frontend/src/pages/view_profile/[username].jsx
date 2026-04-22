@@ -3,7 +3,7 @@ import DashboardLayout from '@/layout/DashboardLayout'
 import UserLayout from '@/layout/UserLayout'
 import { useSearchParams } from 'next/navigation'
 import React, { useEffect } from 'react'
-
+import styles from "./index.module.css"
 const ViewProfilePage = ({userProfile}) => {
     const searchParames = useSearchParams()
 
@@ -14,7 +14,7 @@ const ViewProfilePage = ({userProfile}) => {
   return (
     <UserLayout>
       <DashboardLayout>
-         <div className="container></div>
+         <div className={styles.stycontainer}></div>
       </DashboardLayout>
     </UserLayout>
   )
