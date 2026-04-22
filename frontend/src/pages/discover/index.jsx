@@ -23,6 +23,11 @@ const DiscoverPage = () => {
           <h1>
             Discover
           </h1>
+
+        <div className={styles.allUserProfile}>
+          {authState.all_profiles_fetched && authState.al_}
+        </div>
+
         </div>
       </DashboardLayout>
 
