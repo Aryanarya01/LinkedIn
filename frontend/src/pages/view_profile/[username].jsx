@@ -21,7 +21,12 @@ const ViewProfilePage = ({userProfile}) => {
 
         <div className={styles.profileContainer_details}>
 
-          <div style={{display:"flex",gap:"0.7rem"}}></div>
+          <div style={{display:"flex",gap:"0.7rem"}}>
+
+            <div style={{flex:"0.8"}}></div>
+
+            <div style={{flex:"0.2"}}></div>
+          </div>
 
         </div>
 
