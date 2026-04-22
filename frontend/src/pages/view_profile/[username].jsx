@@ -23,7 +23,11 @@ const ViewProfilePage = ({userProfile}) => {
 
           <div style={{display:"flex",gap:"0.7rem"}}>
 
-            <div style={{flex:"0.8"}}></div>
+            <div style={{flex:"0.8"}}>
+
+              <div style={{display : "flex", width : "fit-content", alignItems : "center"}}></div>
+
+            </div>
 
             <div style={{flex:"0.2"}}></div>
           </div>
