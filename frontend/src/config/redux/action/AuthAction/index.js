@@ -104,12 +104,15 @@ export const getConnectionsRequest = createAsyncThunk("user/getConnectionRequest
 
 
 
-export const getMyConnectionRequests = createAsyncThunk("user/getConnectionRequests",
+export const getMyConnectionRequests = createAsyncThunk("user/getMyConnectionRequests",
   async(user, thunkAPI)=>{
     try{
-      const response = await clientServer.get("/user/getConnectionRequests",{
-        
+      const response = await clientServer.get("/user/user_connection_request",{
+        params : {
+          token : user.token
+        }
       })
+      return thunkAPI.fulfillWithValue(response.data.connections)
     }catch(err){
       return thunkAPI.rejectWithValue(err.response.data);
     }
