@@ -2,7 +2,7 @@ import { clientServer } from '@/config'
 import { useSearchParams } from 'next/navigation'
 import React, { useEffect } from 'react'
 
-const ViewProfilePage = () => {
+const ViewProfilePage = ({userProfile}) => {
     const searchParames = useSearchParams()
 
     useEffect(()=>{
@@ -10,7 +10,7 @@ const ViewProfilePage = () => {
     })
 
   return (
-    <div>ViewProfilePage</div>
+    <div>{userProfile.userId.name}</div>
   )
 }
 
@@ -27,5 +27,5 @@ export async function getServerSideProps(context) {
   })
   const response = await request.data;
   console.log(response);
-    return {props: {}}
+    return {props: {userProfile : request.data.profile}}
 }
