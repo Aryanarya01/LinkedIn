@@ -29,7 +29,7 @@ const MyConnectionsPage = () => {
   return (
     <UserLayout>
       <DashboardLayout>
-        <div>
+        <div style={{display : "flex", flexDirection:"column", gap:"1.7rem"}}>
           <h4>My Connections</h4>
 
           {authState.connectionRequest.length === 0 && <h1>No Connection Request Pending</h1>}
