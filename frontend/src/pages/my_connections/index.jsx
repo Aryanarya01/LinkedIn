@@ -23,13 +23,15 @@ const MyConnectionsPage = () => {
     <UserLayout>
       <DashboardLayout>
         <div>
-          <h1>My Connections</h1>
+          <h4>My Connections</h4>
+
+          {authState.connectionRequest.length === 0 && <h1>No Connection Request Pending</h1>}
 
           {authState.connectionRequest.length != 0 &&
             authState.connectionRequest.map((user, index) => {
               return (
                 <div key={index} className={styles.userCard}>
-                  <div style={{ display: "flex", alignItems: "center" }}>
+                  <div style={{ display: "flex", alignItems: "center",gap:"1.2rem" }}>
                     <div className={styles.profilePicture}>
                       <img
                         src={`${BASE_URL}/${user.userId.profilePicture}`}
