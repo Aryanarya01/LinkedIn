@@ -33,9 +33,16 @@ const MyConnectionsPage = () => {
             return(
                <div className={styles.userCard}>
                 <div style={{display:"flex", alignItems:"center"}}>
-              <div>
+
+              <div className={styles.profilePicture}>
                 <img src={`${BASE_URL}/${user.userId.profilePicture}`} alt="" />
               </div>
+
+              <div className={styles.userInfo}>
+                <h3>{user.userId.name}</h3>
+                <p>{user.userId.username}</p>
+              </div>
+
                 </div>
                </div>
             )
