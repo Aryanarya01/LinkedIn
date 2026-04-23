@@ -1,8 +1,16 @@
 import DashboardLayout from '@/layout/DashboardLayout';
 import UserLayout from '@/layout/UserLayout';
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux';
 
 const MyConnectionsPage = () => {
+
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    dispatch
+  })
+
   return (
      <UserLayout>
          
