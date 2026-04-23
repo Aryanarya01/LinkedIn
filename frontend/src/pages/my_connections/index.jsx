@@ -55,7 +55,7 @@ const MyConnectionsPage = () => {
                      <button onClick={(e)=>{
                       e.stopPropagation()
                       dispatch(AcceptConnection({token : localStorage.getItem("token"),
-                        connection_id : user._id,
+                        connectionId : user._id,
                         action_type : "accept"
                       }))
                      }} className={styles.connectedButton}>Accept</button>
@@ -67,7 +67,7 @@ const MyConnectionsPage = () => {
 
 
                 <h4>My Network</h4>
-              { authState.connectionRequest.filter((connection)=>connection.status_accepted !== null).map((user,index)=>{
+              { authState.connectionRequest.filter((connection)=>connection.status_accepted !== null).map((user,index)=>(
                    <div key={index} className={styles.userCard}>
                   <div onClick={()=>{
                     router.push(`/view_profile/${user.userId.username}`)
@@ -86,7 +86,7 @@ const MyConnectionsPage = () => {
                       
                   </div>
                 </div>
-              })}
+              ))}
 
 
         </div>

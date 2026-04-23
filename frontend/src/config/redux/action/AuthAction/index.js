@@ -128,7 +128,7 @@ export const AcceptConnection = createAsyncThunk(
         "/user/accept_connection_request",
         {
           token: user.token,
-          connection_id: user.connectionId,
+          requestId: user.connectionId,
           action_type: user.action,
         },
       );
