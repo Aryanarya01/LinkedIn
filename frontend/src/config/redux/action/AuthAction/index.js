@@ -113,7 +113,7 @@ export const getMyConnectionRequests = createAsyncThunk(
           token: user.token,
         },
       });
-      return thunkAPI.fulfillWithValue(response.data.connections);
+      return thunkAPI.fulfillWithValue(response.data);
     } catch (err) {
       return thunkAPI.rejectWithValue(err.response.data);
     }

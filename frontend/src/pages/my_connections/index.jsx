@@ -9,12 +9,15 @@ const MyConnectionsPage = () => {
   const dispatch = useDispatch();
   const authState = useSelector((state)=>state.auth)
   useEffect(()=>{
-    dispatch(getMyConnectionRequests())
+    dispatch(getMyConnectionRequests({token : localStorage.getItem("token")}))
   },[])
 
   useEffect(()=>{
-    
-  },[])
+    if(authState.connectionRequest.length != 0){
+      console.log(authState.connectionRequest);
+      
+    }
+  },[authState.connectionRequest])
 
   return (
      <UserLayout>
