@@ -31,9 +31,9 @@ const MyConnectionsPage = () => {
             My Connections
           </h1>
 
-          {authState.connectionRequest.length != 0 && authState.connectionRequest.map((user)=>{
+          {authState.connectionRequest.length != 0 && authState.connectionRequest.map((user,index)=>{
             return(
-               <div className={styles.userCard}>
+               <div key={index} className={styles.userCard}>
                 <div style={{display:"flex", alignItems:"center"}}>
 
               <div className={styles.profilePicture}>
