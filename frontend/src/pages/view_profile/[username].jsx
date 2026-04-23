@@ -73,7 +73,7 @@ const ViewProfilePage = ({userProfile}) => {
 
 
               {isCurrentUserInConnection ? 
-              <button className={styles.connectedButton}>Connected</button> 
+              <button className={styles.connectedButton}>{isConnectionNull ? "Pending" : Connected}</button> 
               :
               <button onClick={()=>{
                 dispatch(sendConnectionRequest({token : localStorage.getItem("token"),user_id : userProfile.userId._id}))
