@@ -12,6 +12,10 @@ const MyConnectionsPage = () => {
     dispatch(getMyConnectionRequests())
   },[])
 
+  useEffect(()=>{
+    
+  },[])
+
   return (
      <UserLayout>
          
