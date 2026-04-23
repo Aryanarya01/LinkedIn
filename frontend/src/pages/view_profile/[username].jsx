@@ -86,8 +86,8 @@ const ViewProfilePage = ({userProfile}) => {
                             }
 
               <div style={{cursor : "pointer"}} onClick={async ()=>{
-                const response = await clientServer.get(`/user/download_resume?id=${profile._id}`)
-                
+                const response = await clientServer.get(`/user/download_resume?id=${userProfile._id}`)
+                  window.open(`${BASE_URL}/${response.data.message}`,"_blank")
               }}>
                 
                 <svg style={{width:"1.2em"}} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
