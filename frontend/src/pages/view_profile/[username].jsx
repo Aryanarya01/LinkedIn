@@ -86,7 +86,7 @@ const ViewProfilePage = ({userProfile}) => {
                             }
 
               <div style={{cursor : "pointer"}} onClick={async ()=>{
-                const response = await clientServer.get(`/user/download_resume?id=${userProfile._id}`)
+                const response = await clientServer.get(`/user/download_resume?id=${userProfile.userId._id}`)
                   window.open(`${BASE_URL}/${response.data.message}`,"_blank")
               }}>
                 
