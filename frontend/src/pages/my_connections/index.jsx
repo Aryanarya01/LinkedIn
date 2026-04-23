@@ -38,7 +38,7 @@ const MyConnectionsPage = () => {
               return (
                 <div key={index} className={styles.userCard}>
                   <div onClick={()=>{
-                    router.push()
+                    router.push(`/view_profile/${user.userId.username}`)
                   }} style={{ display: "flex", alignItems: "center",gap:"1.2rem" }}>
                     <div className={styles.profilePicture}>
                       <img
