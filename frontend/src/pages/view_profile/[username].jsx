@@ -20,7 +20,7 @@ const ViewProfilePage = ({userProfile}) => {
 
     const [userPosts,setUserPosts] = useState([]);
 
-    const [isCurrentUserInConnection, setIsCurrentUserInConnection] =useState(false)
+    const [isCurrentUserInConnection, setIsCurrentUserInConnection] = useState(false)
 
     const getUsersPosts = async()=>{
       await dispatch(getAllPosts());
@@ -38,7 +38,7 @@ const ViewProfilePage = ({userProfile}) => {
 
       useEffect(()=>{
         console.log(authState.connections, userProfile.userId._id)
-        if(authState.connections.some(user => user.connections._id === userProfile.userId._id)){
+        if(authState.connections.some(user => user.connectionId._id === userProfile.userId._id)){
           setIsCurrentUserInConnection(true)
         }
       },[authState.connections])
@@ -46,8 +46,9 @@ const ViewProfilePage = ({userProfile}) => {
 
 
     useEffect(()=>{
+      getUsersPosts()
       console.log("From View : View Profile")
-    })
+    },[])
 
   return (
     <UserLayout>

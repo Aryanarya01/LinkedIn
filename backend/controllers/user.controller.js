@@ -255,7 +255,7 @@ export const sendConnectionRequest = async (req, res) => {
 
 //              maine kis kis ko bja hai
 export const getMyConnectionsRequests = async (req, res) => {
-  const { token } = req.body;
+  const { token } = req.query;
 
   try {
     const user = await User.findOne({ token });
@@ -276,7 +276,7 @@ export const getMyConnectionsRequests = async (req, res) => {
 
 //kis ne muje kiya hai
 export const whatAreMyConnections = async (req, res) => {
-  const { token } = req.body;
+  const { token } = req.query;
 
   try {
     const user = await User.findOne({ token });
