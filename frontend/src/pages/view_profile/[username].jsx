@@ -21,7 +21,7 @@ const ViewProfilePage = ({userProfile}) => {
     const [userPosts,setUserPosts] = useState([]);
 
     const [isCurrentUserInConnection, setIsCurrentUserInConnection] = useState(false)
-    const [isConnectionNull, setIsConnectionNull] = useState(false);
+    const [isConnectionNull, setIsConnectionNull] = useState(true);
 
 
     const getUsersPosts = async()=>{
