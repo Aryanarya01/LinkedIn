@@ -52,12 +52,16 @@ const MyConnectionsPage = () => {
                       <h3>{user.userId.name}</h3>
                       <p>{user.userId.username}</p>
                     </div>
-                     <button onClick={(e)=>{
+                     <button onClick={async (e)=>{
                       e.stopPropagation()
-                      dispatch(AcceptConnection({token : localStorage.getItem("token"),
+                    await dispatch(AcceptConnection({token : localStorage.getItem("token"),
                         connectionId : user._id,
                         action_type : "accept"
                       }))
+                       dispatch(getMyConnectionRequests({
+      token: localStorage.getItem("token")
+    }))
+ 
                      }} className={styles.connectedButton}>Accept</button>
                   </div>
                 </div>
@@ -67,7 +71,8 @@ const MyConnectionsPage = () => {
 
 
                 <h4>My Network</h4>
-              { authState.connectionRequest.filter((connection)=>connection.status_accepted !== null).map((user,index)=>(
+              { authState.connectionRequest.filter((connection)=>connection.status_accepted !== null).map((user,index)=>{
+                return(
                    <div key={index} className={styles.userCard}>
                   <div onClick={()=>{
                     router.push(`/view_profile/${user.userId.username}`)
@@ -86,7 +91,7 @@ const MyConnectionsPage = () => {
                       
                   </div>
                 </div>
-              ))}
+              )})}
 
 
         </div>

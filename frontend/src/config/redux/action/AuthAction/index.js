@@ -129,7 +129,7 @@ export const AcceptConnection = createAsyncThunk(
         {
           token: user.token,
           requestId: user.connectionId,
-          action_type: user.action,
+          action_type: user.action_type,
         },
       );
       return thunkAPI.fulfillWithValue(response.data);

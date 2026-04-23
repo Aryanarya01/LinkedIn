@@ -24,7 +24,7 @@ const ViewProfilePage = ({ userProfile }) => {
 
   const [isCurrentUserInConnection, setIsCurrentUserInConnection] =
     useState(false);
-  const [isConnectionNull, setIsConnectionNull] = useState(true);
+  const [isConnectionNull, setIsConnectionNull] = useState(true);//         check
 
   const getUsersPosts = async () => {
     await dispatch(getAllPosts());
