@@ -1,3 +1,4 @@
+import { BASE_URL } from '@/config';
 import { getMyConnectionRequests } from '@/config/redux/action/AuthAction';
 import DashboardLayout from '@/layout/DashboardLayout';
 import UserLayout from '@/layout/UserLayout';
@@ -27,6 +28,19 @@ const MyConnectionsPage = () => {
           <h1>
             My Connections
           </h1>
+
+          {authState.connectionRequest.length != 0 && authState.connectionRequest.map((user)=>{
+            return(
+               <div className={styles.userCard}>
+                <div style={{display:"flex", alignItems:"center"}}>
+              <div>
+                <img src={`${BASE_URL}/${user.userId.profilePicture}`} alt="" />
+              </div>
+                </div>
+               </div>
+            )
+          })}
+
         </div>
       </DashboardLayout>
 
