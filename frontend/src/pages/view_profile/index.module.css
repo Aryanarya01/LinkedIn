@@ -72,6 +72,10 @@
 
 .workHistoryContainer{
     display: flex;
+    gap: 1.4rem;
+    padding-top: 1.4rem;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 
