@@ -63,6 +63,32 @@ const MyConnectionsPage = () => {
                 </div>
               );
             })}
+
+
+
+                <h4>My Network</h4>
+              { authState.connectionRequest.filter((connection)=>connection.status_accepted !== null).map((user,index)=>{
+                   <div key={index} className={styles.userCard}>
+                  <div onClick={()=>{
+                    router.push(`/view_profile/${user.userId.username}`)
+                  }} style={{ display: "flex",cursor:"pointer", alignItems: "center",gap:"1.2rem",justifyContent:"space-between" }}>
+                    <div className={styles.profilePicture}>
+                      <img
+                        src={`${BASE_URL}/${user.userId.profilePicture}`}
+                        alt=""
+                      />
+                    </div>
+
+                    <div className={styles.userInfo}>
+                      <h3>{user.userId.name}</h3>
+                      <p>{user.userId.username}</p>
+                    </div>
+                      
+                  </div>
+                </div>
+              })}
+
+
         </div>
       </DashboardLayout>
     </UserLayout>
