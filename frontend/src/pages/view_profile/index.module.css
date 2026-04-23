@@ -69,3 +69,7 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.workHistoryContainer{
+    display: flex;
+}
