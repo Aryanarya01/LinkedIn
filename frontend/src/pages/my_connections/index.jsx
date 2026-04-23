@@ -35,7 +35,7 @@ const MyConnectionsPage = () => {
           {authState.connectionRequest.length === 0 && <h1>No Connection Request Pending</h1>}
 
           {authState.connectionRequest.length != 0 &&
-            authState.connectionRequest.map((user, index) => {
+            authState.connectionRequest.filter((connection)=>connection.status_accepted === null).map((user, index) => {
               return (
                 <div key={index} className={styles.userCard}>
                   <div onClick={()=>{
