@@ -1,11 +1,12 @@
 import { BASE_URL } from "@/config";
-import { getMyConnectionRequests } from "@/config/redux/action/AuthAction";
+import { AcceptConnection, getMyConnectionRequests } from "@/config/redux/action/AuthAction";
 import DashboardLayout from "@/layout/DashboardLayout";
 import UserLayout from "@/layout/UserLayout";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./index.module.css";
 import { useRouter } from "next/router";
+import { connection } from "next/server";
 
 const MyConnectionsPage = () => {
   const dispatch = useDispatch();
@@ -39,7 +40,7 @@ const MyConnectionsPage = () => {
                 <div key={index} className={styles.userCard}>
                   <div onClick={()=>{
                     router.push(`/view_profile/${user.userId.username}`)
-                  }} style={{ display: "flex",cursor:"pointer", alignItems: "center",gap:"1.2rem" }}>
+                  }} style={{ display: "flex",cursor:"pointer", alignItems: "center",gap:"1.2rem",justifyContent:"space-between" }}>
                     <div className={styles.profilePicture}>
                       <img
                         src={`${BASE_URL}/${user.userId.profilePicture}`}
@@ -51,7 +52,13 @@ const MyConnectionsPage = () => {
                       <h3>{user.userId.name}</h3>
                       <p>{user.userId.username}</p>
                     </div>
-                     <button className={styles.connectedButton}>Accept</button>
+                     <button onClick={(e)=>{
+                      e.stopPropagation()
+                      dispatch(AcceptConnection({token : localStorage.getItem("token"),
+                        connection_id : user._id,
+                        action_type : "accept"
+                      }))
+                     }} className={styles.connectedButton}>Accept</button>
                   </div>
                 </div>
               );
