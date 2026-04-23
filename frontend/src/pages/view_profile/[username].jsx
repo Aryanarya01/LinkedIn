@@ -113,6 +113,10 @@ const ViewProfilePage = ({userProfile}) => {
         </div>
 
 
+        <div className={styles.workHistory}>
+              <h3>Work History</h3>
+          </div>        
+
          </div>
       </DashboardLayout>
     </UserLayout>

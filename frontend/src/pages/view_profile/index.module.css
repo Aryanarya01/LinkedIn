@@ -1,6 +1,8 @@
 .container {
     padding: 1.3rem;
     background-color: rgb(255, 253, 253);
+    display: flex;
+    
 }
 
 .backDropContainer{
