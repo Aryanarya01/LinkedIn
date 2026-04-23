@@ -51,6 +51,7 @@ const MyConnectionsPage = () => {
                       <h3>{user.userId.name}</h3>
                       <p>{user.userId.username}</p>
                     </div>
+                     <button className={styles.connectedButton}>Accept</button>
                   </div>
                 </div>
               );
