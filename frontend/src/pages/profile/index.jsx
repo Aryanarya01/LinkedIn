@@ -6,31 +6,34 @@ import { BASE_URL } from "@/config";
 import { useDispatch, useSelector } from "react-redux";
 import { getAboutUser } from "@/config/redux/action/AuthAction";
 import { useRouter } from "next/router";
+import { getAllPosts } from "@/config/redux/action/PostAction";
 
 const ProfilePage = ()=>{
         const authState = useSelector((state)=>state.auth)
         const dispatch = useDispatch();
     const postReducer = useSelector((state)=>state.postReducer)
-    const router = useRouter()
 
         const [userProfile, setUserProfile] = useState({})
         const [userPosts, setUserPosts] = useState([])
 
-        useEffect(() => {
-            let post = postReducer.posts.filter((post) => {
-              return post.userId.username === router.query.username;
-            });
-            setUserPosts(post);
-          }, [postReducer.posts]);
+         
 
         useEffect(()=>{
             dispatch(getAboutUser({token : localStorage.getItem("token")}))
-            dispatch(getA)
+            dispatch(getAllPosts())
         },[])
 
         useEffect(()=>{
-            setUserProfile(authState.user)
-        },[authState.user])
+             
+
+            if(authState.user != undefined){
+                setUserProfile(authState.user)
+                    let post = postReducer.posts.filter((post) => {
+              return post.userId.username === authState.user.userId.username;
+            });
+            setUserPosts(post);
+            }
+        },[authState.user,postReducer.posts])
 
     return(
         <>
