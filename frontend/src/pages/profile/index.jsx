@@ -1,20 +1,30 @@
 import DashboardLayout from "@/layout/DashboardLayout";
 import UserLayout from "@/layout/UserLayout";
-import react, { useState } from "react";
+import react, { useEffect, useState } from "react";
 import styles from "./index.module.css"
 import { BASE_URL } from "@/config";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getAboutUser } from "@/config/redux/action/AuthAction";
 
 const ProfilePage = ()=>{
-            const dispatch = useDispatch();
+        const authState = useSelector((state)=>state.auth)
+        const dispatch = useDispatch();
+
+
+
         const [userProfile, setUserProfile] = useState({
-            dispa
+             
         })
+
+        useEffect(()=>{
+            dispatch(getAboutUser({token : localStorage.getItem("token")}))
+        },[])
 
     return(
         <>
         <UserLayout>
             <DashboardLayout>
+                {authState.user &&
                  <div className={styles.container}>
           <div className={styles.backDropContainer}>
             <img
@@ -95,6 +105,7 @@ const ProfilePage = ()=>{
             </div>
           </div>
         </div>
+}
             </DashboardLayout>
         </UserLayout>
         </>
