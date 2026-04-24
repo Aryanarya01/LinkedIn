@@ -12,19 +12,21 @@ const ProfilePage = ()=>{
 
 
 
-        const [userProfile, setUserProfile] = useState({
-             
-        })
+        const [userProfile, setUserProfile] = useState({})
 
         useEffect(()=>{
             dispatch(getAboutUser({token : localStorage.getItem("token")}))
         },[])
 
+        useEffect(()=>{
+            setUserProfile(authState.user)
+        },[authState.user])
+
     return(
         <>
         <UserLayout>
             <DashboardLayout>
-                {authState.user &&
+                {authState.user && userProfile.userId &&
                  <div className={styles.container}>
           <div className={styles.backDropContainer}>
             <img
