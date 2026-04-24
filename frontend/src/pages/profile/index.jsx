@@ -1,12 +1,14 @@
 import DashboardLayout from "@/layout/DashboardLayout";
 import UserLayout from "@/layout/UserLayout";
 import react, { useState } from "react";
-
+import styles from "./index.module.css"
+import { BASE_URL } from "@/config";
+import { useDispatch } from "react-redux";
 
 const ProfilePage = ()=>{
-
+            const dispatch = useDispatch();
         const [userProfile, setUserProfile] = useState({
-            
+            dispa
         })
 
     return(
