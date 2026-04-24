@@ -51,6 +51,16 @@ const ProfilePage = ()=>{
             }
 
 
+          const updateProfileData = async()=>{
+              const request = await clientServer.post("/user_update",{
+                token : localStorage.getItem("token"),
+                name : profile.userId.name,
+              })
+
+              const response = await
+          }
+
+
     return(
         <>
         <UserLayout>
