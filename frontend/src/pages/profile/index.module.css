@@ -89,4 +89,11 @@
     box-shadow: 10px 10px 15px rgb(173, 173, 173);
 }
 
- 
+ .backDrop__overlay{
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    
+ }
