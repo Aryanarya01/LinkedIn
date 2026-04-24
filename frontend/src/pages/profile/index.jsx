@@ -2,7 +2,7 @@ import DashboardLayout from "@/layout/DashboardLayout";
 import UserLayout from "@/layout/UserLayout";
 import react, { useEffect, useState } from "react";
 import styles from "./index.module.css"
-import { BASE_URL } from "@/config";
+import { BASE_URL, clientServer } from "@/config";
 import { useDispatch, useSelector } from "react-redux";
 import { getAboutUser } from "@/config/redux/action/AuthAction";
 import { useRouter } from "next/router";
@@ -39,7 +39,15 @@ const ProfilePage = ()=>{
 
             const uploadProfilePicture = async(file)=>{
                 const formData = new FormData();
-                formData.append("profile_picture",file)
+                formData.append("profile_picture",file);
+                formData.append("token",localStorage.getItem("token"));
+
+                const response = await clientServer.post("/upload_profile_picture",formData,{
+                    headers : {
+                        "Content-Type" : "multipart/form-data",
+                    },
+                })
+                dispatch(getAboutUser({token: localStorage.getItem("token")}))
             }
 
 
