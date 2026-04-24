@@ -152,7 +152,7 @@ const ProfilePage = ()=>{
             </div>
           </div>
           {userProfile != authState.user &&
-          <div className={styles.connectionButton}>
+          <div className={styles.updateProfileBtn}>
             Update Profile
           </div>
           }

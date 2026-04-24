@@ -124,3 +124,15 @@
     font-size: 1.5rem;
     font-weight: bold;
  }
+
+ .updateProfileBtn{
+        padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+    background: rgba(3, 93, 183,0.905);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    width: fit-content;
+ }
