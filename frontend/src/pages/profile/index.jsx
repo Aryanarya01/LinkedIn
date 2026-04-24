@@ -151,6 +151,11 @@ const ProfilePage = ()=>{
               })}
             </div>
           </div>
+          {userProfile != authState.user &&
+          <div className={styles.connectionButton}>
+            Update Profile
+          </div>
+          }
         </div>
 }
             </DashboardLayout>
