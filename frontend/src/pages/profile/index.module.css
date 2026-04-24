@@ -90,10 +90,21 @@
 }
 
  .backDrop__overlay{
-    width: 10em;
-    height: 10em;
+    width: 7em;
+    height: 7em;
     object-fit: cover;
     border-radius: 50%;
     position: absolute;
+    bottom: -30%;
+    left: 8%;
+    text-align: center;
+    z-index: 4;
+    transition: all 0.4s;
     
+ }
+
+ .backDrop__overlay:hover{
+    opacity: 0.4;
+    background-color: black;
+
  }
