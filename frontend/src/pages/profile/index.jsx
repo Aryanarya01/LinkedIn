@@ -42,11 +42,15 @@ const ProfilePage = ()=>{
                 {authState.user && userProfile.userId &&
                  <div className={styles.container}>
           <div className={styles.backDropContainer}>
-            <img
-              className={styles.backDrop}
-              src={`${BASE_URL}/${userProfile.userId.profilePicture}`}
-              alt="backDrop"
-            />
+
+
+                <div className={styles.backDrop__overlay}></div>
+                <img
+                  className={styles.backDrop}
+                  src={`${BASE_URL}/${userProfile.userId.profilePicture}`}
+                  alt="backDrop"
+                />
+
           </div>
 
           <div className={styles.profileContainer_details}>

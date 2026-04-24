@@ -41,12 +41,14 @@
     display: flex;
 }
 
-.card__profileContainer > img{
-    width: 3.4rem;
+ 
+/* .backDrop{
+     width: 3.4rem;
     height: auto;
     height: 3.4rem;
     object-fit: cover;
-}
+    position: relative;
+} */
 
 .connectBtn{
     padding-inline: 0.8rem;
@@ -86,3 +88,5 @@
     border-radius: 10px;
     box-shadow: 10px 10px 15px rgb(173, 173, 173);
 }
+
+ 
