@@ -113,7 +113,14 @@
     background-color: black;
 
  }
-
+.profileContainer_details input{
+    outline: none;
+    border-style: none;
+    padding-inline: 10px;
+    padding-block: 9px;
+    width: fit-content;
+}
  .nameEdit{
-    
+    font-size: 1.5rem;
+    font-weight: bold;
  }
