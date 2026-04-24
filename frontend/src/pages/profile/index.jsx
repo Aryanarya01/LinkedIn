@@ -5,7 +5,9 @@ import react, { useState } from "react";
 
 const ProfilePage = ()=>{
 
-        const [userProfile, setUserProfile] = useState()
+        const [userProfile, setUserProfile] = useState({
+            
+        })
 
     return(
         <>
