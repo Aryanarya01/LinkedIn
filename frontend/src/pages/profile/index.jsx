@@ -65,7 +65,9 @@ const ProfilePage = ()=>{
                         Edit
                     </p>
                 </label>
-                <input type="file" id="profilePictureUpload" />
+                <input onChange={(e)=>{
+                    uploadProfilePicture(e.target.files[0])
+                }} hidden type="file" id="profilePictureUpload" />
                 <img
                   className={styles.backDrop}
                   src={`${BASE_URL}/${userProfile.userId.profilePicture}`}
