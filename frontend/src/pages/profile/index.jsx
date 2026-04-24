@@ -54,10 +54,18 @@ const ProfilePage = ()=>{
           const updateProfileData = async()=>{
               const request = await clientServer.post("/user_update",{
                 token : localStorage.getItem("token"),
-                name : profile.userId.name,
+                name : userProfile?.userId?.name,
               })
 
-              const response = await
+              const response = await clientServer.post("/update_profile_data",{
+                token : localStorage.getItem("token"),
+                bio : userProfile.bio,
+                currentPost : userProfile.currentPost,
+                pastWork : userProfile.pastWork,
+                education : userProfile.education,
+              })
+
+              dispatch(getAboutUser({token : localStorage.getItem("token")}))
           }
 
 
@@ -162,7 +170,9 @@ const ProfilePage = ()=>{
             </div>
           </div>
           {userProfile != authState.user &&
-          <div className={styles.updateProfileBtn}>
+          <div onClick={()=>{
+            updateProfileData()
+          }} className={styles.updateProfileBtn}>
             Update Profile
           </div>
           }
