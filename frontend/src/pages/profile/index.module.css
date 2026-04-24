@@ -101,6 +101,11 @@
     z-index: 4;
     transition: all 0.4s;
     cursor: pointer;
+    color: white;
+    opacity: 0.0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
 
  .backDrop__overlay:hover{
