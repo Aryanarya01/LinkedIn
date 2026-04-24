@@ -35,6 +35,14 @@ const ProfilePage = ()=>{
             }
         },[authState.user,postReducer.posts])
 
+
+
+            const uploadProfilePicture = async(file)=>{
+                const formData = new FormData();
+                formData.append("profile_picture",file)
+            }
+
+
     return(
         <>
         <UserLayout>
