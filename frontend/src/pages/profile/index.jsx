@@ -5,17 +5,27 @@ import styles from "./index.module.css"
 import { BASE_URL } from "@/config";
 import { useDispatch, useSelector } from "react-redux";
 import { getAboutUser } from "@/config/redux/action/AuthAction";
+import { useRouter } from "next/router";
 
 const ProfilePage = ()=>{
         const authState = useSelector((state)=>state.auth)
         const dispatch = useDispatch();
-
-
+    const postReducer = useSelector((state)=>state.postReducer)
+    const router = useRouter()
 
         const [userProfile, setUserProfile] = useState({})
         const [userPosts, setUserPosts] = useState([])
+
+        useEffect(() => {
+            let post = postReducer.posts.filter((post) => {
+              return post.userId.username === router.query.username;
+            });
+            setUserPosts(post);
+          }, [postReducer.posts]);
+
         useEffect(()=>{
             dispatch(getAboutUser({token : localStorage.getItem("token")}))
+            dispatch(getA)
         },[])
 
         useEffect(()=>{
