@@ -1,9 +1,12 @@
 import DashboardLayout from "@/layout/DashboardLayout";
 import UserLayout from "@/layout/UserLayout";
-import react from "react";
+import react, { useState } from "react";
 
 
 const ProfilePage = ()=>{
+
+        const [userProfile, setUserProfile] = useState()
+
     return(
         <>
         <UserLayout>
@@ -34,7 +37,6 @@ const ProfilePage = ()=>{
                   </p>
                 </div>
 
-            
                   
 
                 <div>
