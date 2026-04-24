@@ -1,10 +1,16 @@
+import DashboardLayout from "@/layout/DashboardLayout";
+import UserLayout from "@/layout/UserLayout";
 import react from "react";
 
 
 const ProfilePage = ()=>{
     return(
         <>
-        <h1>Profile Page</h1>
+        <UserLayout>
+            <DashboardLayout>
+                
+            </DashboardLayout>
+        </UserLayout>
         </>
     )
 }
