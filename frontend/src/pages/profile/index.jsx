@@ -13,7 +13,7 @@ const ProfilePage = ()=>{
 
 
         const [userProfile, setUserProfile] = useState({})
-
+        const [userPosts, setUserPosts] = useState([])
         useEffect(()=>{
             dispatch(getAboutUser({token : localStorage.getItem("token")}))
         },[])
