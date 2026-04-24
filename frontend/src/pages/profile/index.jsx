@@ -87,7 +87,12 @@ const ProfilePage = ()=>{
                     gap: "1.2rem",
                   }}
                 >
-                  <h2>{userProfile.userId.name}</h2>
+
+                    <input className={styles.nameEdit} type="text" value={userProfile.userId.name} 
+                    onChange={(e)=>{
+                      setUserProfile({...userProfile, userId:{...userProfile.userId, name:e.target.value}})
+                    }} />
+
                   <p style={{ color: "grey" }}>
                     @{userProfile.userId.username}
                   </p>
