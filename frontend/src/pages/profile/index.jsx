@@ -44,11 +44,12 @@ const ProfilePage = ()=>{
           <div className={styles.backDropContainer}>
 
 
-                <div className={styles.backDrop__overlay}>
+                <label htmlFor="profilePictureUpload" className={styles.backDrop__overlay}>
                     <p>
                         Edit
                     </p>
-                </div>
+                </label>
+                <input type="file" id="profilePictureUpload" />
                 <img
                   className={styles.backDrop}
                   src={`${BASE_URL}/${userProfile.userId.profilePicture}`}
