@@ -17,8 +17,8 @@
 }
 
 .backDropContainer img{
-    width: 7em;
-    height: 7em;
+    width: 8em;
+    height: 8em;
     object-fit: cover;
     border-radius: 50%;
     position: absolute;
@@ -90,8 +90,8 @@
 }
 
  .backDrop__overlay{
-    width: 7em;
-    height: 7em;
+    width: 8em;
+    height: 8em;
     object-fit: cover;
     border-radius: 50%;
     position: absolute;
