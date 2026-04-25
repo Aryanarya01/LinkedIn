@@ -84,4 +84,7 @@
 .mobileNavbar{
     display: flex;
 }
+.homeContainer__feedContainer{
+    padding-bottom: 8vh;
+}
 }
