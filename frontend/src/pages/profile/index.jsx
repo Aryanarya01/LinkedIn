@@ -19,7 +19,8 @@ const ProfilePage = ()=>{
       const [inputData, setInputdata] = useState({company : '', position : '', years : ''})
 
          const handelWorkInputChange = (e)=>{
-
+          const {name, value} = e.target;
+          setInputdata({...inputData, [name] : value})
          }
 
         useEffect(()=>{
@@ -208,9 +209,9 @@ const ProfilePage = ()=>{
         e.stopPropagation()
       }}
     className={styles.allCommentsContainer}>
-                 <input onChange={handelWorkInputChange} type="Email" placeholder="Enter Company" className={styles.inputField} />
-                  <input onChange={handelWorkInputChange} type="Email" placeholder="Enter Position" className={styles.inputField} />
-                   <input onChange={handelWorkInputChange} type="number" placeholder="Years" className={styles.inputField} />
+                 <input onChange={handelWorkInputChange} name="company" type="text" placeholder="Enter Company" className={styles.inputField} />
+                  <input onChange={handelWorkInputChange} name="position" type="text" placeholder="Enter Position" className={styles.inputField} />
+                   <input onChange={handelWorkInputChange} name="years" type="number" placeholder="Years" className={styles.inputField} />
               <div className={styles.updateProfileBtn}>Add Work</div>
 
 
