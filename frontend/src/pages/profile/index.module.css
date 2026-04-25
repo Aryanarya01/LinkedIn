@@ -200,4 +200,8 @@
 }
 
 
- 
+ @media only screen and (max-width : 600px) {
+    .profileContainer_flex{
+        flex-direction: column;
+    }
+}
