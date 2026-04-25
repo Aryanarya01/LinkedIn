@@ -196,7 +196,7 @@ const ProfilePage = ()=>{
 {
   postState.postId !== "" && 
   <div onClick={()=>{
-    dispath(resetPostId())
+    dispatch(resetPostId())
   }} className={styles.commentsContainer}>
 
     <div
@@ -204,42 +204,6 @@ const ProfilePage = ()=>{
         e.stopPropagation()
       }}
     className={styles.allCommentsContainer}>
-        { postState.comments.length === 0 &&
-          <h2>No Comments</h2>
-        }
-
-
-
-        {
-          postState.comments.length !== 0 &&
-          <div>
-            {postState.comments.map((comment,index)=>{
-              return (
-                <div className={styles.singleComment} key={comment._id}>
-                  <div className={styles.singleComment__profileContainer}>
-                  <img src={`${BASE_URL}/${comment.userId.profilePicture}`} alt="" />
-                    <div>
-                      <p style={{fontWeight : "bold",fontSize : "1.2rem"}}>{comment.userId.name}</p>
-                      <p>@{comment.userId.username}</p>
-                    </div>
-                  </div>
-                  <p>{comment.body}</p>
-                </div>
-              )
-            })}
-          </div>
-        }
-
-
-        <div className={styles.postCommentContainer}>
-            <input type="" placeholder="Comment" value={commentText} onChange={(e)=>setCommentText(e.target.value)} />
-            <div onClick={async ()=>{
-                await dispath(postComment({post_id : postState.postId, body :commentText}))
-                await dispath(getAllComments({post_id : postState.postId}))
-            }} className={styles.postCommentContainer__commentBtn}>
-              <p>Comment</p>
-            </div>
-        </div>
 
     </div>
 
