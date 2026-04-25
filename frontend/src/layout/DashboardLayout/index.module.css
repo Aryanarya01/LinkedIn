@@ -49,3 +49,15 @@
 .homeContainer__feedContainer{
     padding-inline:0.8rem ;
 }
+
+@media only screen and (max-width :600px) {
+.homeContainer__extraContainer{
+    display: none;
+}
+.homeContainer{
+    display: block;
+}
+.homeContainer__leftBar{
+    display: none;
+}
+}

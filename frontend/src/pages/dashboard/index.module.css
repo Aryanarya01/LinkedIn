@@ -117,6 +117,7 @@
 .singleOption__optionContainer > svg {
     height: 100%;
     width: 8%;
+    min-width: 1rem;
 }
 
 .commentsContainer{
