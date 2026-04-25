@@ -136,3 +136,8 @@
     cursor: pointer;
     width: fit-content;
  }
+
+ .profileContainer_details textarea{
+    outline: none;
+    border: none;
+ }
