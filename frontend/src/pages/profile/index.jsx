@@ -22,6 +22,9 @@ const ProfilePage = () => {
     years: "",
   });
 
+  const [educationInputData, setEducationInputData] = useState({
+    
+  })
   const handelWorkInputChange = (e) => {
     const { name, value } = e.target;
     setInputdata({ ...inputData, [name]: value });
@@ -212,6 +215,39 @@ const ProfilePage = () => {
                   </button>
                 </div>
               </div>
+
+               <div className={styles.workHistory}>
+            <h3>Education</h3>
+            <div className={styles.workHistoryContainer}>
+              {userProfile?.education?.map((study,index)=>{
+                return (
+                  <div key={index} className={styles.workHistoryCard}>
+                         <p
+                          style={{
+                            fontWeight: "bold",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "0.8rem",
+                          }}
+                        >
+                        School : {study.school}
+                        </p>
+                        <p>Degree : {study.degree}</p>
+                        <p>fieldOfStudy : {study.fieldOfStudy}</p>
+                  </div>
+                  
+                )
+              })}
+              <button
+                    className={styles.addWorkButton}
+                    onClick={() => {
+                      setIsModalOper(true);
+                    }}
+                  >
+                    Add Work
+                  </button>
+            </div>
+          </div>
               {userProfile != authState.user && (
                 <div
                   onClick={() => {
@@ -276,29 +312,7 @@ const ProfilePage = () => {
           )}
 
 
-          <div className={styles.workHistory}>
-            <h3>Education</h3>
-            <div className={styles.workHistoryContainer}>
-              {userProfile?.education?.map((study,index)=>{
-                return (
-                  <div key={index} className={styles.workHistoryCard}>
-                         <p
-                          style={{
-                            fontWeight: "bold",
-                            display: "flex",
-                            alignItems: "center",
-                            gap: "0.8rem",
-                          }}
-                        >
-                        School : {study.school}
-                        </p>
-                        <p>Degree : {study.degree}</p>
-                        <p>fieldOfStudy : {study.fieldOfStudy}</p>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
+          
 
 
         </DashboardLayout>
