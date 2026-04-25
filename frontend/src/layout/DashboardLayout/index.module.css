@@ -51,24 +51,6 @@
 }
 
 
- 
-
-
-@media only screen and (max-width :600px) {
-.homeContainer__extraContainer{
-    display: none;
-}
-.homeContainer{
-    display: block;
-}
-.homeContainer__leftBar{
-    display: none;
-}
-.mobileNavbar{
-    display: flex;
-}
-}
-
 
 .mobileNavbar{
     position: absolute;
@@ -85,4 +67,21 @@
 .mobileNavbar svg{
     height: 2rem;
     width: 2rem;
+}
+
+
+
+@media only screen and (max-width :600px) {
+.homeContainer__extraContainer{
+    display: none;
+}
+.homeContainer{
+    display: block;
+}
+.homeContainer__leftBar{
+    display: none;
+}
+.mobileNavbar{
+    display: flex;
+}
 }
