@@ -178,3 +178,12 @@
     position: relative;
     padding: 1.4rem;
 }
+
+.inputField{
+    padding-inline: 1.3rem;
+    padding-block: 0.8rem;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid silver;
+    width: 100%;
+}

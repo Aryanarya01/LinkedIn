@@ -204,7 +204,7 @@ const ProfilePage = ()=>{
         e.stopPropagation()
       }}
     className={styles.allCommentsContainer}>
-                 <input onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Email" className={styles.inputField} />
+                 <input onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Enter Work Space" className={styles.inputField} />
     </div>
 
   </div>
