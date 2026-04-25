@@ -16,7 +16,7 @@ const ProfilePage = ()=>{
         const [userProfile, setUserProfile] = useState({})
         const [userPosts, setUserPosts] = useState([])
         const [isModalOpen, setIsModalOper] = useState(false);
-      const [inputData, setInputdata] =  
+      const [inputData, setInputdata] = useState({company : '', position : '', years : ''})
 
          const handelWorkInputChange = (e)=>{
 
@@ -208,9 +208,9 @@ const ProfilePage = ()=>{
         e.stopPropagation()
       }}
     className={styles.allCommentsContainer}>
-                 <input onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Enter Company" className={styles.inputField} />
-                  <input onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Enter Position" className={styles.inputField} />
-                   <input onChange={(e)=>setEmail(e.target.value)} type="number" placeholder="Years" className={styles.inputField} />
+                 <input onChange={handelWorkInputChange} type="Email" placeholder="Enter Company" className={styles.inputField} />
+                  <input onChange={handelWorkInputChange} type="Email" placeholder="Enter Position" className={styles.inputField} />
+                   <input onChange={handelWorkInputChange} type="number" placeholder="Years" className={styles.inputField} />
               <div className={styles.updateProfileBtn}>Add Work</div>
 
 
