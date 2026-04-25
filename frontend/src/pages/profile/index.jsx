@@ -15,7 +15,7 @@ const ProfilePage = ()=>{
 
         const [userProfile, setUserProfile] = useState({})
         const [userPosts, setUserPosts] = useState([])
-        const [isModalOpen, setIsModalOper] = useState(true);
+        const [isModalOpen, setIsModalOper] = useState(false);
          
 
         useEffect(()=>{
