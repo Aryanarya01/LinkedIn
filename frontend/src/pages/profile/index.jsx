@@ -176,7 +176,7 @@ const ProfilePage = ()=>{
               })}
 
               <button className={styles.addWorkButton} onClick={()=>{
-
+                setIsModalOper(true)
               }}>Add Work</button>
 
 
@@ -196,7 +196,7 @@ const ProfilePage = ()=>{
 {
   isModalOpen && 
   <div onClick={()=>{
-    dispatch(resetPostId())
+    setIsModalOper(false)
   }} className={styles.commentsContainer}>
 
     <div
