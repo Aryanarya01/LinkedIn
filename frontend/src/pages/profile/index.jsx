@@ -15,7 +15,7 @@ const ProfilePage = ()=>{
 
         const [userProfile, setUserProfile] = useState({})
         const [userPosts, setUserPosts] = useState([])
-        const [isModelOpen, setIsModelOper] = useState(false);
+        const [isModalOpen, setIsModalOper] = useState(false);
          
 
         useEffect(()=>{
@@ -194,7 +194,7 @@ const ProfilePage = ()=>{
 
 
 {
-  postState.postId !== "" && 
+  isModalOpen && 
   <div onClick={()=>{
     dispatch(resetPostId())
   }} className={styles.commentsContainer}>
