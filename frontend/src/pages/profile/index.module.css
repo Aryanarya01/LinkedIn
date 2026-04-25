@@ -172,7 +172,7 @@
 
 .allCommentsContainer{
     width: 40vw;
-    height: 80vh;
+    height: fit-content;
     background: white;
     border-radius: 10px;
     position: relative;
