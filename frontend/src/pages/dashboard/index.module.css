@@ -135,8 +135,9 @@
 }
 
 .allCommentsContainer{
-    width: 40vw;
+     min-width: 40svw;
     height: 80vh;
+    max-width: 1120px;
     background: white;
     border-radius: 10px;
     position: relative;
@@ -177,3 +178,10 @@
     cursor: pointer;
     color: white;
 }
+
+
+ @media screen and (max-width:600px){
+        .allCommentsContainer{
+            width: 90%;
+        }
+ }
