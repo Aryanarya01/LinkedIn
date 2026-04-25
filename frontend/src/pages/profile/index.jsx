@@ -279,7 +279,7 @@ const ProfilePage = () => {
           <div className={styles.workHistory}>
             <h3>Education</h3>
             <div className={styles.workHistoryContainer}>
-              {userProfile.education.map((study,index)=>{
+              {userProfile?.education?.map((study,index)=>{
                 return (
                   <div key={index} className={styles.workHistoryCard}>
                          <p
@@ -290,8 +290,10 @@ const ProfilePage = () => {
                             gap: "0.8rem",
                           }}
                         >
-                          {study.school}
+                        School : {study.school}
                         </p>
+                        <p>Degree : {study.degree}</p>
+                        <p>fieldOfStudy : {study.fieldOfStudy}</p>
                   </div>
                 )
               })}
