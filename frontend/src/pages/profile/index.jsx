@@ -16,7 +16,11 @@ const ProfilePage = ()=>{
         const [userProfile, setUserProfile] = useState({})
         const [userPosts, setUserPosts] = useState([])
         const [isModalOpen, setIsModalOper] = useState(false);
-         
+      const [inputData, setInputdata] =  
+
+         const handelWorkInputChange = (e)=>{
+
+         }
 
         useEffect(()=>{
             dispatch(getAboutUser({token : localStorage.getItem("token")}))
