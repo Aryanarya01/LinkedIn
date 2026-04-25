@@ -274,6 +274,20 @@ const ProfilePage = () => {
               </div>
             </div>
           )}
+
+
+          <div className={styles.workHistory}>
+            <h3>Education</h3>
+            <div className={styles.workHistoryContainer}>
+              {userProfile.education.map((study)=>{
+                return(
+                  <div className="workHistoryCard"></div>
+                )
+              })}
+            </div>
+          </div>
+
+
         </DashboardLayout>
       </UserLayout>
     </>
