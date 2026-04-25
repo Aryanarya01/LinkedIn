@@ -206,7 +206,8 @@ const ProfilePage = ()=>{
     className={styles.allCommentsContainer}>
                  <input onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Enter Company" className={styles.inputField} />
                   <input onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Enter Position" className={styles.inputField} />
-                   <input onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Years" className={styles.inputField} />
+                   <input onChange={(e)=>setEmail(e.target.value)} type="number" placeholder="Years" className={styles.inputField} />
+                   
     </div>
 
   </div>

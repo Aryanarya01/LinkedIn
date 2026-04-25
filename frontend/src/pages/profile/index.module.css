@@ -177,6 +177,9 @@
     border-radius: 10px;
     position: relative;
     padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
 .inputField{
