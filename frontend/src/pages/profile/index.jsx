@@ -212,7 +212,10 @@ const ProfilePage = ()=>{
                  <input onChange={handelWorkInputChange} name="company" type="text" placeholder="Enter Company" className={styles.inputField} />
                   <input onChange={handelWorkInputChange} name="position" type="text" placeholder="Enter Position" className={styles.inputField} />
                    <input onChange={handelWorkInputChange} name="years" type="number" placeholder="Years" className={styles.inputField} />
-              <div className={styles.updateProfileBtn}>Add Work</div>
+              <div onClick={()=>{
+                setUserProfile({...userProfile, pastWork : [...userProfile.pastWork, inputData]})
+                setIsModalOper(false)
+              }} className={styles.updateProfileBtn}>Add Work</div>
 
 
     </div>
