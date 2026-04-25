@@ -175,7 +175,9 @@ const ProfilePage = ()=>{
                 );
               })}
 
-              <button className={styles.addWorkButton} onClick={}></button>
+              <button className={styles.addWorkButton} onClick={()=>{
+
+              }}>Add Work</button>
 
 
             </div>

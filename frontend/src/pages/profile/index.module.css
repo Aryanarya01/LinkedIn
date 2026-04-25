@@ -145,3 +145,9 @@
     font-family : "poppins" !important;
     font-size: 1.1rem;
  }
+
+
+ .addWorkButton{
+    padding-inline: 1.3rem;
+    color: white;
+ }
