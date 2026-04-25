@@ -15,7 +15,7 @@ const ProfilePage = ()=>{
 
         const [userProfile, setUserProfile] = useState({})
         const [userPosts, setUserPosts] = useState([])
-
+        const [isModelOpen, setIsModelOper] = useState(false);
          
 
         useEffect(()=>{
