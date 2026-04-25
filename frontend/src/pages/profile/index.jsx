@@ -174,6 +174,10 @@ const ProfilePage = ()=>{
                   </div>
                 );
               })}
+
+              <button className={styles.addWorkButton} onClick={}></button>
+
+
             </div>
           </div>
           {userProfile != authState.user &&
