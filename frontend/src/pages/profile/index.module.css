@@ -150,4 +150,8 @@
  .addWorkButton{
     padding-inline: 1.3rem;
     color: white;
+    border: 1px dotted silver;
+    border-radius: 10px;
+    
+
  }
