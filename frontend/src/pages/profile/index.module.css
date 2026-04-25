@@ -140,4 +140,7 @@
  .profileContainer_details textarea{
     outline: none;
     border: none;
+    padding-inline: 10px;
+    padding-block: 9px;
+    font-family : "poppins" !important;
  }
