@@ -152,6 +152,6 @@
     color: white;
     border: 1px dotted silver;
     border-radius: 10px;
-    
-
+    padding-block: 1.2rem;
+    cursor: pointer;
  }
