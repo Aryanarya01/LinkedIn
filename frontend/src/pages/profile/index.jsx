@@ -279,9 +279,11 @@ const ProfilePage = () => {
           <div className={styles.workHistory}>
             <h3>Education</h3>
             <div className={styles.workHistoryContainer}>
-              {userProfile.education.map((study)=>{
+              {userProfile.education.map((study,index)=>{
                 return(
-                  <div className="workHistoryCard"></div>
+                  <div key={index} className={styles.workHistoryCard}>
+
+                  </div>
                 )
               })}
             </div>
