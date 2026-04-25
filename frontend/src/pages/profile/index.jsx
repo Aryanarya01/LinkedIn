@@ -23,8 +23,15 @@ const ProfilePage = () => {
   });
 
   const [educationInputData, setEducationInputData] = useState({
-    
+     school: "",
+      degree: "",
+      fieldOfStudy: ""
   })
+
+  const handelEducationInputChange = (e)=>{
+    const {name, value} = e.target;
+    setEducationInputData({...educationInputData,[name] : value})
+  }
   const handelWorkInputChange = (e) => {
     const { name, value } = e.target;
     setInputdata({ ...inputData, [name]: value });
