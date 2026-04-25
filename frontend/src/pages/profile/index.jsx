@@ -280,9 +280,18 @@ const ProfilePage = () => {
             <h3>Education</h3>
             <div className={styles.workHistoryContainer}>
               {userProfile.education.map((study,index)=>{
-                return(
+                return (
                   <div key={index} className={styles.workHistoryCard}>
-
+                         <p
+                          style={{
+                            fontWeight: "bold",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "0.8rem",
+                          }}
+                        >
+                          {study.school}
+                        </p>
                   </div>
                 )
               })}
