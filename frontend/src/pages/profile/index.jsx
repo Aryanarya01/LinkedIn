@@ -207,7 +207,9 @@ const ProfilePage = ()=>{
                  <input onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Enter Company" className={styles.inputField} />
                   <input onChange={(e)=>setEmail(e.target.value)} type="Email" placeholder="Enter Position" className={styles.inputField} />
                    <input onChange={(e)=>setEmail(e.target.value)} type="number" placeholder="Years" className={styles.inputField} />
-                   
+              <div className={styles.updateProfileBtn}>Add Work</div>
+
+
     </div>
 
   </div>
