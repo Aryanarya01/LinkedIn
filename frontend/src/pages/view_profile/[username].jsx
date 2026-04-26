@@ -25,12 +25,16 @@ const ViewProfilePage = ({ userProfile }) => {
 
   const [isCurrentUserInConnection, setIsCurrentUserInConnection] =
     useState(false);
-  const [isConnectionNull, setIsConnectionNull] = useState(true);//         check
+  const [isConnectionNull, setIsConnectionNull] = useState(true); //         check
 
   const getUsersPosts = async () => {
     await dispatch(getAllPosts());
-    await dispatch(getConnectionsRequest({ token: localStorage.getItem("token")}));
-    await dispatch(getMyConnectionRequests({token : localStorage.getItem("token")}))
+    await dispatch(
+      getConnectionsRequest({ token: localStorage.getItem("token") }),
+    );
+    await dispatch(
+      getMyConnectionRequests({ token: localStorage.getItem("token") }),
+    );
   };
 
   useEffect(() => {
@@ -59,7 +63,7 @@ const ViewProfilePage = ({ userProfile }) => {
 
     ///2nd
 
-     if (
+    if (
       authState.connectionRequest.some(
         (user) => user.userId._id === userProfile.userId._id,
       )
@@ -73,7 +77,7 @@ const ViewProfilePage = ({ userProfile }) => {
         setIsConnectionNull(false);
       }
     }
-  }, [authState.connections,authState.connectionRequest]);
+  }, [authState.connections, authState.connectionRequest]);
 
   useEffect(() => {
     getUsersPosts();
@@ -93,7 +97,7 @@ const ViewProfilePage = ({ userProfile }) => {
           </div>
 
           <div className={styles.profileContainer_details}>
-            <div className={styles.profileContainer_flex} >
+            <div className={styles.profileContainer_flex}>
               <div style={{ flex: "0.8" }}>
                 <div
                   style={{
@@ -219,30 +223,28 @@ const ViewProfilePage = ({ userProfile }) => {
           </div>
 
           <div className={styles.workHistory}>
-                      <h3>Education</h3>
-                      <div className={styles.workHistoryContainer}>
-                        {userProfile.education.map((study,index)=>{
-                          return (
-                            <div key={index} className={styles.workHistoryCard}>
-                                   <p
-                                    style={{
-                                      fontWeight: "bold",
-                                      display: "flex",
-                                      alignItems: "center",
-                                      gap: "0.8rem",
-                                    }}
-                                  >
-                                  School : {study.school}
-                                  </p>
-                                  <p>Degree : {study.degree}</p>
-                                  <p>fieldOfStudy : {study.fieldOfStudy}</p>
-                            </div>
-                            
-                          )
-                        })}
-                      </div>
-                    </div>
-          
+            <h3>Education</h3>
+            <div className={styles.workHistoryContainer}>
+              {userProfile.education.map((study, index) => {
+                return (
+                  <div key={index} className={styles.workHistoryCard}>
+                    <p
+                      style={{
+                        fontWeight: "bold",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.8rem",
+                      }}
+                    >
+                      School : {study.school}
+                    </p>
+                    <p>Degree : {study.degree}</p>
+                    <p>fieldOfStudy : {study.fieldOfStudy}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </DashboardLayout>
     </UserLayout>
