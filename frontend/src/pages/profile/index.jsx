@@ -23,15 +23,15 @@ const ProfilePage = () => {
   });
 
   const [educationInputData, setEducationInputData] = useState({
-     school: "",
-      degree: "",
-      fieldOfStudy: ""
-  })
+    school: "",
+    degree: "",
+    fieldOfStudy: "",
+  });
 
-  const handelEducationInputChange = (e)=>{
-    const {name, value} = e.target;
-    setEducationInputData({...educationInputData,[name] : value})
-  }
+  const handelEducationInputChange = (e) => {
+    const { name, value } = e.target;
+    setEducationInputData({ ...educationInputData, [name]: value });
+  };
   const handelWorkInputChange = (e) => {
     const { name, value } = e.target;
     setInputdata({ ...inputData, [name]: value });
@@ -40,7 +40,7 @@ const ProfilePage = () => {
   useEffect(() => {
     dispatch(getAboutUser({ token: localStorage.getItem("token") }));
     dispatch(getAllPosts());
-  },[]);
+  }, []);
 
   useEffect(() => {
     if (authState.user != undefined) {
@@ -223,13 +223,13 @@ const ProfilePage = () => {
                 </div>
               </div>
 
-               <div className={styles.workHistory}>
-            <h3>Education</h3>
-            <div className={styles.workHistoryContainer}>
-              {userProfile.education.map((study,index)=>{
-                return (
-                  <div key={index} className={styles.workHistoryCard}>
-                         <p
+              <div className={styles.workHistory}>
+                <h3>Education</h3>
+                <div className={styles.workHistoryContainer}>
+                  {userProfile.education.map((study, index) => {
+                    return (
+                      <div key={index} className={styles.workHistoryCard}>
+                        <p
                           style={{
                             fontWeight: "bold",
                             display: "flex",
@@ -237,15 +237,14 @@ const ProfilePage = () => {
                             gap: "0.8rem",
                           }}
                         >
-                        School : {study.school}
+                          School : {study.school}
                         </p>
                         <p>Degree : {study.degree}</p>
                         <p>fieldOfStudy : {study.fieldOfStudy}</p>
-                  </div>
-                  
-                )
-              })}
-              <button
+                      </div>
+                    );
+                  })}
+                  <button
                     className={styles.addWorkButton}
                     onClick={() => {
                       setIsModalOpen(true);
@@ -253,11 +252,9 @@ const ProfilePage = () => {
                   >
                     Add Education
                   </button>
-            </div>
-          </div>
+                </div>
+              </div>
 
-
-          
               {userProfile != authState.user && (
                 <div
                   onClick={() => {
@@ -321,8 +318,7 @@ const ProfilePage = () => {
             </div>
           )}
 
-
-           {isModalOpen && (
+          {isModalOpen && (
             <div
               onClick={() => {
                 setIsModalOpen(false);
@@ -371,11 +367,6 @@ const ProfilePage = () => {
               </div>
             </div>
           )}
-
-
-          
-
-
         </DashboardLayout>
       </UserLayout>
     </>
