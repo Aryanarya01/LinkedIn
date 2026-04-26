@@ -15,7 +15,7 @@ const ProfilePage = () => {
 
   const [userProfile, setUserProfile] = useState({});
   const [userPosts, setUserPosts] = useState([]);
-  const [isModalOpen, setIsModalOper] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [inputData, setInputdata] = useState({
     company: "",
     position: "",
@@ -40,7 +40,7 @@ const ProfilePage = () => {
   useEffect(() => {
     dispatch(getAboutUser({ token: localStorage.getItem("token") }));
     dispatch(getAllPosts());
-  }, []);
+  },[]);
 
   useEffect(() => {
     if (authState.user != undefined) {
@@ -215,7 +215,7 @@ const ProfilePage = () => {
                   <button
                     className={styles.addWorkButton}
                     onClick={() => {
-                      setIsModalOper(true);
+                      setIsModalOpen(true);
                     }}
                   >
                     Add Work
@@ -226,7 +226,7 @@ const ProfilePage = () => {
                <div className={styles.workHistory}>
             <h3>Education</h3>
             <div className={styles.workHistoryContainer}>
-              {userProfile?.education?.map((study,index)=>{
+              {userProfile.education.map((study,index)=>{
                 return (
                   <div key={index} className={styles.workHistoryCard}>
                          <p
@@ -248,13 +248,16 @@ const ProfilePage = () => {
               <button
                     className={styles.addWorkButton}
                     onClick={() => {
-                      setIsModalOper(true);
+                      setIsModalOpen(true);
                     }}
                   >
-                    Add Work
+                    Add Education
                   </button>
             </div>
           </div>
+
+
+          
               {userProfile != authState.user && (
                 <div
                   onClick={() => {
@@ -271,7 +274,7 @@ const ProfilePage = () => {
           {isModalOpen && (
             <div
               onClick={() => {
-                setIsModalOper(false);
+                setIsModalOpen(false);
               }}
               className={styles.commentsContainer}
             >
@@ -308,11 +311,62 @@ const ProfilePage = () => {
                       ...userProfile,
                       pastWork: [...userProfile.pastWork, inputData],
                     });
-                    setIsModalOper(false);
+                    setIsModalOpen(false);
                   }}
                   className={styles.updateProfileBtn}
                 >
                   Add Work
+                </div>
+              </div>
+            </div>
+          )}
+
+
+           {isModalOpen && (
+            <div
+              onClick={() => {
+                setIsModalOpen(false);
+              }}
+              className={styles.commentsContainer}
+            >
+              <div
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+                className={styles.allCommentsContainer}
+              >
+                <input
+                  onChange={handelEducationInputChange}
+                  name="school"
+                  type="text"
+                  placeholder="Enter School"
+                  className={styles.inputField}
+                />
+                <input
+                  onChange={handelEducationInputChange}
+                  name="degree"
+                  type="text"
+                  placeholder="Enter Degree"
+                  className={styles.inputField}
+                />
+                <input
+                  onChange={handelEducationInputChange}
+                  name="fieldOfStudy"
+                  type="text"
+                  placeholder="Enter fieldOfStudy"
+                  className={styles.inputField}
+                />
+                <div
+                  onClick={() => {
+                    setUserProfile({
+                      ...userProfile,
+                      education: [...userProfile.education, educationInputData],
+                    });
+                    setIsModalOpen(false);
+                  }}
+                  className={styles.updateProfileBtn}
+                >
+                  Add Education
                 </div>
               </div>
             </div>
