@@ -102,7 +102,7 @@ export const uploadProfilePicture = async (req, res) => {
 export const updateUserProfile = async (req, res) => {
   try {
     const { token, ...newUserData } = req.body;
-    const {username, email} = newUserData;
+    const { username, email } = newUserData;
     const user = await User.findOne({ token });
     if (!user) {
       res.status(400).json({ message: "User not found!" });
@@ -187,13 +187,11 @@ export const updateProfileData = async (req, res) => {
       userId: userProfile._id,
     });
 
-
-    
     Object.assign(profile_to_update, newProfileData);
     await profile_to_update.save();
     return res.status(200).json({ message: "Profile Updated!" });
   } catch (err) {
-   return res.status(500).json(err.message);
+    return res.status(500).json(err.message);
   }
 };
 
@@ -212,7 +210,7 @@ export const getAllUserProfile = async (req, res) => {
 export const downloadProfile = async (req, res) => {
   const user_id = req.query.id;
   console.log(user_id);
-  
+
   const userProfile = await Profile.findOne({ userId: user_id }).populate(
     "userId",
     "name username email profilePicture",
