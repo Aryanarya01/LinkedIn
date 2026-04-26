@@ -35,8 +35,7 @@ const Dashboard = () => {
 
   const [postContent, setPostContent] = useState("");
   const [fileContent, setFileContent] = useState();
-  const [commentText,setCommentText] = useState("");
-
+  const [commentText, setCommentText] = useState("");
 
   const handleUpload = async () => {
     await dispath(createPost({ file: fileContent, body: postContent }));
@@ -151,15 +150,21 @@ const Dashboard = () => {
                           <p style={{ paddingTop: "1.3rem" }}>{post.body}</p>
 
                           <div className={styles.singleCard__image}>
-                           {post.media ?<img src={`${BASE_URL}/${post.media}`} /> : <></>}
+                            {post.media ? (
+                              <img src={`${BASE_URL}/${post.media}`} />
+                            ) : (
+                              <></>
+                            )}
                           </div>
 
                           <div className={styles.optionsContainer}>
-
-                            <div onClick={async ()=>{
-                              await dispath(incrementPostLike({post_id : post._id}))
-                              dispath(getAllPosts())
-                            }}
+                            <div
+                              onClick={async () => {
+                                await dispath(
+                                  incrementPostLike({ post_id: post._id }),
+                                );
+                                dispath(getAllPosts());
+                              }}
                               className={styles.singleOption__optionContainer}
                             >
                               <svg
@@ -179,9 +184,10 @@ const Dashboard = () => {
                               <p>{post.likes}</p>
                             </div>
 
-                            <div onClick={()=>{
-                              dispath(getAllComments({post_id : post._id}))
-                            }}
+                            <div
+                              onClick={() => {
+                                dispath(getAllComments({ post_id: post._id }));
+                              }}
                               className={styles.singleOption__optionContainer}
                             >
                               <svg
@@ -199,7 +205,6 @@ const Dashboard = () => {
                                 />
                               </svg>
                             </div>
-
 
                             <div
                               onClick={() => {
@@ -236,60 +241,79 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-{
-  postState.postId !== "" && 
-  <div onClick={()=>{
-    dispath(resetPostId())
-  }} className={styles.commentsContainer}>
+          {postState.postId !== "" && (
+            <div
+              onClick={() => {
+                dispath(resetPostId());
+              }}
+              className={styles.commentsContainer}
+            >
+              <div
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+                className={styles.allCommentsContainer}
+              >
+                {postState.comments.length === 0 && <h2>No Comments</h2>}
 
-    <div
-      onClick={(e)=>{
-        e.stopPropagation()
-      }}
-    className={styles.allCommentsContainer}>
-        { postState.comments.length === 0 &&
-          <h2>No Comments</h2>
-        }
-
-
-
-        {
-          postState.comments.length !== 0 &&
-          <div>
-            {postState.comments.map((comment,index)=>{
-              return (
-                <div className={styles.singleComment} key={comment._id}>
-                  <div className={styles.singleComment__profileContainer}>
-                  <img src={`${BASE_URL}/${comment.userId.profilePicture}`} alt="" />
-                    <div>
-                      <p style={{fontWeight : "bold",fontSize : "1.2rem"}}>{comment.userId.name}</p>
-                      <p>@{comment.userId.username}</p>
-                    </div>
+                {postState.comments.length !== 0 && (
+                  <div>
+                    {postState.comments.map((comment, index) => {
+                      return (
+                        <div className={styles.singleComment} key={comment._id}>
+                          <div
+                            className={styles.singleComment__profileContainer}
+                          >
+                            <img
+                              src={`${BASE_URL}/${comment.userId.profilePicture}`}
+                              alt=""
+                            />
+                            <div>
+                              <p
+                                style={{
+                                  fontWeight: "bold",
+                                  fontSize: "1.2rem",
+                                }}
+                              >
+                                {comment.userId.name}
+                              </p>
+                              <p>@{comment.userId.username}</p>
+                            </div>
+                          </div>
+                          <p>{comment.body}</p>
+                        </div>
+                      );
+                    })}
                   </div>
-                  <p>{comment.body}</p>
+                )}
+
+                <div className={styles.postCommentContainer}>
+                  <input
+                    type=""
+                    placeholder="Comment"
+                    value={commentText}
+                    onChange={(e) => setCommentText(e.target.value)}
+                  />
+                  <div
+                    onClick={async () => {
+                      await dispath(
+                        postComment({
+                          post_id: postState.postId,
+                          body: commentText,
+                        }),
+                      );
+                      await dispath(
+                        getAllComments({ post_id: postState.postId }),
+                      );
+                    }}
+                    className={styles.postCommentContainer__commentBtn}
+                  >
+                    <p>Comment</p>
+                  </div>
                 </div>
-              )
-            })}
-          </div>
-        }
-
-
-        <div className={styles.postCommentContainer}>
-            <input type="" placeholder="Comment" value={commentText} onChange={(e)=>setCommentText(e.target.value)} />
-            <div onClick={async ()=>{
-                await dispath(postComment({post_id : postState.postId, body :commentText}))
-                await dispath(getAllComments({post_id : postState.postId}))
-            }} className={styles.postCommentContainer__commentBtn}>
-              <p>Comment</p>
+              </div>
             </div>
-        </div>
-
-    </div>
-
-  </div>
-
-}
-
+          )}
         </DashboardLayout>
       </UserLayout>
     );
